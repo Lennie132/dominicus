@@ -11,8 +11,6 @@ In het voorbeeld hieronder zie je ook hoe je een default sectie kan defineren en
 
 <div class="container" lcms-grid="12">Footer
     <div class="row">
-        <div class="col-sm-4">Kolom 1</div>
-        <div class="col-sm-4">Kolom 2</div>
-        <div class="col-sm-4">Kolom 3</div>
+        <div class="col-sm-12">Content</div>
     </div>
 </div>
