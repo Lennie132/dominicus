@@ -1,0 +1,167 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+@white-color: #fff;
+@black-color: #000;
+
+.header-wrapper{
+    background-color: @white-color;
+    min-height: 74px;
+    font-size: 0;
+    width: 100%;
+    .header-main {
+        padding: 0 30px;
+        max-height: 62px;
+        display: inline-block;
+        width: 100%;
+
+        .header-buttons{
+            display: inline-block;
+            font-size: 24px;
+            padding: 0;
+            text-align: left;
+            width: 347px;
+            text-align: left;
+            a {
+                &:hover, &:focus{
+                    text-decoration: none;
+                }
+            }
+            .header-btn {
+                margin-right: 15px;
+                display: inline-block;
+                min-height: 62px;
+                padding: 15px 20px;
+                line-height: 32px;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+
+                background-color: @kleur1;
+                color: @white-color;
+                .transition(background .3s);
+
+                &:hover, &:focus{
+                    background-color: @kleur3;
+                    text-decoration: none;
+                }
+            }
+        } 
+
+        .header-social{
+            display: inline-block;
+            font-size: 24px;
+            padding: 0;
+            text-align: right;
+            width: 100px;
+
+            .social-list {
+                list-style-type: none;
+                padding: 0;
+                .social-item {
+                    display: inline-block;
+                    .social-link {
+                        span {
+                            color: @kleur1;
+                            vertical-align: middle;
+                            font-size: 30px;
+                            line-height: 62px;
+                            text-decoration: none;
+                            .transition(all .3s);
+                        }
+
+                        &:hover, &:focus {
+                            text-decoration: none;
+                            span {
+                                color: @white-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ==========================================================================
+   Header responsive
+   ========================================================================== */
+@media (max-width: 1199px){
+}
+
+@media (max-width: 991px){
+    .header-wrapper{
+        min-height: 74px;
+        font-size: 0;
+        width: 100%;
+        .header-main {
+            padding: 0;
+            max-height: 62px;
+
+            .header-buttons{
+                margin-left: 5px;
+                display: inline-block;
+                font-size: 24px;
+                padding: 0;
+                text-align: left;
+                float: left;
+                width: 182px;
+
+                .header-btn {
+                    margin-right: 2px;
+                    display: inline-block;
+                    min-height: 62px;
+                    padding: 15px 7px;
+                    line-height: 32px;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    text-align: center;
+
+                    background-color: @kleur1;
+                    color: @white-color;
+                    .transition(background .3s);
+
+                    &:hover, &:focus{
+                        background-color: @kleur3;
+                        text-decoration: none;
+                    }
+                }
+            } 
+
+            .header-social{
+                display: inline-block;
+                padding: 0;
+                width: 70px;
+                .social-list {
+                    list-style-type: none;
+                    padding: 0;
+                    .social-item {
+                        display: inline-block;
+                        .social-link {
+                            span {
+                                color: @kleur1;
+                                vertical-align: middle;
+                                font-size: 25px;
+                                line-height: 62px;
+                                text-decoration: none;
+                                .transition(all .3s);
+                            }
+
+                            &:hover, &:focus {
+                                text-decoration: none;
+                                span {
+                                    color: @white-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    
+}
