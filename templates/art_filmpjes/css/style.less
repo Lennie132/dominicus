@@ -1,0 +1,46 @@
+.transition(@transition) {
+    -webkit-transition: @transition;
+    transition: @transition;
+}
+
+
+/* ==========================================================================
+   Nieuwsitems
+   ========================================================================== */
+.film-wrapper{
+    margin:14px 0;
+}
+.filmitem{
+    padding: 20px;
+    p.date{
+        font-size:14px;
+        line-height:16px;
+        color:#cccccc;
+        margin-bottom:5px;
+    }
+    a.read_more, .back-link{
+        color: @kleur2;
+        position:relative;
+        display:table;
+        margin-top:20px;
+        font-weight: bold;
+    }
+    [class^="icon-"], [class*=" icon-"] {
+        display:inline-block;
+        vertical-align:middle;
+    }
+    margin-bottom: 25px;
+
+}
+.pagination{
+    margin:5px 0;
+    text-align:center;
+}
+
+@media (max-width: 767px){
+    .filmitem{
+        img{
+            margin:10px auto 10px;
+        }
+    }
+}
