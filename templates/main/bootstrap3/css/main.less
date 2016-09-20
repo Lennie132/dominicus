@@ -92,34 +92,103 @@ h1, h2, h3, h4, h5, h6{
    Home pagina
    ========================================================================== */
 
+.top-row {
+    padding: 0 15px 15px 15px;
+    .block-wrapper { 
+        padding: 0 15px 15px 15px;   
+        &.top-left-block {
+            padding-top: 330px;
+        }
+        .block-in-beeld {
+            padding: 15px;
+            background-color: @kleur1;
+            height: 470px;
+        }
+        .block-op-zoek {
+            padding: 15px;
+            background-color: @kleur1;
+            height: 800px;
+        }
+    }
+
+    .block-btn-row {
+        padding-top: 30px;
+        height: 170px;
+        .block-btn-wrapper-left {
+            padding: 0 15px 0 0;
+        }
+        .block-btn-wrapper-right {
+            padding: 0 0 0 15px;
+        }
+        .block-btn {
+            height: 140px;
+            background-image: url('img/home-btn-background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    .right-column {
+        > .block-wrapper-left {
+            padding: 0 15px 0 0;
+            .block-kom-kijken {
+                height: 530px;
+                background-color: @kleur4;
+            }
+        }
+        > .block-wrapper-right {
+            padding: 0 0 0 15px;
+            .block-info-groep8 {
+                height: 250px;
+                background-color: @kleur4;
+            }
+            .block-maak-app {
+                margin-top: 30px;
+                height: 250px;
+                background-color: @kleur4;
+            }
+        }
+        > .block-afbeelding {
+            margin-top: 30px;
+            background-color: @kleur1;
+            height: 410px;
+        }
+    }
+}
+
 .middle-row {
     padding: 15px;
     .block-wrapper { 
-        padding: 15px;
-        
+        padding: 15px;   
         .block {
-            padding: 15px;
-            background-color: @kleur4;
-            height: 350px;
+            height: auto;
+            img {
+                .img-responsive;
+                height: auto!important;
+                width: auto!important;
+            }
+            h2 {
+                padding: 15px;
+                font-size: 36px;
+                background-color: @kleur4;
+            }
         }
-    }
-    
+    } 
 }
 
 .bottom-row {
     padding-top: 15px;
     .row {
         background-color: @kleur2;
-        padding-top: 30px;
-        margin-bottom: 30px;
+        padding: 30px 0 0 0;
+        margin:0 0 30px 0;
         .block-middle-wrapper {
             padding: 0;
             .block-middle {
                 background-color: @kleur1;
                 padding: 15px;
-                height: 340px;
+                height: 460px;
                 text-align: center;
-                vertical-align: middle;
             }
             .block-fix {
                 background-color: @white-color;
@@ -130,10 +199,9 @@ h1, h2, h3, h4, h5, h6{
         }     
         .block-outside {
             margin-top: 31px;
-            height: 340px;
+            height: 460px;
             background-color: @kleur4;
             text-align: center;
-            vertical-align: middle;
         }
     }
 }

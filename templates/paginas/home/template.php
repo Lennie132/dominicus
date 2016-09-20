@@ -10,58 +10,90 @@
 ?>
 
 <div class="top-row">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 block">
+    <div class="row">
+        <div class="col-md-4 block-wrapper top-left-block">
+            <div class="block-in-beeld">
+                <?php //echo lcms::Template()->getSectieContent($DATA['page'], 'talenten'); ?>
             </div>
-        </div>
-    </div>
-
-    <div class="middle-row">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 block-wrapper">
-                    <div class="block">
-                        <?php echo lcms::Template()->getSectieContent($DATA['page'], 'talenten'); ?>
-                    </div>
-
+            <div class="block-btn-row">
+                <div class="col-md-6 block-btn-wrapper-left">
+                    <div class="block-btn"></div>
                 </div>
-                <div class="col-md-4 block-wrapper">
-                    <div class="block">
-                        <?php echo lcms::Template()->getSectieContent($DATA['page'], 'filmmakers'); ?>
-                    </div>
-
-                </div>
-                <div class="col-md-4 block-wrapper">
-                    <div class="block">
-                        <?php echo lcms::Template()->getSectieContent($DATA['page'], '10-jaar-later'); ?>
-                    </div>
-
+                <div class="col-md-6 block-btn-wrapper-right">
+                    <div class="block-btn"></div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="bottom-row">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 block-outside">
-                    <?php echo lcms::Template()->getSectieContent($DATA['page'], 'nieuws-activiteiten'); ?>
+        <div class="col-md-4 block-wrapper">
+            <div class="block-op-zoek">
+                <?php //echo lcms::Template()->getSectieContent($DATA['page'], 'filmmakers'); ?>
+            </div>
+            <div class="block-btn-row">
+                <div class="col-md-6 block-btn-wrapper-left">
+                    <div class="block-btn"></div>
                 </div>
-                <div class="col-md-4 block-middle-wrapper">
-                    <div class="block-middle">
-                        <?php echo lcms::Template()->getSectieContent($DATA['page'], 'waarom-dc'); ?>
-                    </div>
-                    <div class="col-md-4 block-fix">
-                        <img src="img/home-panel-left.jpg" class="panel">
-                        <img src="img/home-panel-right.jpg" class="panel pull-right">
-                    </div>
-                </div>
-
-
-                <div class="col-md-4 block-outside">
-                    <?php echo lcms::Template()->getSectieContent($DATA['page'], 'monnikskap'); ?>
+                <div class="col-md-6 block-btn-wrapper-right">
+                    <div class="block-btn"></div>
                 </div>
             </div>
         </div>
+
+        <div class="col-md-4 block-wrapper">
+            <div class="right-column">
+                <div class="col-md-6 block-wrapper-left">
+                    <div class="block-kom-kijken"></div>
+                </div>
+                <div class="col-md-6 block-wrapper-right">
+                    <div class="block-info-groep8"></div>
+                    <div class="block-maak-app"></div>
+                </div>
+                <div class="col-md-12 block-afbeelding">
+                    <?php //echo lcms::Template()->getSectieContent($DATA['page'], 'filmmakers'); ?>
+                </div>
+            </div>
+
+        </div>
     </div>
+</div>
+</div>
+
+<div class="middle-row">
+    <div class="row">
+        <div class="col-md-4 block-wrapper">
+            <div class="block">
+                <?php echo lcms::Template()->getSectieContent($DATA['page'], 'talenten'); ?>
+            </div>
+        </div>
+        <div class="col-md-4 block-wrapper">
+            <div class="block">
+                <?php echo lcms::Template()->getSectieContent($DATA['page'], 'filmmakers'); ?>
+            </div>
+        </div>
+        <div class="col-md-4 block-wrapper">
+            <div class="block">
+                <?php echo lcms::Template()->getSectieContent($DATA['page'], '10-jaar-later'); ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bottom-row">
+    <div class="row">
+        <div class="col-md-4 block-outside">
+            <?php echo lcms::Template()->getSectieContent($DATA['page'], 'nieuws-activiteiten'); ?>
+        </div>
+        <div class="col-md-4 block-middle-wrapper">
+            <div class="block-middle">
+                <?php echo lcms::Template()->getSectieContent($DATA['page'], 'waarom-dc'); ?>
+            </div>
+            <div class="col-md-4 block-fix">
+                <img src="img/home-panel-left.jpg" class="panel">
+                <img src="img/home-panel-right.jpg" class="panel pull-right">
+            </div>
+        </div>
+        <div class="col-md-4 block-outside">
+            <?php echo lcms::Template()->getSectieContent($DATA['page'], 'monnikskap'); ?>
+        </div>
+    </div>
+</div>
