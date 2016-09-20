@@ -89,6 +89,42 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* ==========================================================================
+   Home pagina
+   ========================================================================== */
+
+
+.bottom-row {
+    .row {
+        background-color: @kleur2;
+        padding-top: 50px;
+        margin-bottom: 30px;
+        .block-middle-wrapper {
+            padding: 0;
+            .block-middle {
+                background-color: @kleur1;
+                padding: 15px;
+                height: 340px;
+                text-align: center;
+                vertical-align: middle;
+            }
+            .block-fix {
+                background-color: @white-color;
+                padding: 0!important;
+                height: 31px;
+                width: 100%;
+            }
+        }     
+        .block-outside {
+            margin-top: 31px;
+            height: 340px;
+            background-color: @kleur4;
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+}
+
+/* ==========================================================================
    Formulier
    ========================================================================== */
 form{
@@ -112,16 +148,16 @@ form{
 
 /* Placeholder */
 ::-webkit-input-placeholder {
-	color: @kleur1;
+    color: @kleur1;
 }
 :-moz-placeholder {
-	color: @kleur1;
+    color: @kleur1;
 }
 ::-moz-placeholder {
-	color: @kleur1;
+    color: @kleur1;
 }
 :-ms-input-placeholder {  
-	color: @kleur1;
+    color: @kleur1;
 }
 
 /* ==========================================================================
