@@ -26,38 +26,44 @@ if (!empty($art_arr)) {
     <div class="news-wrapper">
         <div class="row">
             <?php
+            $count = 0;
             foreach ($art_arr as $key => $artikel) {
                 $img = get_art_file_path($artikel['Afbeelding'], $artikel['artikel_id']);
                 $oldDate = $artikel['Datum'];
                 $newDate = date("d-m-Y", strtotime($oldDate));
                 ?>
                 <div class="col-xs-12">
-                    <div class="newsitem">
+                    <div class="newsitem <?= $count >= 5 ? 'only-title' : ''; ?>">
                         <div class="row">
-                            <div class="col-xs-12">
-                                <h2><?= $newDate; ?> | <?= $artikel['Titel']; ?></h2>
-                            </div>
+                            <?php if ($count >= 5) { ?><a href="<?= link::c($DATA['page'])->artikel_groep($artikel['page'])->artikel_id($artikel['artikel_id']); ?>" title="<?= $artikel['Titel']; ?>"> <?php } ?>
+                                <div class="col-xs-12">
+                                    <h2><?= $newDate; ?> | <?= $artikel['Titel']; ?></h2>
+                                </div>
+                                <?php if ($count >= 5) { ?></a> <?php } ?>
                         </div>
-                        <div class="row">
-                            <div class="<?= trim($img != '' ? 'col-md-9 col-sm-8' : 'col-xs-12'); ?> ">
-                                <?= $artikel['Inleiding']; ?>
-                                <a class="read_more" href="<?= link::c($DATA['page'])->artikel_groep($artikel['page'])->artikel_id($artikel['artikel_id']); ?>" title="<?= $artikel['Titel']; ?>">
-                                    Lees meer<span class="icon-chevron_right"></span>
-                                </a>
-                            </div>
-                            <?php
-                            if (trim($img != '')) {
-                                ?>
-                                <div class="col-md-3 col-sm-4">
-                                    <img src="<?= lcms::resize($img, 300, 300, '', 80); ?>" class="img-responsive" alt="<?= $artikel['Titel']; ?>" />
+                        <?php if ($count < 5) { ?>
+                            <div class="row">
+                                <div class="<?= trim($img != '' ? 'col-md-9 col-sm-8' : 'col-xs-12'); ?> ">
+                                    <?= $artikel['Inleiding']; ?>
+                                    <a class="read_more" href="<?= link::c($DATA['page'])->artikel_groep($artikel['page'])->artikel_id($artikel['artikel_id']); ?>" title="<?= $artikel['Titel']; ?>">
+                                        Lees meer<span class="icon-chevron_right"></span>
+                                    </a>
                                 </div>
                                 <?php
-                            }
-                            ?>
-                        </div>
+                                if (trim($img != '')) {
+                                    ?>
+                                    <div class="col-md-3 col-sm-4">
+                                        <img src="<?= lcms::resize($img, 300, 300, '', 80); ?>" class="img-responsive" alt="<?= $artikel['Titel']; ?>" />
+                                    </div>
+                                    <?php
+                                }
+                                ?>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
                 <?php
+                $count++;
             }
             ?>
         </div>
