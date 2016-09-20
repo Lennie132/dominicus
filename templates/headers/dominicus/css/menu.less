@@ -8,13 +8,9 @@
 
 .header-nav {
     display: inline-block;
-    font-size: 24px;
-    line-height: 60px;
+    width: ~'calc(100% - 407px)';
     text-align: center;
-    width: ~'calc(100% - 457px)';
-
-    li{
-        display: inline-block;
+    > li{
         margin-right: 15px;
         &:last-child{
             margin: 0;
@@ -23,17 +19,55 @@
             color: @kleur3;
             text-transform: uppercase;
             vertical-align: middle;
+            font-size: 24px;
             line-height: 62px;
             .transition(all .3s);
-
-            &:hover, &:focus{
+            &:hover {
                 text-decoration: none;
                 font-weight: bold;
+                border-top: 5px solid @kleur1;
+            }
+            &:focus {
+                text-decoration: none;
+            }
+        }
+        > ul {
+            display: none;
+            position: absolute;
+            background-color: @white-color;
+            z-index: 100;
+            padding: 0;
+            > li {
+                display: block;
+                padding: 5px 10px;
+                > a {
+                    color: @kleur3;
+                    font-size: 21px;
+                    line-height: 21px;
+                    &:hover, &:focus {
+                        text-decoration: underline;
+                        font-weight: bold;
+                        border-top: none;
+                    }
+                }
+                &.active {
+                    > a {
+                        text-decoration: underline;
+                        font-weight: bold;
+                        border-top: none;
+                    }
+                }
+            }
+        }
+        &.is-open-1 {
+            > ul {
+                display: block;
             }
         }
         &.active {
             > a {
                 font-weight: bold;
+                border-top: 5px solid @kleur1;
             }
         }
     }
@@ -93,7 +127,7 @@
             float: right;
             background-color: @white-color;
 
-            li{
+            > li{
                 display: block;
                 border-top: 2px solid @kleur1;
                 text-align: center;
@@ -101,7 +135,7 @@
                 &:last-child{
                     margin: 0;
                 }
-                a{
+                > a{
                     font-size: 24px;
                     color: @kleur3;
                     text-transform: uppercase;
@@ -115,7 +149,7 @@
                     }
                 }
                 &.active {
-                    a {
+                    > a {
                         font-weight: bold;
                     }
                 }
