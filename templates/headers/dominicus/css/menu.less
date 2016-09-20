@@ -19,7 +19,6 @@
         > a{
             color: @kleur3;
             font-family: @ubuntu;
-            text-transform: uppercase;
             vertical-align: middle;
             font-size: 24px;
             line-height: 62px;
@@ -41,12 +40,14 @@
             padding: 0;
             > li {
                 display: block;
-                padding: 5px 10px;
+                padding: 5px 15px;
+                text-align: left;
                 > a {
                     font-family: @ubuntu;
                     color: @kleur3;
                     font-size: 21px;
                     line-height: 21px;
+                    
                     &:hover, &:focus {
                         text-decoration: underline;
                         font-weight: bold;
@@ -62,7 +63,7 @@
                 }
             }
         }
-        &.is-open-1 {
+        &:hover {
             > ul {
                 display: block;
             }
@@ -141,7 +142,6 @@
                 > a{
                     font-size: 24px;
                     color: @kleur3;
-                    text-transform: uppercase;
                     vertical-align: middle;
                     line-height: 62px;
                     white-space: nowrap;
@@ -194,7 +194,6 @@
             }
             > a{
                 color: @kleur3;
-                text-transform: uppercase;
                 vertical-align: middle;
                 line-height: 62px;
                 .transition(all .3s);
@@ -268,7 +267,6 @@
                         white-space: normal;
                         display: inline-block;
                         font-size: 24px;
-                        text-transform: uppercase;
 
                         line-height: 62px;
 
