@@ -12,7 +12,14 @@ In het voorbeeld hieronder zie je ook hoe je een default sectie kan defineren en
     <div class="row">rij
         <div class="col-md-12">Slider</div>
     </div>
-    <div class="row">
-        <div class="col-md-12">Content</div>
+    <div class="row">middle
+        <div class="col-md-4">talenten</div>
+        <div class="col-md-4">filmmakers</div>
+        <div class="col-md-4">10-jaar-later</div>
+    </div>
+    <div class="row">bottom
+        <div class="col-md-4">nieuws-activiteiten</div>
+        <div class="col-md-4">waarom-dc</div>
+        <div class="col-md-4">monnikskap</div>
     </div>
 </div>
