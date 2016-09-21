@@ -197,6 +197,54 @@
                                 text-decoration: underline;
                             }
                         }
+                        &.isparent {
+                            > a {
+                                &:after {
+                                    font-family: 'icomoon' !important;
+                                    content: "\f0d7";
+                                    position: absolute;
+                                    right: 20px;
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                }
+                            }
+                        }
+                        &.isparent.is-open-2 {
+                            > a {
+                                &:after {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                            > ul {
+                                display: block;
+                                list-style: none;
+                                margin: 0;
+                                padding: 0 0 5px;
+                                background-color: @kleur1;
+                                > li {
+                                    padding: 7px 10px 7px 23px;
+                                    > a {
+                                        color: @kleur3;
+                                        font-family: @ubuntu;
+                                        font-size: 16px;
+                                        line-height: 20px;
+                                        display: block;
+                                    }
+                                    &:hover, &:focus {
+                                        > a {
+                                            font-weight: bold;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                    &.active {
+                                        > a {
+                                            font-weight: bold;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
