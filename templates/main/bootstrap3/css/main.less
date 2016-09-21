@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6{
    ========================================================================== */
 
 .top-row {
-    padding: 0 15px 15px 15px;
+    padding: 0 15px;
     .block-wrapper { 
         padding: 0 15px 15px 15px;   
         &.top-left-block {
@@ -127,6 +127,17 @@ h1, h2, h3, h4, h5, h6{
             background-image: url('img/home-btn-background.jpg');
             background-size: cover;
             background-position: center;
+            h2 {
+                margin: 0;
+                text-align: center;
+                line-height: 125px;
+                font-size: 40px;
+                color: @white-color;
+                &:hover {
+                    color: @kleur2;
+                    border-bottom: 15px solid @kleur2;
+                }
+            }
         }
     }
 
@@ -135,16 +146,20 @@ h1, h2, h3, h4, h5, h6{
             padding: 0 15px 0 0;
             .block-kom-kijken {
                 height: 530px;
+                padding: 1px;
                 background-color: @kleur4;
+                
             }
         }
         > .block-wrapper-right {
             padding: 0 0 0 15px;
             .block-info-groep8 {
+                padding: 1px;
                 height: 250px;
                 background-color: @kleur4;
             }
             .block-maak-app {
+                padding: 1px;
                 margin-top: 30px;
                 height: 250px;
                 background-color: @kleur4;
@@ -159,7 +174,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .middle-row {
-    padding: 15px;
+    padding: 0 15px;
     .block-wrapper { 
         padding: 15px;   
         .block {
@@ -171,6 +186,7 @@ h1, h2, h3, h4, h5, h6{
             }
             h2 {
                 padding: 15px;
+                margin: 0;
                 font-size: 36px;
                 background-color: @kleur4;
             }
@@ -188,7 +204,7 @@ h1, h2, h3, h4, h5, h6{
             padding: 0;
             .block-middle {
                 background-color: @kleur1;
-                padding: 15px;
+                padding: 35px 15px;
                 height: 460px;
                 text-align: center;
             }
@@ -202,8 +218,18 @@ h1, h2, h3, h4, h5, h6{
         .block-outside {
             margin-top: 31px;
             height: 460px;
+            padding: 35px 15px;
             background-color: @kleur4;
             text-align: center;
+        }
+        h2 {
+            font-size: 44px;
+            color: @kleur3;
+            margin-bottom: 25px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 26px;
         }
     }
 }

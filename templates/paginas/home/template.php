@@ -45,7 +45,7 @@
                     <div class="block-kom-kijken"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'kom-kijken'); ?></div>
                 </div>
                 <div class="col-md-6 block-wrapper-right">
-                    <div class="block-info-groep8"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'inf-groep-8'); ?></div>
+                    <div class="block-info-groep8"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'info-groep-8'); ?></div>
                     <div class="block-maak-app"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'maak-app'); ?></div>
                 </div>
                 <div class="col-md-12 block-afbeelding">
