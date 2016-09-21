@@ -10,12 +10,27 @@ In het voorbeeld hieronder zie je ook hoe je een default sectie kan defineren en
 -->
 <div class="container" lcms-grid="12">Home
     <div class="row">top
+        <div class="col-md-4" id="in-beeld">in-beeld</div>
+        <div class="col-md-4" id="op-zoek">op-zoek</div>
+        <div class="col-md-2" id="kom-kijken">kom-kijken</div>
+        <div class="col-md-1" id="info-groep-8">info-groep-8</div>
+        <div class="col-md-1" id="maak-app">maak-app</div>
     </div>
+    
+    <div class="row">
+        <div class="col-md-2" id="knop-1">knop-1</div>
+        <div class="col-md-2" id="knop-2">knop-2</div>
+        <div class="col-md-2" id="knop-3">knop-3</div>
+        <div class="col-md-2" id="knop-4">knop-4</div>
+        <div class="col-md-4" id="blok-foto">blok-foto</div>
+    </div>
+
     <div class="row">middle
         <div class="col-md-4" id="talenten">talenten</div>
         <div class="col-md-4" id="filmmakers">filmmakers</div>
         <div class="col-md-4" id="10-jaar-later">10-jaar-later</div>
     </div>
+    
     <div class="row">bottom
         <div class="col-md-4" id="nieuws-activiteiten">nieuws-activiteiten</div>
         <div class="col-md-4" id="waarom-dc">waarom-dc</div>

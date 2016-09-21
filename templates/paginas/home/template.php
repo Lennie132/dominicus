@@ -13,28 +13,28 @@
     <div class="row">
         <div class="col-md-4 block-wrapper top-left-block">
             <div class="block-in-beeld">
-                <?php //echo lcms::Template()->getSectieContent($DATA['page'], 'talenten'); ?>
+                <?php echo lcms::Template()->getSectieContent($DATA['page'], 'in-beeld'); ?>
             </div>
             <div class="block-btn-row">
                 <div class="col-md-6 block-btn-wrapper-left">
-                    <div class="block-btn"></div>
+                    <div class="block-btn"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'knop-1'); ?></div>
                 </div>
                 <div class="col-md-6 block-btn-wrapper-right">
-                    <div class="block-btn"></div>
+                    <div class="block-btn"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'knop-2'); ?></div>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4 block-wrapper">
             <div class="block-op-zoek">
-                <?php //echo lcms::Template()->getSectieContent($DATA['page'], 'filmmakers'); ?>
+                <?php echo lcms::Template()->getSectieContent($DATA['page'], 'op-zoek'); ?>
             </div>
             <div class="block-btn-row">
                 <div class="col-md-6 block-btn-wrapper-left">
-                    <div class="block-btn"></div>
+                    <div class="block-btn"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'knop-3'); ?></div>
                 </div>
                 <div class="col-md-6 block-btn-wrapper-right">
-                    <div class="block-btn"></div>
+                    <div class="block-btn"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'knop-4'); ?></div>
                 </div>
             </div>
         </div>
@@ -42,14 +42,14 @@
         <div class="col-md-4 block-wrapper">
             <div class="right-column">
                 <div class="col-md-6 block-wrapper-left">
-                    <div class="block-kom-kijken"></div>
+                    <div class="block-kom-kijken"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'kom-kijken'); ?></div>
                 </div>
                 <div class="col-md-6 block-wrapper-right">
-                    <div class="block-info-groep8"></div>
-                    <div class="block-maak-app"></div>
+                    <div class="block-info-groep8"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'inf-groep-8'); ?></div>
+                    <div class="block-maak-app"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'maak-app'); ?></div>
                 </div>
                 <div class="col-md-12 block-afbeelding">
-                    <?php //echo lcms::Template()->getSectieContent($DATA['page'], 'filmmakers'); ?>
+                    <?php echo lcms::Template()->getSectieContent($DATA['page'], 'blok-foto'); ?>
                 </div>
             </div>
 
