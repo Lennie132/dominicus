@@ -18,9 +18,11 @@ if (trim($sfeer) != '') {
 ?>
 
 <div class="titel-wrapper">
-    <div class="row">
-        <div class="col-xs-12">
-            <h1><?php echo get_pagina_title($pageid) ?></h1>
+    <div class="containter">
+        <div class="container">
+            <div class="col-xs-12">
+                <h1><?php echo get_pagina_title($pageid) ?></h1>
+            </div>
         </div>
     </div>
 </div>
