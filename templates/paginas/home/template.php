@@ -70,11 +70,7 @@
                 <?php echo lcms::Template()->getSectieContent($DATA['page'], 'filmmakers'); ?>
             </div>
         </div>
-        <div class="col-md-4 block-wrapper">
-            <div class="block">
-                <?php echo lcms::Template()->getSectieContent($DATA['page'], '10-jaar-later'); ?>
-            </div>
-        </div>
+        <?php echo lcms::Template()->getSectieContent($DATA['page'], '10-jaar-later'); ?>
     </div>
 </div>
 
