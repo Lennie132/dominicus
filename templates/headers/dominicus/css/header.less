@@ -5,53 +5,59 @@
 @black-color: #000;
 
 .header-wrapper{
-    background-color: @white-color;
-    width: 100%;
-    padding: 16px 0;
-    font-size: 0;   
-    border-bottom: 2px solid @kleur3;
-    .header-main {
-        padding: 0 30px;
+    height: 74px;
+    .header-bar {
+        background-color: @white-color;
+        position: fixed;
+        top: 0;
         width: 100%;
-        height: 40px;
+        padding: 16px 0;
+        font-size: 0;   
+        border-bottom: 2px solid @kleur3;
+        z-index: 200;
+        .header-main {
+            padding: 0 30px;
+            width: 100%;
+            height: 40px;
 
-        .header-logo {
-            width: 260px;
-            display: inline-block;
-            vertical-align: top;
-            .logo {
-                position: absolute;
-                top: 10px;
-                padding-left: 40px;
-                z-index: 10;
-            }
-        } 
-
-        .social-list {
-            display: inline-block;
-            vertical-align: top;
-            width: 160px; 
-            margin: 0;
-            padding: 0;
-            text-align: right;
-            list-style-type: none;
-            .social-item {
+            .header-logo {
+                width: 260px;
                 display: inline-block;
-                margin-right: 10px;
-                &:last-child {
-                    margin-right: 0;
+                vertical-align: top;
+                .logo {
+                    position: absolute;
+                    top: 10px;
+                    padding-left: 40px;
+                    z-index: 10;
                 }
-                .social-link {
-                    span {
-                        color: @kleur3;
-                        font-size: 28px;
-                        line-height: 40px;
-                        .transition(all .3s);
-                        
+            } 
+
+            .social-list {
+                display: inline-block;
+                vertical-align: top;
+                width: 160px; 
+                margin: 0;
+                padding: 0;
+                text-align: right;
+                list-style-type: none;
+                .social-item {
+                    display: inline-block;
+                    margin-right: 10px;
+                    &:last-child {
+                        margin-right: 0;
                     }
-                    &:hover, &:focus {
+                    .social-link {
+                        span {
+                            color: @kleur3;
+                            font-size: 28px;
+                            line-height: 40px;
+                            .transition(all .3s);
+
+                        }
+                        &:hover, &:focus {
                             text-decoration: none;
                         }
+                    }
                 }
             }
         }
@@ -67,32 +73,36 @@
 
 @media (max-width: 991px){
     .header-wrapper{
-        padding: 0;
-        .header-main {
+        .header-bar {
             padding: 0;
-            height: 72px;
-            .header-logo {
-                float: left;
-                padding: 3px 5px;
-                width: auto;
-                .logo {
-                    position: static;
-                    padding: 0;
-                    width: 50px;
-                }
-            } 
+            position: static;
+            .header-main {
+                padding: 0;
+                height: 72px;
+                .header-logo {
+                    float: left;
+                    padding: 3px 5px;
+                    width: auto;
+                    .logo {
+                        position: static;
+                        padding: 0;
+                        width: 50px;
+                    }
+                } 
 
-            .social-list {
-                padding: 16px 0;
-                float: left;
-                padding-left: 10px;
-                width: auto;
-                .social-item {
-                    .social-link {
+                .social-list {
+                    padding: 16px 0;
+                    float: left;
+                    padding-left: 10px;
+                    width: auto;
+                    .social-item {
+                        .social-link {
+                        }
                     }
                 }
             }
         }
+
     }
 }
 @media (max-width: 767px){
