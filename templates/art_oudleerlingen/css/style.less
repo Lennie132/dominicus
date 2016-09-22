@@ -1,0 +1,131 @@
+.transition(@transition) {
+    -webkit-transition: @transition;
+    transition: @transition;
+}
+@grey-light: #e1dfde;
+@black-color: #000000;
+
+/* ==========================================================================
+   Nieuwsitems
+   ========================================================================== */
+.student-wrapper {
+
+}
+.student-item {
+    padding: 15px 0;
+    height: 380px;
+    .student-afbeelding {
+        padding-left: 0;
+        img {
+            position: absolute;
+            padding-top: 80px;
+            z-index: 20;
+            width: 140px;
+        }
+    }
+    .student-content {
+        background-color: @grey-light;
+        height: 350px;
+        .student-titel {
+            color: @kleur3;
+        }
+        .student-img-space {
+        }
+        .student-info {
+            font-size: 13px;
+            color: @kleur3;
+
+            .student-naam {
+                font-size: 15px;
+                color: @black-color;
+                font-weight: bold;
+            }
+            .student-jaar-leerling {
+                margin-bottom: 0;
+            }
+            .student-jaar-interview-beroep {
+            }
+            .student-tekst-intro {
+                height: 140px;
+            }
+        }
+    }
+    p.date{
+        font-size:14px;
+        line-height:16px;
+        color:#cccccc;
+        margin-bottom:5px;
+    }
+    a.read_more, .back-link{
+        position:relative;
+        font-weight: bold;
+        display:table;
+        margin-top:10px;
+    }
+    [class^="icon-"], [class*=" icon-"] {
+        display:inline-block;
+        vertical-align:middle;
+    }
+}
+
+.student-item-detail {
+    padding: 0;
+    .student-content {
+        background-color: @grey-light;
+        padding: 20px;
+        .student-titel {
+            color: @kleur3;
+        }
+        .student-img-space {
+            padding-bottom: 10px;
+        }
+        .student-info {
+            font-size: 13px;
+            color: @kleur3;
+
+            .student-naam {
+                font-size: 15px;
+                color: @black-color;
+                font-weight: bold;
+            }
+            .student-jaar-leerling {
+                margin-bottom: 0;
+            }
+            .student-jaar-interview-beroep {
+            }
+            .student-tekst-intro {
+                height: 140px;
+            }
+        }
+    }
+    p.date{
+        font-size:14px;
+        line-height:16px;
+        color:#cccccc;
+        margin-bottom:5px;
+    }
+    a.read_more, .back-link{
+        position:relative;
+        font-weight: bold;
+        display:table;
+        padding-top:20px;
+    }
+    [class^="icon-"], [class*=" icon-"] {
+        display:inline-block;
+        vertical-align:middle;
+    }
+}
+
+
+.pagination{
+    margin:5px 0;
+    text-align:center;
+}
+
+@media (max-width: 767px){
+    .student-afbeelding{
+        img {
+            margin:10px auto 10px;
+        }
+    }
+}
