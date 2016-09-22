@@ -13,6 +13,7 @@
     <div class="row">
         <div class="col-md-4 block-wrapper top-left-block">
             <div class="block-in-beeld">
+                <img class="icon-in-beeld" src="img/icon-in-beeld.png">
                 <?php echo lcms::Template()->getSectieContent($DATA['page'], 'in-beeld'); ?>
             </div>
             <div class="block-btn-row">
@@ -27,6 +28,7 @@
 
         <div class="col-md-4 block-wrapper">
             <div class="block-op-zoek">
+                <img class="icon-op-zoek" src="img/icon-op-zoek.png">
                 <?php echo lcms::Template()->getSectieContent($DATA['page'], 'op-zoek'); ?>
             </div>
             <div class="block-btn-row">
