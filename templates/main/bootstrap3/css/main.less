@@ -6,6 +6,7 @@
 @theme-color: #ff9900; // oranje
 @white-color: #ffffff; // wit
 @black-color: #000000; // zwart
+@fancy-box-overlap: #cfa700;
 
 /* ==========================================================================
    2.0 Global styles
@@ -127,12 +128,14 @@ h1, h2, h3, h4, h5, h6{
             background-image: url('img/home-btn-background.jpg');
             background-size: cover;
             background-position: center;
+            
             h2 {
                 margin: 0;
                 text-align: center;
                 line-height: 125px;
                 font-size: 40px;
                 color: @white-color;
+                .transition( all 0.3s);
                 &:hover {
                     color: @kleur2;
                     border-bottom: 15px solid @kleur2;
@@ -148,7 +151,7 @@ h1, h2, h3, h4, h5, h6{
                 height: 530px;
                 padding: 1px;
                 background-color: @kleur4;
-                
+
             }
         }
         > .block-wrapper-right {
@@ -195,41 +198,87 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .bottom-row {
-    padding-top: 15px;
+    padding: 15px 0 30px 0;
+    
     .row {
-        background-color: @kleur2;
-        padding: 30px 0 0 0;
-        margin:0 0 30px 0;
-        .block-middle-wrapper {
-            padding: 0;
-            .block-middle {
-                background-color: @kleur1;
-                padding: 35px 15px;
-                height: 460px;
-                text-align: center;
-            }
-            .block-fix {
-                background-color: @white-color;
-                padding: 0!important;
-                height: 31px;
-                width: 100%;
-            }
-        }     
-        .block-outside {
-            margin-top: 31px;
-            height: 460px;
-            padding: 35px 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        &.no-margin {
+            margin: 0;
+        }
+        .block-fancy-colored {
+            width: 100%;
+            height: 60px;
+            background-color: @kleur2;
+        }
+        .block-fancy {
+            left:0;
             background-color: @kleur4;
-            text-align: center;
-        }
-        h2 {
-            font-size: 44px;
-            color: @kleur3;
-            margin-bottom: 25px;
-        }
-        p {
-            font-size: 20px;
-            line-height: 26px;
+            width: ~'calc(33.33% + 20px)';
+            float: left;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            .transition( all 0.5s);
+            top: 0px;
+            margin: 0 -10px;
+            &:before {
+                content: '';
+                width: 20px;
+                position: absolute;
+                right: 0;
+                opacity: 0;
+                bottom: 0px;
+                height: 30px!important;
+                box-sizing: border-box;
+            }
+            &:after {
+                content: '';
+                width: 20px;
+                position: absolute;
+                left: 0;
+                opacity: 0;
+                bottom: 0px;
+                height: 30px!important;
+                box-sizing: border-box;
+            }
+            &:hover {
+                top: -30px;
+                z-index: 10;
+                background-color: @kleur1;
+                .transition( all 0.5s);
+                &:before {
+                    opacity: 1;
+                    .transition( all 0.5s);
+                    bottom: -30px;
+                    height: ~'calc(100% + 30px)';
+                    border-left: 20px @fancy-box-overlap solid;
+                    border-bottom: 30px @kleur4 solid;
+                }
+                &:after {
+                    opacity: 1;
+                    .transition( all 0.5s);
+                    bottom: -30px;
+                    height: ~'calc(100% + 40px)';
+                    border-right: 20px @fancy-box-overlap solid;
+                    border-bottom: 30px @kleur4 solid;
+                }
+            }
+            .block-fancy-content {
+                margin: 20% 10%;
+                display: inline-block;
+                position: relative;
+            }
+
+            /*        h2 {
+                        font-size: 44px;
+                        color: @kleur3;
+                        margin-bottom: 25px;
+                    }
+                    p {
+                        font-size: 20px;
+                        line-height: 26px;
+                    }*/
         }
     }
 }
@@ -239,20 +288,109 @@ h1, h2, h3, h4, h5, h6{
    ========================================================================== */
 form{
     .formulier_div{
+        margin-bottom: 1rem;
+        width: 100%;
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
         label{
             font-weight: bold;
             font-family: @ubuntu;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            margin-bottom: 0;
+            float: left;
+            width: 16.666667%;
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
         }
         input, textarea{
-
+            display: block;
+            padding: .5rem .75rem;
+            font-family: @ubuntu;
+            font-size: 1rem;
+            line-height: 1.25;
+            color: #55595c;
+            background-color: #fff;
+            background-image: none;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border: 1px solid rgba(0,0,0,.15);
+            border-radius: .25rem;
+            float: left;
+            width: 41.666667%;
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
         }
         textarea{
-
+            height: 150px;
         }
     }
     .formulier_div_submit{
         input{
+            background-color: @kleur2;
+            color: @white-color;
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.25;
+            border: 1px solid transparent;
+            padding: .5rem 1rem;
+            font-size: 1rem;
+            border-radius: .25rem;
+            margin-left: 16.666667%;
+        }
+    }
+}
 
+.formulier_verzonden {
+    color: @kleur2;
+}
+@media (max-width: 991px) {
+    form{
+        .formulier_div{
+            label{
+                width: 33.33333333%;
+            }
+            input, textarea{
+                width: 50%;
+            }
+            textarea{
+
+            }
+        }
+        .formulier_div_submit{
+            input{
+                margin-left: 33.33333333%;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    form{
+        .formulier_div{
+            label{
+                width: 100%;
+                padding-left: 0;
+
+            }
+            input, textarea{
+                width: 100%;
+            }
+            textarea{
+
+            }
+        }
+        .formulier_div_submit{
+            input{
+                margin-left: 0;
+            }
         }
     }
 }

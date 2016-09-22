@@ -79,21 +79,24 @@
 </div>
 
 <div class="bottom-row">
+    <div class="row no-margin">
+        <div class="block-fancy-colored"></div>
+    </div>
     <div class="row">
-        <div class="col-md-4 block-outside">
-            <?php echo lcms::Template()->getSectieContent($DATA['page'], 'nieuws-activiteiten'); ?>
+        <div class="block-fancy">
+            <div class="block-fancy-content">
+                <?php echo lcms::Template()->getSectieContent($DATA['page'], 'nieuws-activiteiten'); ?>
+            </div>
         </div>
-        <div class="col-md-4 block-middle-wrapper">
-            <div class="block-middle">
+        <div class="block-fancy">
+            <div class="block-fancy-content">
                 <?php echo lcms::Template()->getSectieContent($DATA['page'], 'waarom-dc'); ?>
             </div>
-            <div class="col-md-4 block-fix">
-                <img src="img/home-panel-left.jpg" class="panel">
-                <img src="img/home-panel-right.jpg" class="panel pull-right">
-            </div>
         </div>
-        <div class="col-md-4 block-outside">
-            <?php echo lcms::Template()->getSectieContent($DATA['page'], 'monnikskap'); ?>
+        <div class="block-fancy">
+            <div class="block-fancy-content">
+                <?php echo lcms::Template()->getSectieContent($DATA['page'], 'monnikskap'); ?>
+            </div>
         </div>
     </div>
 </div>
