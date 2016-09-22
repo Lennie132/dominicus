@@ -5,7 +5,6 @@ lcms_client_script::add_header_js('flexmenu.min.js');
 lcms_client_script::add_header_js('priority-nav.js');
 lcms_client_script::add_header_js('main.js');
 ?>
-
 <header>
     <div class="header-wrapper">
         <div class="header-main">
@@ -33,6 +32,10 @@ lcms_client_script::add_header_js('main.js');
                     }
                 }
                 ?>
+                <li class="social-item">
+                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FDominicusCollege&width=116&layout=button_count&action=like&show_faces=false&share=false&height=21&appId" width="130" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </li>
+
             </ul>
         </div>
 

@@ -30,13 +30,17 @@
         .social-list {
             display: inline-block;
             vertical-align: top;
-            width: 100px; 
+            width: 160px; 
             margin: 0;
             padding: 0;
             text-align: right;
             list-style-type: none;
             .social-item {
                 display: inline-block;
+                margin-right: 10px;
+                &:last-child {
+                    margin-right: 0;
+                }
                 .social-link {
                     span {
                         color: @kleur3;
