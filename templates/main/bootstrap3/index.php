@@ -43,7 +43,7 @@
 
         /** custom JS inladen * */
         //lcms_client_script::add_js('client/template/custom/js/plugins.js', true);
-        //lcms_client_script::add_js('client/template/custom/js/main.js', true);
+        lcms_client_script::add_main_js('js/main.js',true);
 
         /** Google analytics * */
         analytics_code();

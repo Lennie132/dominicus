@@ -104,14 +104,63 @@ h1, h2, h3, h4, h5, h6{
             padding-top: 330px;
         }
         .block-in-beeld {
-            padding: 15px;
-            background-color: @kleur1;
+            position: relative;
+            padding: 15px 15px 15px 0;
             height: 470px;
+            iframe {
+                position: absolute;
+                padding-left: 5%;
+                width: 100%;
+                height: 340px;
+                z-index: 10;
+            }
+            h2 {
+                vertical-align: bottom;
+                position: absolute;
+                bottom: 0;
+                height: 260px;
+                width: 90%;
+                margin: 0;
+                padding: 190px 25px 25px;
+                font-size: 36px;
+                color: @kleur3;
+                background-color: @kleur1;
+            }
         }
         .block-op-zoek {
-            padding: 15px;
+            padding: 1px;
+            position: relative;
             background-color: @kleur1;
             height: 800px;
+            width: 90%;
+
+            h2 {
+                padding-left: 25%;
+                font-size: 36px;
+                color: @kleur3;
+            }
+
+            img {
+                position: relative;
+                margin: 25px 0;
+                width: 100%!important;
+                height: auto!important;
+                right: ~'calc(-7px - 10%)';
+            }
+
+            p {
+                display: block;
+                padding: 0 10% 10px;
+                font-size: 24px;
+                height: 250px;
+                line-height: 30px;
+                margin-bottom: 0;
+            }
+            a {
+                padding: 0 10% 10px;
+                font-size: 20px;
+                font-weight: bold;
+            }
         }
     }
 
@@ -129,7 +178,7 @@ h1, h2, h3, h4, h5, h6{
             background-image: url('img/home-btn-background.jpg');
             background-size: cover;
             background-position: center;
-            
+
             h2 {
                 margin: 0;
                 text-align: center;
@@ -200,7 +249,7 @@ h1, h2, h3, h4, h5, h6{
 
 .bottom-row {
     padding: 15px 0 30px 0;
-    
+
     .row {
         margin-left: 10px;
         margin-right: 10px;
