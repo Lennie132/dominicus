@@ -1,0 +1,62 @@
+.transition(@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    transition: @transition;
+}
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+@white-color: #fff;
+@black-color: #000;
+
+.faq-wrapper{
+    margin-bottom: 15px;
+    .faq-item{
+        .transition(all .3s);
+        .vraag{
+            display: block;
+            font-size: 16px;
+            cursor: pointer;
+            span{
+                font-size: 20px;
+            }
+        }
+        .antwoord{
+            display: none;
+            border-left: 2px solid @kleur2;
+            padding: 0 15px;
+            margin: 15px 0;
+        }
+        &:hover{
+            .vraag{
+                h2 {
+                    font-weight: bold;
+                }
+            }
+        }
+        &.active{
+            margin-bottom: 20px;
+            .vraag{
+                h2 {
+                    font-weight: bold;   
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   FAQ responsive
+   ========================================================================== */
+@media (max-width: 1199px){
+
+}
+
+@media (max-width: 991px){
+
+}
+
+@media (max-width: 767px){
+
+}
