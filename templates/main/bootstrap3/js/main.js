@@ -5,4 +5,6 @@ $(document).ready(function () {
     $(".block-fancy-content p").dotdotdot({
         watch: "window"
     });
+
+    $('[data-toggle="tooltip"]').tooltip();
 });

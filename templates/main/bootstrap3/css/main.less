@@ -481,13 +481,28 @@ h1, h2, h3, h4, h5, h6{
    Formulier
    ========================================================================== */
 form{
-    .formulier_div{
+    .formulier_div {
         margin-bottom: 1rem;
         width: 100%;
         &:after {
             content: "";
             display: table;
             clear: both;
+        }
+        &.hoofdkop {
+            padding-top: 20px;
+            span {
+                color: @kleur2;
+                font-size: 22px;
+                font-weight: bold;
+            }
+        }
+        &.tussenkop {
+            span {
+                color: @kleur2;
+                font-size: 20px;
+                font-weight: bold;
+            }
         }
         label{
             font-weight: bold;
@@ -496,7 +511,7 @@ form{
             padding-bottom: .5rem;
             margin-bottom: 0;
             float: left;
-            width: 16.666667%;
+            width: 30%;
             position: relative;
             min-height: 1px;
             padding-right: 15px;
@@ -516,14 +531,41 @@ form{
             border: 1px solid rgba(0,0,0,.15);
             border-radius: .25rem;
             float: left;
-            width: 41.666667%;
+            width: 50%;
             position: relative;
             min-height: 1px;
             padding-right: 15px;
             padding-left: 15px;
         }
+        .formulier_radio, .formulier_check {
+            margin-left: 30%;
+            width: 100%;
+            height: auto;
+            float: left;
+            > input {
+                width: 20px;
+                margin-top: 12px;
+            }
+            > label {
+                width: auto;
+            }
+        }
         textarea{
             height: 150px;
+        }
+        .form_tooltip {
+            font-weight: bold;
+            font-family: @ubuntu;
+            margin-bottom: 0;
+            float: left;
+            margin-left: 10px;
+            position: relative;
+            padding: 8px 12px;
+            border-radius: 16px;
+            font-size: 24px;
+            background-color: @kleur2;
+            color: @white-color;
+            cursor: pointer;
         }
     }
     .formulier_div_submit{
@@ -537,7 +579,7 @@ form{
             padding: .5rem 1rem;
             font-size: 1rem;
             border-radius: .25rem;
-            margin-left: 16.666667%;
+            margin-left: 30%;
         }
     }
 }
@@ -553,6 +595,9 @@ form{
             }
             input, textarea{
                 width: 50%;
+            }
+            .formulier_radio, .formulier_check {
+                margin-left: 33.33333333%;
             }
             textarea{
 
@@ -576,6 +621,9 @@ form{
             }
             input, textarea{
                 width: 100%;
+            }
+            .formulier_radio, .formulier_check {
+                margin-left: 5%;
             }
             textarea{
 
