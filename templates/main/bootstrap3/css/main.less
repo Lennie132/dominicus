@@ -156,10 +156,23 @@ h1, h2, h3, h4, h5, h6{
                 font-weight: bold;
                 color: @kleur3;
             }
-
             img {
                 position: relative;
-                margin: 25px 0;
+                margin: 25px 0 0 0;
+                width: 100%!important;
+                height: auto!important;
+                right: ~'calc(-7px - 10%)';
+            }
+            pre {
+                display: block;
+                background-color: @kleur2;
+                color: @white-color;
+                font-family: @ubuntu;
+                font-size: 24px;
+                text-align: center;
+                padding: 15px;
+                position: relative;
+                margin: 0 0 25px 0;
                 width: 100%!important;
                 height: auto!important;
                 right: ~'calc(-7px - 10%)';
@@ -169,7 +182,7 @@ h1, h2, h3, h4, h5, h6{
                 display: block;
                 padding: 0 10% 10px;
                 font-size: 24px;
-                height: 250px;
+                height: 200px;
                 line-height: 30px;
                 margin-bottom: 0;
             }
@@ -215,34 +228,111 @@ h1, h2, h3, h4, h5, h6{
         > .block-wrapper-left {
             padding: 0 15px 0 0;
             .block-kom-kijken {
+                position: relative;
                 height: 530px;
-                padding: 1px;
-                background-color: @kleur4;
 
+                img {
+                    .img-responsive;
+                    height: 530px!important;
+                    width: 100%!important;
+                    object-fit: cover;
+                }
+                .icon-kom-kijken {
+                    position: absolute;
+                    object-fit: none;
+                    margin: 0;
+                    width: 95px!important;
+                    height: auto!important;
+                    left: ~'calc(50% - 47px)';
+                    bottom: 70px;
+                    z-index: 5;
+                }
+                h2 {
+                    position: absolute;
+                    text-align: center;
+                    bottom: 0;
+                    width: 100%;
+                    margin: 0;
+                    padding: 45px 10px 20px;
+                    font-size: 36px;
+                    font-weight: bold;
+                    background-color: @kleur4;
+                    a {
+                        color: @white-color;
+                    }
+                }
             }
         }
+
         > .block-wrapper-right {
             padding: 0 0 0 15px;
             .block-info-groep8 {
-                padding: 1px;
+                position: relative;
                 height: 250px;
-                background-color: @kleur4;
+
+                img {
+                    .img-responsive;
+                    height: 250px!important;
+                    width: 100%!important;
+                    object-fit: cover;
+                }
+                h2 {
+                    position: absolute;
+                    text-align: center;
+                    bottom: 0;
+                    width: 100%;
+                    margin: 0;
+                    padding: 15px 10px;
+                    font-size: 26px;
+                    font-weight: bold;
+                    background-color: @kleur2;
+                    a {
+                        color: @white-color;
+                    }
+                }
             }
             .block-maak-app {
-                padding: 1px;
-                margin-top: 30px;
+                position: relative;
                 height: 250px;
-                background-color: @kleur4;
+                margin-top: 30px;
+
+                img {
+                    .img-responsive;
+                    height: 250px!important;
+                    width: 100%!important;
+                    object-fit: cover;
+                }
+                h2 {
+                    position: absolute;
+                    text-align: center;
+                    bottom: 0;
+                    width: 100%;
+                    margin: 0;
+                    padding: 15px 10px;
+                    font-size: 26px;
+                    font-weight: bold;
+                    color: @white-color;
+                    background-color: @kleur4;
+                    a {
+                        color: @white-color;
+                    }
+                }
             }
         }
         > .block-afbeelding {
+            padding: 0;
             margin-top: 30px;
-            background-color: @kleur1;
             height: 410px;
+            .background-image {
+                background-size: cover;
+                background-position: center;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+            }
         }
     }
 }
-
 .middle-row {
     padding: 0 15px;
     .block-wrapper { 
@@ -251,18 +341,50 @@ h1, h2, h3, h4, h5, h6{
             height: auto;
             img {
                 .img-responsive;
-                height: auto!important;
-                width: auto!important;
+                height: 380px!important;
+                width: 100%!important;
+                object-fit: cover;
             }
             h2 {
-                padding: 15px;
+                padding: 25px 20px;
                 margin: 0;
                 font-size: 36px;
-                background-color: @kleur4;
+                font-weight: bold;
+                color: @kleur3;
+                background-color: @grey-light;
+            }
+            &.block-talenten {
+                h2 {
+                    margin-top: 30px;
+                }
+                .icon-talenten {
+                    position: absolute;
+                    margin: 0;
+                    width: 60px!important;
+                    height: auto!important;
+                    bottom: 35px;
+                    right: 40px;
+                }
+            }
+            &.block-filmmakers {
+                h2 {
+                    margin-bottom: 30px;
+                }
+                .icon-filmmakers {
+                    position: absolute;
+                    margin: 0;
+                    width: 60px!important;
+                    height: auto!important;
+                    top: 35px;
+                    right: 40px;
+                }
             }
         }
-    } 
-}
+
+
+    }
+
+} 
 
 .bottom-row {
     padding: 15px 0 30px 0;
@@ -282,6 +404,7 @@ h1, h2, h3, h4, h5, h6{
             left:0;
             background-color: @kleur4;
             width: ~'calc(33.33% + 20px)';
+            height: 460px;
             float: left;
             padding: 0;
             margin: 0;
@@ -332,20 +455,27 @@ h1, h2, h3, h4, h5, h6{
                 }
             }
             .block-fancy-content {
-                margin: 20% 10%;
+                margin: 5% 10%;
                 display: inline-block;
                 position: relative;
-            }
+                h2 {
+                    font-size: 36px;
+                    font-weight: bold;
+                    color: @kleur3;
+                    text-align: center;
+                }
+                p {
+                    height: 260px;
+                    padding-top: 40px;
+                    font-size:22px;
+                    line-height:28px;
 
-            /*        h2 {
-                        font-size: 44px;
-                        color: @kleur3;
-                        margin-bottom: 25px;
-                    }
-                    p {
-                        font-size: 20px;
-                        line-height: 26px;
-                    }*/
+                }
+                a {
+                    font-weight: bold;
+                    font-size:20px;
+                }
+            }
         }
     }
 }
