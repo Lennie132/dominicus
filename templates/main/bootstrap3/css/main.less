@@ -383,8 +383,7 @@ h1, h2, h3, h4, h5, h6{
             }
         }
     }
-} 
-
+}
 .bottom-row {
     padding: 15px 0 30px 0;
 
@@ -479,6 +478,230 @@ h1, h2, h3, h4, h5, h6{
     }
 }
 
+.groep-8-top-row {
+    padding: 0 15px;
+    .block-wrapper { 
+        padding: 0 15px 15px 15px;   
+        &.top-left-block {
+            padding-top: 300px;
+        }
+        .block-info-ouders {
+            position: relative;
+            padding: 15px 15px 15px 0;
+            height: 500px;
+            img {
+                position: absolute;
+                object-fit: cover;
+                padding-left: 5%;
+                width: 100%!important;
+                height: 360px!important;
+                z-index: 10;
+            }
+            h2 {
+                vertical-align: bottom;
+                position: absolute;
+                text-align: right;
+                bottom: 0;
+                width: 90%;
+                margin: 0;
+                padding: 190px 20px 25px;
+                font-size: 34px;
+                font-weight: bold;
+                color: @kleur3;
+                background-color: @kleur4;
+            }
+        }
+        .block-hallo-achtste-groeper {
+            padding: 1px;
+            position: relative;
+            background-color: @kleur1;
+            height: 800px;
+            width: 90%;
+            .icon-op-zoek {
+                position: absolute;
+                margin: 0;
+                width: 60px!important;
+                top: 30px;
+                left: 35px;
+            }
+            h2 {
+                padding-left: 25%;
+                font-size: 36px;
+                font-weight: bold;
+                color: @kleur3;
+            }
+            img {
+                position: relative;
+                margin: 25px 0 0 0;
+                width: 100%!important;
+                height: auto!important;
+                right: ~'calc(-7px - 10%)';
+            }
+            pre {
+                display: block;
+                background-color: @kleur3;
+                color: @white-color;
+                font-family: @ubuntu;
+                font-size: 24px;
+                line-height: 26px;
+                white-space: normal;
+                text-align: center;
+                padding: 15px;
+                position: relative;
+                margin: 0 0 25px 0;
+                width: 100%!important;
+                height: auto!important;
+                right: ~'calc(-7px - 10%)';
+            }
+
+            p {
+                display: block;
+                padding: 0 10% 10px;
+                font-size: 24px;
+                height: 200px;
+                line-height: 30px;
+                margin-bottom: 0;
+            }
+            a {
+                padding: 0 10% 10px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+        .block-schrijf-in {
+            position: relative;
+            height: 89px;
+            .icon-kom-kijken {
+                position: absolute;
+                object-fit: none;
+                margin: 0;
+                width: 90px!important;
+                height: auto!important;
+                left: ~'calc(50% - 47px)';
+                bottom: 70px;
+                z-index: 5;
+            }
+            h2 {
+                position: absolute;
+                text-align: center;
+                bottom: 0;
+                width: 100%;
+                margin: 0;
+                padding: 25px 10px;
+                font-size: 36px;
+                font-weight: bold;
+                background-color: @kleur2;
+                a {
+                    color: @white-color;
+                }
+            }
+        }
+        .block-kom-kijken-groep8 {
+            position: relative;
+            height: 680px;
+            margin-top:30px;
+
+            img {
+                .img-responsive;
+                height: 581px!important;
+                width: 100%!important;
+                object-fit: cover;
+            }
+            h2 {
+                position: absolute;
+                text-align: center;
+                bottom: 0;
+                width: 100%;
+                margin: 0;
+                padding: 30px 10px;
+                font-size: 36px;
+                font-weight: bold;
+                background-color: @kleur4;
+                a {
+                    color: @white-color;
+                }
+            }
+        }
+    }
+}
+
+.groep-8-bottom-row {
+    padding: 0 15px;
+    .block-wrapper { 
+        padding: 15px;
+        .block-filmmakers {
+            height: auto;
+            img {
+                .img-responsive;
+                height: 380px!important;
+                width: 100%!important;
+                object-fit: cover;
+            }
+            h2 {
+                padding: 25px 20px;
+                margin: 0 0 30px 0;
+                font-size: 36px;
+                font-weight: bold;
+                color: @kleur3;
+                background-color: @grey-light;
+            }
+            .icon-filmmakers {
+                position: absolute;
+                margin: 0;
+                width: 60px!important;
+                height: auto!important;
+                top: 35px;
+                right: 40px;
+            }
+        }
+        .block-10-vragen {
+            height: 500px;
+            background-color: @kleur2;
+            color: @white-color;
+            img {
+                .img-responsive;
+                height: 200px!important;
+                width: 100%!important;
+                object-fit: cover;
+            }
+            h2 {
+                padding: 25px 20px;
+                margin: 0 0 30px 0;
+                font-size: 36px;
+                font-weight: bold;
+                color: @white-color;
+                
+            }
+            .icon-10-vragen {
+                position: absolute;
+                margin: 0;
+                width: 60px!important;
+                height: auto!important;
+                top: 35px;
+                right: 40px;
+            }
+        }
+        .block-monnikskap {
+             height: 500px;
+            background-color: @grey-light;
+            color: @kleur3;
+            img {
+                .img-responsive;
+                height: 200px!important;
+                width: 100%!important;
+                object-fit: cover;
+            }
+            h2 {
+                padding: 25px 20px;
+                margin: 0 0 30px 0;
+                font-size: 36px;
+                font-weight: bold;
+                color: @kleur3;
+                
+            }
+        }
+    }
+}
 /* ==========================================================================
    Formulier
    ========================================================================== */
