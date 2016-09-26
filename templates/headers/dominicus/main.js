@@ -26,7 +26,13 @@ $(document).ready(function () {
 
         //OPTIE 2:
         //Als de pagina zelf geen content bevat, altijd sub-menu triggeren en link uitzetten
-        e.preventDefault();
+        //e.preventDefault();
+        
+        //OPTIE CUSTOM MADE:
+        if (!$(this).parents('li.isparent').eq(0).hasClass('has-content')) {
+            e.preventDefault();
+        }
+
 
         //Vervolg van de functie voor diepte 1
         if ($(this).parents('li.isparent').eq(0).hasClass('is-open-1')) {
