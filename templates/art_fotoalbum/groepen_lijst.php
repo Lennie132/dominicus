@@ -1,4 +1,8 @@
 <?php
+
+
+if($DATA['page'] != get_variabele('page_home')){
+
 //--- Groepen ophalen
 $order = 'g.gewicht ASC';
 $groepen_arr = get_artikel_groepen_arr($DATA['group'], $order);
@@ -97,3 +101,5 @@ $divideGetal = 0;
     }
     ?>
 </ul>
+
+<?php } ?>
