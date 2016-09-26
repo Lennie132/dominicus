@@ -14,7 +14,7 @@ $config = array(
 );
 
 //--- Groepen ophalen
-$groepen_arr = get_artikel_groepen_arr('', 'g.gewicht ASC');
+$groepen_arr = get_artikel_groepen_arr('*', 'g.gewicht ASC');
 
 $art_arr = get_artikelen_arr($config['tabelnaam'], $config['group_id'], $config['order'], $config['artikel_id'], $config['limit_links'], $config['where']);
 if (!empty($art_arr)) {
@@ -23,12 +23,17 @@ if (!empty($art_arr)) {
 
         <?php
         //--- Voeg albumtitel toe als groep gezet is
+        
         if ($DATA['group'] != '' && $DATA['group'] > 0) {
             ?>
             <div class="row">
                 <div class="col-xs-12">
                     <h2 class="album">
-                        <?= $groepen_arr[$DATA['group']]['group_name']; ?>
+                        <?php if ($groepen_arr[$DATA['group']]['group_name'] == '') {
+                            echo $art_arr[0]['group_name'];
+                        } else {
+                            echo $groepen_arr[$DATA['group']]['group_name'];
+                        } ?>
                     </h2>
                 </div>
             </div>

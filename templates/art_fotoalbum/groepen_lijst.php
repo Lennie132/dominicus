@@ -32,23 +32,23 @@ $divideGetal = 0;
             <li class="divider"><br/></li>
             <?php
             $divideTeller = 0;
-            }
+        }
 
-            //--- Voeg albumtitel toe als groep gezet is
-            if ($DATA['group_id'] != '') {
-                ?>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h2 class="album"> TERUG Albums
-                            <?= $groepen_arr[$DATA['group']]['group_name']; ?>
-                        </h2>
-                    </div>
+        //--- Voeg albumtitel toe als groep gezet is
+        if ($DATA['group_id'] != '') {
+            ?>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="album"> TERUG Albums
+                        <?= $groepen_arr[$DATA['group']]['group_name']; ?>
+                    </h2>
                 </div>
-                <?php
-            }
+            </div>
+            <?php
+        }
 
-            //Afbeelding ophalen voor groep-afbeelding
-            $config = array(
+        //Afbeelding ophalen voor groep-afbeelding
+        $config = array(
             'tabelnaam' => $tabelnaam,
             'group_id' => $groep['group_id'],
             'order' => 'a.gewicht ASC', // bv: RAND()
@@ -56,12 +56,12 @@ $divideGetal = 0;
             'limit_links' => 0,
             'where' => '',
             'module' => 0,
-            );
-            // Groepen ophalen
-            $groepen_arr = get_artikel_groepen_arr('', 'g.gewicht ASC');
+        );
+        // Groepen ophalen
+        $groepen_arr = get_artikel_groepen_arr('', 'g.gewicht ASC');
 
-            $art_arr = get_artikelen_arr($config['tabelnaam'], $config['group_id'], $config['order'], $config['artikel_id'], $config['limit_links'], $config['where']);
-            if (!empty($art_arr)) {
+        $art_arr = get_artikelen_arr($config['tabelnaam'], $config['group_id'], $config['order'], $config['artikel_id'], $config['limit_links'], $config['where']);
+        if (!empty($art_arr)) {
             ?>
             <li class="<?php echo $class ?> col-md-4">
                 <h2><a href="<?php echo maak_link($DATA['page'], '', '', $groep['group_id']) ?>" title="Back"><?php echo $groep['group_name'] ?></a></h2>
@@ -76,13 +76,20 @@ $divideGetal = 0;
                             <img src="<?= lcms::resize($img, 480, 320, '480x320', 80); ?>" class="img-responsive" alt="<?php echo $groep['group_name'] ?>">
                         </a>
                     </div>
-                    <?php
-                }
-                ?>
+                <?php } ?>
             </li>
 
-            <?php
-        }
+        <?php } else {
+            ?>
+            <li class="<?php echo $class ?> col-md-4">
+                <h2><a href="<?php echo maak_link($DATA['page'], '', '', $groep['group_id']) ?>" title="Back"><?php echo $groep['group_name'] ?></a></h2>
+                <div class="gallery-item">
+                    <a class="fancybox" rel="<?= $art_arr[0]['group_id']; ?>" href="<?php echo maak_link($DATA['page'], '', '', $groep['group_id']) ?>" title="<?php echo $groep['group_name'] ?>">
+                            <img src="img/no-preview.JPG" class="img-responsive" alt="<?php echo $groep['group_name'] ?>">
+                        </a>
+                </div>
+            </li>
+        <?php }
         ?>
 
         <?php
