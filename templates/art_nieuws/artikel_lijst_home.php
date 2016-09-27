@@ -27,7 +27,7 @@ if (!empty($art_arr)) {
         <?php
         foreach ($art_arr as $key => $artikel) {
             $oldDate = $artikel['Datum'];
-            $newDate = date("d-m-Y", strtotime($oldDate));
+            $newDate = date("d-m", strtotime($oldDate));
             ?>
             <div class="col-xs-12">
                 <div class="newsitem-home">
