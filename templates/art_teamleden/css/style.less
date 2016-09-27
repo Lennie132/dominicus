@@ -1,0 +1,85 @@
+.transition(@transition) {
+    -webkit-transition: @transition;
+    transition: @transition;
+}
+
+
+/* ==========================================================================
+   Nieuwsitems
+   ========================================================================== */
+.teacher-wrapper{
+    margin:16px 0;
+
+    .filter-wrapper {
+
+        text-align: center;
+        .filter-item {
+            display: inline-block;
+            position: relative;
+            background: #88b7d5;
+            padding: 15px;
+            background-color: @kleur2;
+            color: #fff;
+            font-size: 18px;
+            line-height: 32px;
+            margin: 5px 10px 30px 10px;
+            border: none;
+
+            select {
+                color: black;
+                font-size: 16px;
+                width: 200px;
+            }
+            //&.active {
+            &:after {
+                top: 100%;
+                left: 50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-color: rgba(136, 183, 213, 0);
+                border-top-color: @kleur2;
+                border-width: 10px;
+                margin-left: -10px;
+            }
+            // }
+        }
+    }
+}
+.teacher-item{
+    min-height: 360px;
+    img {
+        .transition(all 0.3s);
+        &:hover {
+            transform: scale(0.9);
+        }
+    }
+    .teacher-name {
+        text-align: center;
+        h2 {
+
+        }
+    }   
+}
+.teacher-detail {
+    margin-top: 20px;
+    min-height: 360px;
+    .teacher-name {
+        text-align: center;
+        h2 {
+
+        }
+    }   
+}
+
+.pagination{
+    margin:5px 0;
+    text-align:center;
+}
+
+@media (max-width: 767px){
+
+}
