@@ -214,12 +214,20 @@ h1, h2, h3, h4, h5, h6{
             h2 {
                 margin: 0;
                 text-align: center;
-                line-height: 125px;
-                font-size: 40px;
-                color: @white-color;
+
                 .transition( all 0.3s);
+                a {
+                    line-height: 125px;
+                    font-size: 40px;
+                    color: @white-color;
+                    display: block;
+                }
                 &:hover {
-                    color: @kleur2;
+                    a {
+                        color: @kleur2;
+                        text-decoration: none;
+                    }
+
                     border-bottom: 15px solid @kleur2;
                 }
             }
@@ -457,10 +465,17 @@ h1, h2, h3, h4, h5, h6{
                 display: inline-block;
                 position: relative;
                 h2 {
+                    text-align: center;
                     font-size: 36px;
                     font-weight: bold;
                     color: @kleur3;
-                    text-align: center;
+                    a {
+                        font-size: 36px;
+                        font-weight: bold;
+                        color: @kleur3;
+
+                    }
+
                 }
                 p {
                     height: 260px;
@@ -670,7 +685,7 @@ h1, h2, h3, h4, h5, h6{
                 font-size: 36px;
                 font-weight: bold;
                 color: @white-color;
-                
+
             }
             .icon-10-vragen {
                 position: absolute;
@@ -682,7 +697,7 @@ h1, h2, h3, h4, h5, h6{
             }
         }
         .block-monnikskap {
-             height: 500px;
+            height: 500px;
             background-color: @grey-light;
             color: @kleur3;
             img {
@@ -697,7 +712,7 @@ h1, h2, h3, h4, h5, h6{
                 font-size: 36px;
                 font-weight: bold;
                 color: @kleur3;
-                
+
             }
         }
     }
