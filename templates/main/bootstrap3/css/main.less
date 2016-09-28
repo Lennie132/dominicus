@@ -85,6 +85,7 @@ h1, h2, h3, h4, h5, h6{
    ========================================================================== */
 .content-wrapper{
     padding: 40px 0;
+    line-height: 26px;
     color: @black-color;
 
     h2 {
@@ -152,9 +153,12 @@ h1, h2, h3, h4, h5, h6{
             }
             h2 {
                 padding-left: 25%;
-                font-size: 36px;
-                font-weight: bold;
-                color: @kleur3;
+                a{
+                    padding: 0;
+                    font-size: 36px;
+                    font-weight: bold;
+                    color: @kleur3;
+                }
             }
             img {
                 position: relative;
@@ -184,7 +188,7 @@ h1, h2, h3, h4, h5, h6{
                 display: block;
                 padding: 0 10% 10px;
                 font-size: 24px;
-                height: 200px;
+                //height: 200px;
                 line-height: 30px;
                 margin-bottom: 0;
             }
@@ -532,18 +536,22 @@ h1, h2, h3, h4, h5, h6{
             background-color: @kleur1;
             height: 800px;
             width: 90%;
-            .icon-op-zoek {
+            .icon-duim {
                 position: absolute;
                 margin: 0;
                 width: 60px!important;
+                height: 60px!important;
                 top: 30px;
                 left: 35px;
             }
             h2 {
                 padding-left: 25%;
-                font-size: 36px;
-                font-weight: bold;
-                color: @kleur3;
+                a{
+                    padding: 0;
+                    font-size: 36px;
+                    font-weight: bold;
+                    color: @kleur3;
+                }
             }
             img {
                 position: relative;
@@ -567,13 +575,19 @@ h1, h2, h3, h4, h5, h6{
                 width: 100%!important;
                 height: auto!important;
                 right: ~'calc(-7px - 10%)';
+                a{
+                    line-height: 26px;
+                    color: @white-color;
+                    font-family: @ubuntu;
+                    font-size: 24px;
+                    font-weight: normal;
+                }
             }
 
             p {
                 display: block;
                 padding: 0 10% 10px;
                 font-size: 24px;
-                height: 200px;
                 line-height: 30px;
                 margin-bottom: 0;
             }
@@ -586,14 +600,14 @@ h1, h2, h3, h4, h5, h6{
         .block-schrijf-in {
             position: relative;
             height: 89px;
-            .icon-kom-kijken {
+            .icon-inschrijven {
                 position: absolute;
                 object-fit: none;
                 margin: 0;
-                width: 90px!important;
-                height: auto!important;
-                left: ~'calc(50% - 47px)';
-                bottom: 70px;
+                width: 45px!important;
+                height: 45px!important;
+                left: 20px;
+                bottom: 25px;
                 z-index: 5;
             }
             h2 {
@@ -636,6 +650,16 @@ h1, h2, h3, h4, h5, h6{
                     color: @white-color;
                 }
             }
+            .icon-kom-kijken {
+                position: absolute;
+                object-fit: none;
+                margin: 0;
+                width: 65px!important;
+                height: 65px!important;
+                left: 20px;
+                bottom: 20px;
+                z-index: 5;
+            }
         }
     }
 }
@@ -654,6 +678,7 @@ h1, h2, h3, h4, h5, h6{
             }
             h2 {
                 padding: 25px 20px;
+                text-align: right;
                 margin: 0 0 30px 0;
                 font-size: 36px;
                 font-weight: bold;
@@ -665,8 +690,8 @@ h1, h2, h3, h4, h5, h6{
                 margin: 0;
                 width: 60px!important;
                 height: auto!important;
-                top: 35px;
-                right: 40px;
+                top: 40px;
+                left: 40px;
             }
         }
         .block-10-vragen {
@@ -681,19 +706,32 @@ h1, h2, h3, h4, h5, h6{
             }
             h2 {
                 padding: 25px 20px;
-                margin: 0 0 30px 0;
+                margin: 0;
                 font-size: 36px;
                 font-weight: bold;
-                color: @white-color;
 
+                text-align: center;
+                a {
+                    font-size: 36px;
+                    font-weight: bold;
+                    color: @white-color;
+                }
             }
-            .icon-10-vragen {
+            h3 {
+                padding: 0 20px;
+                margin-top: 0;
+                text-align: center;
+                font-style: italic;
+                font-size: 38px;
+            }
+
+            .icon-vragen {
                 position: absolute;
                 margin: 0;
-                width: 60px!important;
+                width: 100px!important;
                 height: auto!important;
-                top: 35px;
-                right: 40px;
+                bottom: 35px;
+                left: ~'calc(50% - 50px)';
             }
         }
         .block-monnikskap {
@@ -708,10 +746,29 @@ h1, h2, h3, h4, h5, h6{
             }
             h2 {
                 padding: 25px 20px;
-                margin: 0 0 30px 0;
+                margin: 0;
                 font-size: 36px;
                 font-weight: bold;
-                color: @kleur3;
+                text-align: center;
+                a {
+                    font-size: 36px;
+                    font-weight: bold;
+                }
+            }
+            h3 {
+                padding: 0 20px;
+                margin-top: 0;
+                text-align: center;
+                font-style: italic;
+            }
+            p {
+                padding: 0 20px;
+                line-height: 26px;
+            }
+            a {
+                padding: 0 20px;
+                font-size: 18px;
+                font-weight: bold;
             }
         }
     }
