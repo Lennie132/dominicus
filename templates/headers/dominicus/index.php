@@ -10,7 +10,19 @@ lcms_client_script::add_header_js('main.js');
         <div class="header-bar">
             <div class="header-main">
                 <div class="header-logo">
-                    <?php echo get_logo_html(); ?>
+                    <div class="wrapper-logo">
+                        <?php echo get_logo_html(); ?>
+                    </div>
+                    <div class="wrapper-logo-no-text">
+                        <div class="logo" itemscope="" itemtype="http://schema.org/Organization">
+                            <a itemprop="url" class="img-responsive" href="http://dev.lined.nl/dominicus2016/" title="Dominicus College">
+                                <img itemprop="logo" src="<?= lcms::resize('img/dominicus-logo-no-text.png', 239, 500, '', 80); ?>" alt="Dominicus College" class="img-responsive">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="wrapper-logo-160-jaar">
+                        <img itemprop="logo" src="<?= lcms::resize('img/logo-160-jaar.png', 120, 120, '', 80); ?>" alt="Dominicus College" class="img-responsive">
+                    </div>
                 </div>
 
                 <?php // lcms::Menu()->setNiveausDiep(2)->setClass('main-nav list-unstyled')->getHTML(); ?>

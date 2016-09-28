@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    checkScrollPositionTop();
+
+
     var nav = priorityNav.init({
         mainNavWrapper: ".header-main", // mainnav wrapper selector (must be direct parent from mainNav)
         mainNav: ".header-nav", // mainnav selector. (must be inline-block)
@@ -14,6 +17,14 @@ $(document).ready(function () {
         } // executed when item is moved back to main menu);
     });
 
+
+    // Logo tekst weghalen bij scrollen
+    $(window).scroll(function () {
+        checkScrollPositionTop();
+
+    });
+
+
     // Functie voor het open van submenu's
     $('.header-nav > li.isparent > a').on('click', function (e) {
         //OPTIE 1:
@@ -26,12 +37,7 @@ $(document).ready(function () {
 
         //OPTIE 2:
         //Als de pagina zelf geen content bevat, altijd sub-menu triggeren en link uitzetten
-        //e.preventDefault();
-        
-        //OPTIE CUSTOM MADE:
-        if (!$(this).parents('li.isparent').eq(0).hasClass('has-content')) {
-            e.preventDefault();
-        }
+        e.preventDefault();
 
 
         //Vervolg van de functie voor diepte 1
@@ -75,3 +81,23 @@ $(document).ready(function () {
 
     });
 });
+
+/**
+ * Plaatst ander logo zonder tekst bij scrollen
+ */
+function checkScrollPositionTop() {
+    if ($(window).width() < 991) {
+        $('.wrapper-logo').removeClass("not-visible");
+        $('.wrapper-logo-no-text').addClass("not-visible");
+    } else {
+        var scrollPosition = $(window).scrollTop();
+        if (scrollPosition > 70) {
+            $('.wrapper-logo').addClass("not-visible");
+            $('.wrapper-logo-no-text').removeClass("not-visible");
+        }
+        else {
+            $('.wrapper-logo').removeClass("not-visible");
+            $('.wrapper-logo-no-text').addClass("not-visible");
+        }
+    }
+}
