@@ -48,16 +48,28 @@ if (!empty($artikel)) {
                             <?php if ($artikel['mentor']['DATA'] == 'ja') { ?>
                                 <p><span class="icon-directions_walk"></span> Mentor</i> </p>
                             <?php } ?>
-                            <p><a href="mailto:<?= $artikel['emailadres']['DATA']; ?>"><?= $artikel['emailadres']['DATA']; ?></a></p>
+                            <?php if ($artikel['emailadres']['DATA'] != '') { ?>
+                                <p><a href="mailto:<?= $artikel['emailadres']['DATA']; ?>"><?= $artikel['emailadres']['DATA']; ?></a></p>
+                            <?php } ?>
                             <?php if ($artikel['afdelingen']['DATA'] != '') { ?>
                                 <h3>Afdelingen</h3>
                                 <p><?= $artikel['afdelingen']['DATA']; ?></p>
                             <?php } ?>
                             <?php if ($artikel['vakken']['DATA'] != '') { ?>
-                            <h3>Vakken</h3>
+                                <h3>Vakken</h3>
                                 <p><?= $artikel['vakken']['DATA']; ?></p>
                             <?php } ?>
-                           
+
+                            <?php if ($artikel['quote']['DATA'] != '') { ?>
+                                <h3>Quote</h3>
+                                <p class="teacher-quote">"<?= $artikel['quote']['DATA']; ?>"</p>
+                            <?php } ?>
+
+                            <?php if ($artikel['beschrijving']['DATA'] != '') { ?>
+                                <h3>Beschrijving</h3>
+                                <p><?= $artikel['beschrijving']['DATA']; ?></p>
+                            <?php } ?>
+
                         </div>
                     </div>
                 </div>
