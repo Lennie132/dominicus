@@ -38,12 +38,10 @@ if (!empty($art_arr)) {
                         <p class="newsitem-intro-p"><?= $artikel['Inleiding']; ?></p>
                     </div>
                     <div class="col-xs-12">
-                        <a class="read_more" href="<?= link::c($DATA['page'])->artikel_groep($artikel['page'])->artikel_id($artikel['artikel_id']); ?>" title="<?= $artikel['Titel']; ?>">
+                        <a class="read_more" href="<?= link::v('page_nieuws')->artikel_groep($artikel['page'])->artikel_id($artikel['artikel_id']); ?>" title="<?= $artikel['Titel']; ?>">
                         Lees meer<span class="icon-chevron_right"></span>
                     </a>
-                    </div>
-                    
-                    
+                    </div>             
                 </div>
             </div>
             <?php
