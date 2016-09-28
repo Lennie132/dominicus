@@ -477,16 +477,19 @@ h1, h2, h3, h4, h5, h6{
                         font-size: 36px;
                         font-weight: bold;
                         color: @kleur3;
-
                     }
-
+                }
+                h3 {
+                    padding: 0 20px;
+                    text-align: center;
+                    font-style: italic;
+                    color: @kleur3;
                 }
                 p {
-                    height: 260px;
-                    padding-top: 40px;
+                    height: 240px;
+                    padding-top: 25px;
                     font-size:22px;
                     line-height:28px;
-
                 }
                 a {
                     font-weight: bold;
@@ -496,6 +499,9 @@ h1, h2, h3, h4, h5, h6{
         }
     }
 }
+/* ==========================================================================
+   Home Groep 8 pagina
+   ========================================================================== */
 
 .groep-8-top-row {
     padding: 0 15px;
@@ -672,7 +678,7 @@ h1, h2, h3, h4, h5, h6{
             height: auto;
             img {
                 .img-responsive;
-                height: 380px!important;
+                height: 420px!important;
                 width: 100%!important;
                 object-fit: cover;
             }
@@ -695,7 +701,7 @@ h1, h2, h3, h4, h5, h6{
             }
         }
         .block-10-vragen {
-            height: 500px;
+            height: 550px;
             background-color: @kleur2;
             color: @white-color;
             img {
@@ -735,7 +741,7 @@ h1, h2, h3, h4, h5, h6{
             }
         }
         .block-monnikskap {
-            height: 500px;
+            height: 550px;
             background-color: @grey-light;
             color: @kleur3;
             img {
@@ -971,7 +977,13 @@ form{
 }
 
 @media (max-width: 991px){
-
+    .top-row {
+        .block-wrapper { 
+            &.top-left-block {
+                padding-top: 0;
+            }
+        }
+    }
 }
 
 @media (max-width: 767px){

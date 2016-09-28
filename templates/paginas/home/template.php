@@ -11,7 +11,7 @@
 
 <div class="top-row">
     <div class="row">
-        <div class="col-md-4 col-sm-6 block-wrapper top-left-block">
+        <div class="col-lg-4 col-md-6 block-wrapper top-left-block">
             <div class="block-in-beeld">
                 <img class="icon-in-beeld" src="img/icon-in-beeld.png">
                 <?php echo lcms::Template()->getSectieContent($DATA['page'], 'in-beeld'); ?>
@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <div class="col-md-4 col-sm-6 block-wrapper">
+        <div class="col-lg-4 col-md-6 block-wrapper">
             <div class="block-op-zoek">
                 <img class="icon-op-zoek" src="img/icon-op-zoek.png">
                 <?php echo lcms::Template()->getSectieContent($DATA['page'], 'op-zoek'); ?>
@@ -41,16 +41,16 @@
             </div>
         </div>
 
-        <div class="col-md-4 col-sm-6 block-wrapper">
+        <div class="col-lg-4 col-md-12 block-wrapper">
             <div class="right-column">
-                <div class="col-md-6 block-wrapper-left">
+                <div class="col-lg-6 col-md-6 block-wrapper-left">
                     <div class="block-kom-kijken"><img class="icon-kom-kijken" src="img/icon-kom-kijken.png"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'kom-kijken'); ?></div>
                 </div>
-                <div class="col-md-6 block-wrapper-right">
+                <div class="col-lg-6 col-md-6 block-wrapper-right">
                     <div class="block-info-groep8"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'info-groep-8'); ?></div>
                     <div class="block-maak-app"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'maak-app'); ?></div>
                 </div>
-                <div class="col-md-12 block-afbeelding">
+                <div class="col-lg-12 hidden-md block-afbeelding">
                     <?php echo lcms::Template()->getSectieContent($DATA['page'], 'blok-foto'); ?>
                 </div>
             </div>
@@ -62,13 +62,13 @@
 
 <div class="middle-row">
     <div class="row">
-        <div class="col-md-4 block-wrapper">
+        <div class="col-lg-4 col-md-6 block-wrapper">
             <div class="block block-talenten">
                 <?php echo lcms::Template()->getSectieContent($DATA['page'], 'talenten'); ?>
                 <img class="icon-talenten" src="img/icon-talenten.png">
             </div>
         </div>
-        <div class="col-md-4 block-wrapper">
+        <div class="col-lg-4 col-md-6 block-wrapper">
             <div class="block block-filmmakers">
                 <img class="icon-filmmakers" src="img/icon-filmmakers.png">
                 <?php echo lcms::Template()->getSectieContent($DATA['page'], 'filmmakers'); ?>
