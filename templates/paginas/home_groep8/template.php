@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 block-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 block-wrapper">
             <div class="block-schrijf-in">
                 <img class="icon-inschrijven" src="<?= lcms::resize('img/icon-inschrijven.png', 45, 45, '', 80); ?>">
                 <?php echo lcms::Template()->getSectieContent($DATA['page'], 'schrijf-in'); ?>
@@ -38,19 +38,19 @@
 
 <div class="groep-8-bottom-row">
     <div class="row">
-        <div class="col-lg-4 col-md-6 block-wrapper">
+        <div class="col-lg-4 col-md-4 col-sm-12 block-wrapper">
             <div class="block block-filmmakers">
                 <?php echo lcms::Template()->getSectieContent($DATA['page'], 'filmmakers'); ?>
                 <img class="icon-filmmakers" src="<?= lcms::resize('img/icon-filmmakers.png', 50, 50, '', 80); ?>">
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 block-wrapper">
+        <div class="col-lg-4 col-md-4 col-sm-12 block-wrapper">
             <div class="block block-10-vragen">
                 <img class="icon-vragen" src="<?= lcms::resize('img/icon-vragen.png', 100, 100, '', 80); ?>">
                 <?php echo lcms::Template()->getSectieContent($DATA['page'], '10-vragen'); ?>
             </div>
         </div>
-        <div class="col-lg-4 block-wrapper">
+        <div class="col-lg-4 col-md-4 col-sm-12 block-wrapper">
             <div class="block block-monnikskap">
                 <?php echo lcms::Template()->getSectieContent($DATA['page'], 'monnikskap'); ?>
             </div>

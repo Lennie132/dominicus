@@ -29,15 +29,15 @@ if (!empty($art_arr)) {
             $oldDate = $artikel['Datum'];
             $newDate = date("d-m", strtotime($oldDate));
             ?>
-            <div class="col-xs-12">
+            <div class="">
                 <div class="newsitem-home">
-                    <div class="col-xs-12">
+                    <div class="">
                         <h3 class="newsitem-title"><?= $newDate; ?> | <?= $artikel['Titel']; ?></h3>
                     </div>
-                    <div class="col-xs-12 newsitem-intro">
+                    <div class=" newsitem-intro">
                         <p class="newsitem-intro-p"><?= $artikel['Inleiding']; ?></p>
                     </div>
-                    <div class="col-xs-12">
+                    <div class="">
                         <a class="read_more" href="<?= link::v('page_nieuws')->artikel_groep($artikel['page'])->artikel_id($artikel['artikel_id']); ?>" title="<?= $artikel['Titel']; ?>">
                         Lees meer<span class="icon-chevron_right"></span>
                     </a>

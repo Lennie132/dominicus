@@ -17,10 +17,10 @@
                 <?php echo lcms::Template()->getSectieContent($DATA['page'], 'in-beeld'); ?>
             </div>
             <div class="block-btn-row">
-                <div class="col-md-6 block-btn-wrapper-left">
+                <div class="col-md-6 col-xs-6 block-btn-wrapper-left">
                     <div class="block-btn"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'knop-1'); ?></div>
                 </div>
-                <div class="col-md-6 block-btn-wrapper-right">
+                <div class="col-md-6 col-xs-6 block-btn-wrapper-right">
                     <div class="block-btn"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'knop-2'); ?></div>
                 </div>
             </div>
@@ -32,10 +32,10 @@
                 <?php echo lcms::Template()->getSectieContent($DATA['page'], 'op-zoek'); ?>
             </div>
             <div class="block-btn-row">
-                <div class="col-md-6 block-btn-wrapper-left">
+                <div class="col-md-6 col-xs-6 block-btn-wrapper-left">
                     <div class="block-btn"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'knop-3'); ?></div>
                 </div>
-                <div class="col-md-6 block-btn-wrapper-right">
+                <div class="col-md-6 col-xs-6 block-btn-wrapper-right">
                     <div class="block-btn"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'knop-4'); ?></div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                     <div class="block-info-groep8"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'info-groep-8'); ?></div>
                     <div class="block-maak-app"><?php echo lcms::Template()->getSectieContent($DATA['page'], 'maak-app'); ?></div>
                 </div>
-                <div class="col-lg-12 hidden-md block-afbeelding">
+                <div class="col-lg-12 hidden-md hidden-sm hidden-xs block-afbeelding">
                     <?php echo lcms::Template()->getSectieContent($DATA['page'], 'blok-foto'); ?>
                 </div>
             </div>

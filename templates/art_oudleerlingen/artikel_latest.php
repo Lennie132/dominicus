@@ -27,24 +27,24 @@ if (!empty($art_arr)) {
     foreach ($art_arr as $key => $artikel) {
         $img = get_art_file_path($artikel['afbeelding'], $artikel['artikel_id']);
         ?>
-        <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="col-lg-4 hidden-md col-sm-12">
             <div class="student-item-latest">
                 <img class="icon-oudleerling" src="img/icon-oudleerling.png">
                 <?php
                 if (trim($img != '')) {
                     ?>
-                    <div class="student-afbeelding col-sm-2 hidden-xs">
+                    <div class="student-afbeelding col-md-2 hidden-sm hidden-xs">
                         <img src="<?= lcms::resize($img, 190, 270, '190x270', 80); ?>" class="" alt="<?= $artikel['Titel']; ?>" />
                     </div>
                     <?php
                 }
                 ?>
-                <div class="student-content col-sm-10 col-xs-12">
+                <div class="student-content col-md-10 col-sm-12">
                     <h2 class="student-titel"><?= $artikel['titel']; ?></h2>
-                    <div class="student-img-space col-sm-3 hidden-xs">
+                    <div class="student-img-space col-md-3 hidden-sm hidden-xs">
 
                     </div>
-                    <div class="student-info col-sm-9">
+                    <div class="student-info col-md-9">
                         <p class="student-naam"><?= $artikel['naam']; ?></p>
                         <p class="student-jaar-leerling">Leerling in: <?= $artikel['jaar_dominicusleerling']; ?></p>
                         <p class="student-jaar-interview-beroep">Anno <?= $artikel['jaar_interview']; ?>: <?= $artikel['beroep']; ?></p>
