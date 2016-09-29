@@ -202,51 +202,58 @@
     margin:5px 0;
     text-align:center;
 }
+@media (max-width: 1550px) and (min-width: 1200px){
+    .student-item-latest {
+        .student-content {
+            .student-titel {
+                font-size: 24px;
+                line-height: 39px;
+            }
+            .student-info {
+                .student-naam {
+                    font-size: 22px;
+                }
+                .student-jaar-leerling {
+                    font-size: 18px;
+                }
+                .student-jaar-interview-beroep {
+                    font-size: 18px;
+                }
+                .student-tekst-intro {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+        }
+        a.read_more, .back-link{
+            font-size: 18px;
+        }
+    }
+}
+
 @media (max-width: 991px) {
     .student-item-latest {
         padding: 0;
         height: auto;
-
         .icon-oudleerling {
-            position: absolute;
-            margin: 0;
             width: 40px!important;
-            height: auto!important;
             top: 10px;
             right: 30px;
-            z-index: 2;
-        }
-        .student-afbeelding {
-            padding-left: 0;
-            position: relative;
-            img {
-                position: absolute;
-                padding-top: 100px;
-                z-index: 20;
-                width: 235%;
-            }
         }
         .student-content {
-            background-color: @grey-light;
             height: auto;
             padding: 1px 15px;
             .student-titel {
                 margin: 15px 65px 0 0;
                 font-size: 24px;
                 font-weight: bold;
-                color: @kleur3;
-            }
-            .student-img-space {
             }
             .student-info {
                 padding: 15px 0;
                 font-size: 16px;
                 line-height: 26px;
-                color: @kleur3;
 
                 .student-naam {
-                    color: @black-color;
-                    font-weight: bold;
                     margin-bottom: 0;
                 }
                 .student-jaar-leerling {
@@ -262,22 +269,6 @@
                     line-height: 22px;
                 }
             }
-        }
-        p.date{
-            font-size:14px;
-            line-height:16px;
-            color:#cccccc;
-            margin-bottom:5px;
-        }
-        a.read_more, .back-link{
-            position:relative;
-            font-weight: bold;
-            display:table;
-            margin-top:10px;
-        }
-        [class^="icon-"], [class*=" icon-"] {
-            display:inline-block;
-            vertical-align:middle;
         }
     }
 }

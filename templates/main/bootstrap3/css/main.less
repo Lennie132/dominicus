@@ -91,6 +91,12 @@ h1, h2, h3, h4, h5, h6{
     h2 {
         color: @kleur2;
     }
+
+    img {
+        .img-responsive;
+        height: auto!important;
+        margin: 10px;
+    }
 }
 
 /* ==========================================================================
@@ -110,21 +116,22 @@ h1, h2, h3, h4, h5, h6{
             height: 470px;
             iframe {
                 position: absolute;
-                padding-left: 5%;
                 width: 100%;
                 height: 340px;
+                padding-left: 5%;
                 z-index: 10;
             }
             h2 {
-                vertical-align: bottom;
                 position: absolute;
-                text-align: right;
-                bottom: 0;
                 height: 260px;
+                width: 95%;
                 margin: 0;
                 padding: 190px 25px 25px 100px;
+                vertical-align: bottom;
+                bottom: 0;   
                 font-size: 36px;
                 font-weight: bold;
+                text-align: right;
                 color: @kleur3;
                 background-color: @kleur1;
             }
@@ -138,11 +145,11 @@ h1, h2, h3, h4, h5, h6{
             }
         }
         .block-op-zoek {
-            padding: 15px;
             position: relative;
-            background-color: @kleur1;
             height: 800px;
             width: 90%;
+            padding: 15px;
+            background-color: @kleur1;
             .icon-op-zoek {
                 position: absolute;
                 margin: 0;
@@ -151,7 +158,7 @@ h1, h2, h3, h4, h5, h6{
                 left: 35px;
             }
             h2 {
-                padding-left: 25%;
+                padding-left: 100px;
                 a{
                     padding: 0;
                     font-size: 36px;
@@ -167,7 +174,14 @@ h1, h2, h3, h4, h5, h6{
                 right: ~'calc(-7px - 10%)';
             }
             pre {
+                position: relative;
                 display: block;
+
+                padding: 15px;
+                width: 100%!important;
+                height: auto!important;
+                margin: 0 0 25px 0;
+                right: ~'calc(-7px - 10%)';
                 background-color: @kleur2;
                 color: @white-color;
                 font-family: @ubuntu;
@@ -175,19 +189,12 @@ h1, h2, h3, h4, h5, h6{
                 line-height: 26px;
                 white-space: normal;
                 text-align: center;
-                padding: 15px;
-                position: relative;
-                margin: 0 0 25px 0;
-                width: 100%!important;
-                height: auto!important;
-                right: ~'calc(-7px - 10%)';
             }
 
             p {
                 display: block;
                 padding: 0 10% 10px;
                 font-size: 24px;
-                //height: 200px;
                 line-height: 30px;
                 margin-bottom: 0;
             }
@@ -217,13 +224,12 @@ h1, h2, h3, h4, h5, h6{
             h2 {
                 margin: 0;
                 text-align: center;
-
                 .transition( all 0.3s);
                 a {
+                    display: block;
                     line-height: 125px;
                     font-size: 40px;
                     color: @white-color;
-                    display: block;
                 }
                 &:hover {
                     a {
@@ -252,10 +258,10 @@ h1, h2, h3, h4, h5, h6{
                 }
                 .icon-kom-kijken {
                     position: absolute;
-                    object-fit: none;
                     margin: 0;
                     width: 95px!important;
                     height: auto!important;
+                    object-fit: none;
                     left: ~'calc(50% - 47px)';
                     bottom: 70px;
                     z-index: 5;
@@ -291,13 +297,13 @@ h1, h2, h3, h4, h5, h6{
                 }
                 h2 {
                     position: absolute;
-                    text-align: center;
-                    bottom: 0;
                     width: 100%;
                     margin: 0;
-                    padding: 15px 10px;
+                    padding: 15px 10px;               
+                    bottom: 0;
                     font-size: 26px;
                     font-weight: bold;
+                    text-align: center;
                     background-color: @kleur2;
                     a {
                         color: @white-color;
@@ -317,13 +323,13 @@ h1, h2, h3, h4, h5, h6{
                 }
                 h2 {
                     position: absolute;
-                    text-align: center;
-                    bottom: 0;
                     width: 100%;
                     margin: 0;
                     padding: 15px 10px;
+                    bottom: 0; 
                     font-size: 26px;
                     font-weight: bold;
+                    text-align: center;
                     color: @white-color;
                     background-color: @kleur4;
                     a {
@@ -410,35 +416,35 @@ h1, h2, h3, h4, h5, h6{
             background-color: @kleur2;
         }
         .block-fancy {
-            left:0;
-            background-color: @kleur4;
+            position: relative;
+            float: left;
             width: ~'calc(33.33% + 20px)';
             height: 460px;
-            float: left;
             padding: 0;
-            margin: 0;
-            position: relative;
-            .transition( all 0.5s);
-            top: 0px;
             margin: 0 -10px;
+            left:0;
+            top: 0px;
+            background-color: @kleur4;
+            .transition( all 0.5s);
+
             &:before {
                 content: '';
-                width: 20px;
-                position: absolute;
-                right: 0;
                 opacity: 0;
-                bottom: 0px;
+                position: absolute;
+                width: 20px;
                 height: 30px!important;
+                right: 0;
+                bottom: 0;
                 box-sizing: border-box;
             }
             &:after {
                 content: '';
-                width: 20px;
-                position: absolute;
-                left: 0;
                 opacity: 0;
-                bottom: 0px;
+                position: absolute;
+                width: 20px;
                 height: 30px!important;
+                left: 0;
+                bottom: 0;
                 box-sizing: border-box;
             }
             &:hover {
@@ -464,9 +470,9 @@ h1, h2, h3, h4, h5, h6{
                 }
             }
             .block-fancy-content {
-                margin: 5% 10%;
                 display: inline-block;
                 position: relative;
+                margin: 5% 10%;
                 h2 {
                     text-align: center;
                     font-size: 36px;
@@ -550,7 +556,9 @@ h1, h2, h3, h4, h5, h6{
                 left: 35px;
             }
             h2 {
-                padding-left: 25%;
+                text-align: right;
+                padding-left: 110px;
+                padding-right: 20px;
                 a{
                     padding: 0;
                     font-size: 36px;
@@ -971,8 +979,148 @@ form{
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
-@media (max-width: 1199px){
+@media (max-width: 1550px) and (min-width: 1200px){
+    /* ==========================================================================
+       Home pagina
+       ========================================================================== */
+    .top-row {
+        .block-wrapper { 
+            .block-in-beeld {
+                h2 { 
+                    font-size: 27px;
+                }
+            }
+            .block-op-zoek {
+                h2 {
+                    a{
+                        font-size: 27px;
+                    }
+                }
+                pre {
+                    padding: 10px;
+                    font-size: 22px;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+        .block-btn-row {
+            .block-btn {
+                h2 {
+                    a {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        .right-column {
+            > .block-wrapper-left {
+                .block-kom-kijken {
+                    h2 {
+                        a {
+                            font-size: 26px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .middle-row {
+        .block-wrapper { 
+            .block {
+                h2 {
+                    font-size: 24px;
+                    line-height: 39px;
+                }
+            }
+        }
+    }
+    /* ==========================================================================
+        Home Groep 8 pagina
+       ========================================================================== */
 
+    .groep-8-top-row {
+        .block-wrapper { 
+            .block-info-ouders {
+                h2 {
+                    font-size: 25px;
+                }
+            }
+            .block-hallo-achtste-groeper {
+                .icon-duim {
+                    top: 15px;
+                }
+                h2 {
+                    a{
+                        font-size: 25px;
+                    }
+                }
+                pre {
+                    padding: 15px;
+                    a{
+                        padding: 0;
+                        font-size: 22px;
+                    }
+                }
+                p {
+                    font-size: 20px;                  
+                }
+                a {
+                    display: block;
+                    padding-top: 20px;
+                }
+            }
+            .block-schrijf-in {
+                h2 {
+                    padding-right: 30px;
+                    text-align: right;
+                }
+            }
+            .block-kom-kijken-groep8 {
+                h2 {
+                    padding-right: 30px;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .groep-8-bottom-row {
+        .block-wrapper { 
+            .block-filmmakers {
+                h2 {
+                    font-size: 24px;
+                    line-height: 39px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px){
+    .middle-row {
+        .block-wrapper { 
+            .block {
+                h2 {
+                    font-size: 32px;
+                    line-height: 39px;
+                }
+            }
+        }
+    }
+    .groep-8-bottom-row {
+        .block-wrapper { 
+            .block-filmmakers {
+                .icon-filmmakers {
+                    display: none;
+                }
+                h2 {
+                    font-size: 24px;
+                    line-height: 39px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 991px){  
@@ -1417,6 +1565,12 @@ form{
         h1 {
             font-size: 24px;
             line-height: 28px;
+        }
+    }
+
+    .content-wrapper{
+        img {
+            margin: 10px 0 10px 0;
         }
     }
 }
