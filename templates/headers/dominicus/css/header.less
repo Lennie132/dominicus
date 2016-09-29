@@ -33,6 +33,10 @@
                         top: 10px;
                         padding-left: 40px;
                         z-index: -1;
+                        img {
+                            width: 287px;
+                            max-width: 287px;
+                        }
                     }
                     &.not-visible {
                         .logo {
@@ -47,7 +51,8 @@
                         position: absolute;
                         top: 10px;
                         padding-left: 40px;
-                        z-index: -1; 
+                        z-index: -1;
+
                     }
                     &.not-visible {
                         .logo {
@@ -56,13 +61,17 @@
                     }
                 }
                 .wrapper-logo-160-jaar {
-                    padding-left: 180px;
-                    padding-top: 95px;
+                    opacity: 1;
+                    .transition(all 0.3s);
+                    padding-left: 237px;
+                    padding-top: 107px;
                     z-index: 12; 
-                    .logo {
-                        position: absolute;
-                        top: 10px;
-
+                    img {
+                        max-width: 150px;
+                        width: 150px;
+                    }
+                    &.not-visible {
+                        opacity: 0;
                     }
                 }
             } 
@@ -118,14 +127,18 @@
                     float: left;
                     padding: 3px 5px;
                     width: auto;
+                    max-width: 100%;
                     .wrapper-logo {
                         .logo {
                             position: static;
                             padding: 0;
                             width: 50px;
+                            img {
+                                max-width: 50px;
+                            }
                         }
                     }
-                    
+
                     .wrapper-logo-no-text {
                         display: none;
                     }

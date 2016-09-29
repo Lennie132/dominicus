@@ -1,7 +1,6 @@
 <?php
 lcms_client_script::add_header_css('/css/header.less');
 lcms_client_script::add_header_css('/css/menu.less');
-lcms_client_script::add_header_js('flexmenu.min.js');
 lcms_client_script::add_header_js('priority-nav.js');
 lcms_client_script::add_header_js('main.js');
 ?>
@@ -16,7 +15,7 @@ lcms_client_script::add_header_js('main.js');
                     <div class="wrapper-logo-no-text">
                         <div class="logo" itemscope="" itemtype="http://schema.org/Organization">
                             <a itemprop="url" class="img-responsive" href="http://dev.lined.nl/dominicus2016/" title="Dominicus College">
-                                <img itemprop="logo" src="<?= lcms::resize('img/dominicus-logo-no-text.png', 239, 500, '', 80); ?>" alt="Dominicus College" class="img-responsive">
+                                <img itemprop="logo" src="<?= lcms::resize('img/dominicus-logo-no-text.png', 300, 500, '', 80); ?>" alt="Dominicus College" class="img-responsive">
                             </a>
                         </div>
                     </div>

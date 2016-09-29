@@ -93,10 +93,12 @@ function checkScrollPositionTop() {
         var scrollPosition = $(window).scrollTop();
         if (scrollPosition > 70) {
             $('.wrapper-logo').addClass("not-visible");
+            $('.wrapper-logo-160-jaar').addClass("not-visible");
             $('.wrapper-logo-no-text').removeClass("not-visible");
         }
         else {
             $('.wrapper-logo').removeClass("not-visible");
+            $('.wrapper-logo-160-jaar').removeClass("not-visible");
             $('.wrapper-logo-no-text').addClass("not-visible");
         }
     }
