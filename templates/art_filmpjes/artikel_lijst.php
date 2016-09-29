@@ -35,7 +35,7 @@ if (!empty($art_arr)) {
                         <div class="row">
                             <iframe id="ytplayer" type="text/html" width="100%" height="180px"
                                     src="https://www.youtube.com/embed/<?= $artikel['youtube_code']; ?>"
-                                    frameborder="0">
+                                    frameborder="0" allowfullscreen>
                             </iframe>
                             <h2><?= $artikel['link']; ?></h2>
                             <h2><?= $artikel['titel']; ?></h2>

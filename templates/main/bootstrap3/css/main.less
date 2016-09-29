@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6{
                 font-weight: bold;
                 text-align: right;
                 color: @kleur3;
-                background-color: @kleur1;
+                background-color: @kleur4;
             }
             .icon-in-beeld {
                 position: absolute;
@@ -694,6 +694,7 @@ h1, h2, h3, h4, h5, h6{
                 text-align: right;
                 margin: 0 0 30px 0;
                 font-size: 36px;
+                line-height: 50px;
                 font-weight: bold;
                 color: @kleur3;
                 background-color: @grey-light;
@@ -1091,18 +1092,34 @@ form{
             .block-filmmakers {
                 h2 {
                     font-size: 24px;
-                    line-height: 39px;
+                    line-height: 50px;
                 }
             }
         }
     }
 }
 @media (max-width: 1199px){
+    .top-row {
+        .block-wrapper { 
+            .block-in-beeld {
+                h2 { 
+                    font-size: 28px;
+                }
+            }
+            .block-op-zoek {
+                h2 {
+                    a{
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
     .middle-row {
         .block-wrapper { 
             .block {
                 h2 {
-                    font-size: 32px;
+                    font-size: 28px;
                     line-height: 39px;
                 }
             }
@@ -1116,7 +1133,31 @@ form{
                 }
                 h2 {
                     font-size: 24px;
-                    line-height: 39px;
+                    line-height: 50px;
+                }
+            }
+            .block-10-vragen {
+                h2 {
+                    a {
+                        font-size: 28px;
+                        line-height: 32px;
+                    }
+                }
+                h3 {
+                    font-size: 26px;
+                    line-height: 30px;
+                }
+            }
+            .block-monnikskap {
+                h2 {
+                    a {
+                        font-size: 28px;
+                        line-height: 32px;
+                    }
+                }
+                h3 {
+                    font-size: 24px;
+                    line-height: 28px;
                 }
             }
         }
@@ -1136,7 +1177,7 @@ form{
                 padding: 15px;
                 height: auto;
                 width: 100%;
-                background-color: @kleur1;
+                background-color: @kleur4;
                 overflow: auto;
                 iframe {
                     position: static;
