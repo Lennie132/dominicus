@@ -1,4 +1,5 @@
 <?php
+global $DATA;
 lcms_client_script::add_header_css('/css/header.less');
 lcms_client_script::add_header_css('/css/menu.less');
 lcms_client_script::add_header_js('priority-nav.js');
@@ -10,22 +11,34 @@ lcms_client_script::add_header_js('main.js');
             <div class="header-main">
                 <div class="header-logo">
                     <div class="wrapper-logo">
-                        <?php echo get_logo_html(); ?>
+                        <?php
+                        if ($DATA['page'] == get_variabele('page_home') || $DATA['page'] == get_variabele('page_home_groep8')) {
+                             echo lcms::Logo()->setMaxSizes(999, 999)->getHTML(); 
+                        } else { ?>
+                            <div class="logo" itemscope="" itemtype="http://schema.org/Organization">
+                            <a itemprop="url" class="img-responsive" href="<?= link::v('page_home'); ?>" title="Dominicus College">
+                                <img itemprop="logo" src="<?= lcms::resize('img/dominicus-logo-no-text.png', 300, 500, '', 80); ?>" alt="Dominicus College" class="img-responsive">
+                            </a>
+                        </div>
+                        <?php }
+                        ?>
                     </div>
                     <div class="wrapper-logo-no-text">
                         <div class="logo" itemscope="" itemtype="http://schema.org/Organization">
-                            <a itemprop="url" class="img-responsive" href="http://dev.lined.nl/dominicus2016/" title="Dominicus College">
+                            <a itemprop="url" class="img-responsive" href="<?= link::v('page_home'); ?>" title="Dominicus College">
                                 <img itemprop="logo" src="<?= lcms::resize('img/dominicus-logo-no-text.png', 300, 500, '', 80); ?>" alt="Dominicus College" class="img-responsive">
                             </a>
                         </div>
                     </div>
                     <div class="wrapper-logo-160-jaar">
-                        <img itemprop="logo" src="<?= lcms::resize('img/logo-160-jaar.png', 120, 120, '', 80); ?>" alt="Dominicus College" class="img-responsive">
+                        <a itemprop="url" class="img-responsive" href="<?= link::v('page_home'); ?>" title="Dominicus College">
+                            <img itemprop="logo" src="<?= lcms::resize('img/logo-160-jaar.png', 120, 120, '', 80); ?>" alt="Dominicus College" class="img-responsive">
+                        </a>
                     </div>
                 </div>
 
-                <?php // lcms::Menu()->setNiveausDiep(2)->setClass('main-nav list-unstyled')->getHTML(); ?>
-                <?= get_menu(0, '', 'header-nav list-unstyled'); ?>
+                    <?php // lcms::Menu()->setNiveausDiep(2)->setClass('main-nav list-unstyled')->getHTML();  ?>
+                    <?= get_menu(0, '', 'header-nav list-unstyled'); ?>
 
                 <ul class="social-list">
                     <?php

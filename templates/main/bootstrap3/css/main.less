@@ -166,6 +166,9 @@ h1, h2, h3, h4, h5, h6{
                     color: @kleur3;
                 }
             }
+            a {
+                padding: 0;
+            }
             img {
                 position: relative;
                 margin: 25px 0 0 0;
@@ -173,6 +176,7 @@ h1, h2, h3, h4, h5, h6{
                 height: auto!important;
                 right: ~'calc(-7px - 10%)';
             }
+
             pre {
                 position: relative;
                 display: block;
@@ -197,12 +201,12 @@ h1, h2, h3, h4, h5, h6{
                 font-size: 24px;
                 line-height: 30px;
                 margin-bottom: 0;
+                a {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
             }
-            a {
-                padding: 0 10% 10px;
-                font-size: 20px;
-                font-weight: bold;
-            }
+
         }
     }
 
@@ -566,6 +570,9 @@ h1, h2, h3, h4, h5, h6{
                     color: @kleur3;
                 }
             }
+            a {
+                padding: 0;
+            }
             img {
                 position: relative;
                 margin: 25px 0 0 0;
@@ -573,6 +580,7 @@ h1, h2, h3, h4, h5, h6{
                 height: auto!important;
                 right: ~'calc(-7px - 10%)';
             }
+
             pre {
                 display: block;
                 background-color: @kleur3;
@@ -603,11 +611,10 @@ h1, h2, h3, h4, h5, h6{
                 font-size: 24px;
                 line-height: 30px;
                 margin-bottom: 0;
-            }
-            a {
-                padding: 0 10% 10px;
-                font-size: 20px;
-                font-weight: bold;
+                a {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
             }
         }
         .block-schrijf-in {
@@ -752,6 +759,10 @@ h1, h2, h3, h4, h5, h6{
             height: 550px;
             background-color: @grey-light;
             color: @kleur3;
+            a{
+                padding: 0;
+
+            }
             img {
                 .img-responsive;
                 height: 200px!important;
@@ -778,12 +789,12 @@ h1, h2, h3, h4, h5, h6{
             p {
                 padding: 0 20px;
                 line-height: 26px;
+                a {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
             }
-            a {
-                padding: 0 20px;
-                font-size: 18px;
-                font-weight: bold;
-            }
+
         }
     }
 }
@@ -1216,10 +1227,13 @@ form{
                         font-size: 24px;
                     }
                 }
-                img {
-                    margin: 0;
-                    right: 0;
+                a {
+                    img {
+                        margin: 0;
+                        right: 0;
+                    } 
                 }
+
                 pre {
                     font-size: 18px;
                     line-height: 22px;
@@ -1233,13 +1247,14 @@ form{
                     padding: 15px 0;
                     font-size: 16px;
                     line-height: 24px;
+                    a {
+                        display: block;
+                        position: relative;
+                        padding: 15px 0;
+                        font-size: 18px;
+                    }
                 }
-                a {
-                    display: block;
-                    position: relative;
-                    padding: 15px 0;
-                    font-size: 18px;
-                }
+
             }
         }
 
@@ -1458,6 +1473,9 @@ form{
                         color: @kleur3;
                     }
                 }
+                a {
+
+                }
                 img {
                     margin: 0;
                     right: 0;
@@ -1479,12 +1497,13 @@ form{
                     padding: 10px 0;
                     font-size: 16px;
                     line-height: 20px;
+                    a {
+                        padding: 5px 0 10px;
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
                 }
-                a {
-                    padding: 5px 0 10px;
-                    font-size: 20px;
-                    font-weight: bold;
-                }
+
             }
             .block-schrijf-in {
                 height: 76px;
@@ -1534,6 +1553,7 @@ form{
                     font-size: 24px;
                 }
                 .icon-filmmakers {
+                    display: block;
                     margin: 0;
                     width: 50px!important;
                     height: auto!important;
@@ -1569,6 +1589,9 @@ form{
             }
             .block-monnikskap {
                 height: auto;
+                a {
+                    padding: 0;
+                }
                 img {
                     height: auto!important;
                 }
@@ -1590,12 +1613,13 @@ form{
                     padding: 0 15px;
                     line-height: 20px;
                     font-size: 16px;
+                    a {
+                        display: block;
+                        padding: 15px 0;
+                        font-size: 16px;
+                    }
                 }
-                a {
-                    display: block;
-                    padding: 15px;
-                    font-size: 16px;
-                }
+
             }
         }
     }
