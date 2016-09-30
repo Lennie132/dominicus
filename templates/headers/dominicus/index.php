@@ -17,7 +17,7 @@ lcms_client_script::add_header_js('main.js');
                         } else { ?>
                             <div class="logo" itemscope="" itemtype="http://schema.org/Organization">
                             <a itemprop="url" class="img-responsive" href="<?= link::v('page_home'); ?>" title="Dominicus College">
-                                <img itemprop="logo" src="<?= lcms::resize('img/dominicus-logo-no-text.png', 300, 500, '', 80); ?>" alt="Dominicus College" class="img-responsive">
+                                <img itemprop="logo" src="<?= lcms::resize('img/dominicus-logo-white-text-fixed.png', 300, 500, '', 80); ?>" alt="Dominicus College" class="img-responsive">
                             </a>
                         </div>
                         <?php }
@@ -32,7 +32,7 @@ lcms_client_script::add_header_js('main.js');
                     </div>
                     <div class="wrapper-logo-160-jaar">
                         <a itemprop="url" class="img-responsive" href="<?= link::v('page_home'); ?>" title="Dominicus College">
-                            <img itemprop="logo" src="<?= lcms::resize('img/logo-160-jaar.png', 120, 120, '', 80); ?>" alt="Dominicus College" class="img-responsive">
+                            <img itemprop="logo" src="<?= lcms::resize('img/logo-160-jaar.png', 150, 150, '', 80); ?>" alt="Dominicus College" class="img-responsive">
                         </a>
                     </div>
                 </div>
