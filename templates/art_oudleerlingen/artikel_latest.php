@@ -47,9 +47,9 @@ if (!empty($art_arr)) {
                     <div class="student-info col-md-9">
                         <p class="student-naam"><?= $artikel['naam']; ?></p>
                         <p class="student-jaar-leerling">Leerling in: <?= $artikel['jaar_dominicusleerling']; ?></p>
-                        <p class="student-jaar-interview-beroep">Anno <?= $artikel['jaar_interview']; ?>: <?= $artikel['beroep']; ?></p>
+                        <p class="student-jaar-interview-beroep"><?= $artikel['jaar_interview']; ?>: <?= $artikel['beroep']; ?></p>
                         <div class="student-tekst-intro">
-                            Anno <?= $artikel['tekst_intro']; ?>
+                            <?= $artikel['tekst_intro']; ?>
                         </div>
                         <a class="read_more" href="<?= link::v('page_oudleerlingen')->artikel_groep($artikel['page'])->artikel_id($artikel['artikel_id']); ?>" title="<?= $artikel['Titel']; ?>">
                             Lees meer<span class="icon-chevron_right"></span>

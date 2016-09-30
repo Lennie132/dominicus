@@ -42,9 +42,9 @@ if (!empty($artikel)) {
                     <div class="student-info col-sm-9 col-xs-12">
                         <p class="student-naam"><?= $artikel['naam']['DATA']; ?></p>
                         <p class="student-jaar-leerling">Leerling in: <?= $artikel['jaar_dominicusleerling']['DATA']; ?></p>
-                        <p class="student-jaar-interview-beroep">Anno <?= $artikel['jaar_interview']['DATA']; ?>: <?= $artikel['beroep']['DATA']; ?></p>
+                        <p class="student-jaar-interview-beroep"><?= $artikel['jaar_interview']['DATA']; ?>: <?= $artikel['beroep']['DATA']; ?></p>
                         <div class="student-tekst-vervolg">
-                            Anno <?= $artikel['tekst_vervolg']['DATA']; ?>
+                            <?= $artikel['tekst_vervolg']['DATA']; ?>
                         </div>
                     </div>
                     <a href="<?= link::c($DATA['page']); ?>" class="back-link">
