@@ -1,168 +1,201 @@
 /* ==========================================================================
-   Header
-   ========================================================================== */
+Header
+========================================================================== */
 @white-color: #fff;
 @black-color: #000;
 
 .header-wrapper{
-    height: 74px;
-    .header-bar {
-        background-color: @white-color;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        max-width: 1920px;
-        padding: 16px 0;
-        font-size: 0;   
-        border-bottom: 2px solid @kleur3;
-        z-index: 200;
-        .header-main {
-            padding: 0 30px;
-            width: 100%;
-            height: 40px;
+  height: 74px;
+  .header-bar {
+    background-color: @white-color;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1920px;
+    padding: 16px 0;
+    font-size: 0;
+    border-bottom: 2px solid @kleur3;
+    z-index: 200;
+    .header-main {
+      padding: 0 30px;
+      width: 100%;
+      height: 40px;
 
-            .header-logo {
-                width: 300px;
-                display: inline-block;
-                vertical-align: top;
-                .wrapper-logo {
-                    .logo {
-                        opacity: 1;
-                        .transition(all 0.3s);
-                        position: absolute;
-                        top: 10px;
-                        padding-left: 40px;
-                        z-index: -1;
-                        img {
-                            width: 287px;
-                            max-width: 287px;
-                        }
-                    }
-                    &.not-visible {
-                        .logo {
-                            opacity: 0;
-                        }
-                    }
-                }
-                .wrapper-logo-no-text {
-                    .logo {
-                        .transition(all 0.3s);
-                        opacity: 1;
-                        position: absolute;
-                        top: 10px;
-                        padding-left: 40px;
-                        z-index: -1;
-
-                    }
-                    &.not-visible {
-                        .logo {
-                            opacity: 0;
-                        }
-                    }
-                }
-                .wrapper-logo-160-jaar {
-                    opacity: 1;
-                    .transition(all 0.3s);
-
-                    z-index: 12;
-                    a {
-                        padding-left: 237px;
-                        padding-top: 107px;
-                    }
-                    img {
-                        max-width: 147px;
-                        width: 147px;
-                    }
-                    &.not-visible {
-                        opacity: 0;
-                    }
-                }
-            } 
-
-            .social-list {
-                display: inline-block;
-                vertical-align: top;
-                width: 160px; 
-                margin: 0;
-                padding: 0;
-                text-align: right;
-                list-style-type: none;
-                .social-item {
-                    display: inline-block;
-                    margin-right: 10px;
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                    .social-link {
-                        span {
-                            color: @kleur3;
-                            font-size: 28px;
-                            line-height: 40px;
-                            .transition(all .3s);
-
-                        }
-                        &:hover, &:focus {
-                            text-decoration: none;
-                        }
-                    }
-                }
+      .header-logo {
+        width: 300px;
+        display: inline-block;
+        vertical-align: top;
+        .wrapper-logo {
+          .logo {
+            opacity: 1;
+            .transition(all 0.3s);
+            position: absolute;
+            top: 10px;
+            padding-left: 40px;
+            z-index: -1;
+            img {
+              width: 287px;
+              max-width: 287px;
             }
+          }
+          &.not-visible {
+            .logo {
+              opacity: 0;
+            }
+          }
         }
+        .wrapper-logo-no-text {
+          .logo {
+            .transition(all 0.3s);
+            opacity: 1;
+            position: absolute;
+            top: 10px;
+            padding-left: 40px;
+            z-index: -1;
+
+          }
+          &.not-visible {
+            .logo {
+              opacity: 0;
+            }
+          }
+        }
+        .wrapper-logo-160-jaar {
+          opacity: 1;
+          .transition(all 0.3s);
+
+          z-index: 12;
+          a {
+            padding-left: 237px;
+            padding-top: 107px;
+          }
+          img {
+            max-width: 147px;
+            width: 147px;
+          }
+          &.not-visible {
+            opacity: 0;
+          }
+        }
+      }
+
+      .search {
+        display: inline-block;
+        vertical-align: top;
+        padding: 8px 0;
+        vertical-align: top;
+        width: 210px;
+        margin-right: 10px;
+        .search__input {
+          display: inline-block;
+          width: 140px;
+          height: 24px;
+          margin: 0 10px 0 0;
+          color: @black-color;
+          line-height: 18px;
+          font-size: 14px;
+        }
+        .search__button {
+          display: inline-block;
+          vertical-align: top;
+          width: 50px;
+          line-height: 22px;
+          font-size: 14px;
+          background-color: @kleur2;
+          color: @white-color;
+          border: none;
+          border-radius: 3px;
+        }
+      }
+
+      .social-list {
+        display: inline-block;
+        vertical-align: top;
+        width: 160px;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+        list-style-type: none;
+        .social-item {
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 10px;
+          &:last-child {
+            margin-right: 0;
+          }
+          .social-link {
+            span {
+              color: @kleur3;
+              font-size: 28px;
+              line-height: 40px;
+              .transition(all .3s);
+            }
+
+            &:hover, &:focus {
+              text-decoration: none;
+            }
+          }
+          .fb-like {
+            padding: 10px 0;
+          }
+        }
+      }
     }
+  }
 }
 
 
 /* ==========================================================================
-   Header responsive
-   ========================================================================== */
+Header responsive
+========================================================================== */
 @media (max-width: 1199px){
 }
 
 @media (max-width: 991px){
-    .header-wrapper{
-        .header-bar {
-            padding: 0;
-            position: static;
-            .header-main {
-                padding: 0;
-                height: 72px;
-                .header-logo {
-                    float: left;
-                    padding: 3px 5px;
-                    width: auto;
-                    max-width: 100%;
-                    .wrapper-logo {
-                        .logo {
-                            position: static;
-                            padding: 0;
-                            width: 50px;
-                            img {
-                                max-width: 50px;
-                            }
-                        }
-                    }
-
-                    .wrapper-logo-no-text {
-                        display: none;
-                    }
-                    .wrapper-logo-160-jaar {
-                        display: none;
-                    }
-                } 
-
-                .social-list {
-                    padding: 16px 0;
-                    float: left;
-                    padding-left: 10px;
-                    width: auto;
-                    .social-item {
-                        .social-link {
-                        }
-                    }
-                }
+  .header-wrapper{
+    .header-bar {
+      padding: 0;
+      position: static;
+      .header-main {
+        padding: 0;
+        height: 72px;
+        .header-logo {
+          float: left;
+          padding: 3px 5px;
+          width: auto;
+          max-width: 100%;
+          .wrapper-logo {
+            .logo {
+              position: static;
+              padding: 0;
+              width: 50px;
+              img {
+                max-width: 50px;
+              }
             }
+          }
+
+          .wrapper-logo-no-text {
+            display: none;
+          }
+          .wrapper-logo-160-jaar {
+            display: none;
+          }
         }
+
+        .social-list {
+          padding: 16px 0;
+          float: left;
+          padding-left: 10px;
+          width: auto;
+          .social-item {
+            .social-link {
+            }
+          }
+        }
+      }
     }
+  }
 }
 @media (max-width: 767px){
 
