@@ -9,14 +9,14 @@
       'module' => 0,
   );
 
-  $art_arr = get_artikelen_arr($config['tabelnaam'], $config['group_id'], $config['order'], $config['artikel_id'], $config['limit_links'], $config['where']);
-  if (!empty($art_arr)) {
+  $slide_arr = get_artikelen_arr($config['tabelnaam'], $config['group_id'], $config['order'], $config['artikel_id'], $config['limit_links'], $config['where']);
+  if (!empty($slide_arr)) {
     ?>
     <div class="slider-wrapper">
       <div class="bxslider">
         <?php
-        foreach ($art_arr as $key => $artikel) {
-          $images = get_art_multi_files($artikel['afbeeldingen'], $artikel['artikel_id'], $DATA['m']);
+        foreach ($slide_arr as $key => $slide) {
+          $images = get_art_multi_files($slide['afbeeldingen'], $slide['artikel_id'], $DATA['m']);
           //print_pre($images);
           foreach ($images as $key => $image) {
             //print_pre($image);
