@@ -57,7 +57,7 @@
 
                 $img = get_art_file_path($artikel['hoofdafbeelding'], $artikel['artikel_id']);
                 if ($img == '') {
-                  $img = 'img/img_placeholder.png';
+                  $img = 'img/default_fotoalbum_placeholder.png';
                 }
 
                 if (trim($img) != '') {

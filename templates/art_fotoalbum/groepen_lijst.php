@@ -18,7 +18,7 @@
           if (trim($afbeelding[0]['hoofdafbeelding']) != '') {
             $img = get_art_file_path($afbeelding[0]['hoofdafbeelding'], $afbeelding[0]['artikel_id']);
           } else {
-            $img = 'img/img_placeholder.png';
+            $img = 'img/default_fotoalbum_placeholder.png';
           }
           ?>
           <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
