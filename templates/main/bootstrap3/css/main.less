@@ -20,91 +20,91 @@
    3.0 Typography
    ========================================================================== */
 html {
-    font-size: 100%;
+  font-size: 100%;
 }
 body {
-    font-family: @opensans;
-    font-size: 16px;
-    color: @text-color;
-    line-height: 1.125em;
-    max-width: 1920px;
-    margin: 0 auto;
+  font-family: @opensans;
+  font-size: 16px;
+  color: @text-color;
+  line-height: 1.125em;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 /* ==========================================================================
    x.x Chromeframe
    ========================================================================== */
 .chromeframe {
-    padding: 10px; background: #f5f5f5; color: @text-color; text-align: center;
+  padding: 10px; background: #f5f5f5; color: @text-color; text-align: center;
 }
 
 /* ==========================================================================
    Algemeen
    ========================================================================== */
 a{
+  color: @kleur3;
+  &:hover, &:focus{
     color: @kleur3;
-    &:hover, &:focus{
-        color: @kleur3;
-        font-weight: bold;
-        text-decoration: underline;
-    }
+    font-weight: bold;
+    text-decoration: underline;
+  }
 }
 
 h1, h2, h3, h4, h5, h6{
-    font-family: @ubuntu;
+  font-family: @ubuntu;
 }
 
 /* ==========================================================================
    Sfeerbeeld
    ========================================================================== */
 .sfeerbeeld{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 320px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 320px;
 }
 
 /* ==========================================================================
   Titel
    ========================================================================== */
 .titel-wrapper{
-    //min-height: 100px;
-    padding: 20px 0;
-    background-color: @kleur2;
-    h1 {
-        vertical-align: middle;
-        margin: 0;
-        font-size: 48px;
-        text-align: center;
-        color: @white-color;
-    }
+  //min-height: 100px;
+  padding: 20px 0;
+  background-color: @kleur2;
+  h1 {
+    vertical-align: middle;
+    margin: 0;
+    font-size: 48px;
+    text-align: center;
+    color: @white-color;
+  }
 }
 
 /* ==========================================================================
    Content
    ========================================================================== */
 .content-wrapper{
-    padding: 40px 0;
-    line-height: 26px;
-    color: @black-color;
+  padding: 40px 0;
+  line-height: 26px;
+  color: @black-color;
 
-    h2 {
-        color: @kleur2;
-    }
+  h2 {
+    color: @kleur2;
+  }
 
-    img {
-        .img-responsive;
-        height: auto!important;
-        margin: 10px;
-    }
+  img {
+    .img-responsive;
+    height: auto!important;
+    margin: 10px;
+  }
 }
 
 /* ==========================================================================
    Schoolgids pagina
    ========================================================================== */
 .issuuembed {
-    width: 100%!important;
-    height: 430px!important;
+  width: 100%!important;
+  height: 430px!important;
 }
 
 /* ==========================================================================
@@ -112,1630 +112,1650 @@ h1, h2, h3, h4, h5, h6{
    ========================================================================== */
 
 .top-row {
-    padding: 0 15px;
-    .block-wrapper {
-        padding: 0 15px 15px 15px;
-        &.top-left-block {
-            padding-top: 330px;
+  padding: 0 15px;
+  .block-wrapper {
+    padding: 0 15px 15px 15px;
+    &.top-left-block {
+      padding-top: 330px;
+    }
+    .block-in-beeld {
+      position: relative;
+      padding: 15px 15px 15px 0;
+      height: 470px;
+      iframe {
+        position: absolute;
+        width: 100%;
+        height: 340px;
+        padding-left: 5%;
+        z-index: 10;
+      }
+      h2 {
+        position: absolute;
+        height: 260px;
+        width: 95%;
+        margin: 0;
+        padding: 190px 25px 25px 100px;
+        vertical-align: bottom;
+        bottom: 0;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: right;
+        color: @kleur3;
+        background-color: @kleur4;
+      }
+      .icon-in-beeld {
+        position: absolute;
+        margin: 0;
+        width: 60px!important;
+        bottom: 30px;
+        left: 35px;
+        z-index: 5;
+      }
+    }
+    .block-op-zoek {
+      position: relative;
+      height: 800px;
+      width: 90%;
+      padding: 15px;
+      background-color: @kleur1;
+      .icon-op-zoek {
+        position: absolute;
+        margin: 0;
+        width: 60px!important;
+        top: 30px;
+        left: 35px;
+      }
+      h2 {
+        padding-left: 100px;
+        a{
+          padding: 0;
+          font-size: 36px;
+          font-weight: bold;
+          color: @kleur3;
         }
-        .block-in-beeld {
-            position: relative;
-            padding: 15px 15px 15px 0;
-            height: 470px;
-            iframe {
-                position: absolute;
-                width: 100%;
-                height: 340px;
-                padding-left: 5%;
-                z-index: 10;
-            }
-            h2 {
-                position: absolute;
-                height: 260px;
-                width: 95%;
-                margin: 0;
-                padding: 190px 25px 25px 100px;
-                vertical-align: bottom;
-                bottom: 0;
-                font-size: 36px;
-                font-weight: bold;
-                text-align: right;
-                color: @kleur3;
-                background-color: @kleur4;
-            }
-            .icon-in-beeld {
-                position: absolute;
-                margin: 0;
-                width: 60px!important;
-                bottom: 30px;
-                left: 35px;
-                z-index: 5;
-            }
+      }
+      a {
+        padding: 0;
+      }
+      img {
+        position: relative;
+        margin: 25px 0 0 0;
+        width: 100%!important;
+        height: auto!important;
+        right: ~'calc(-7px - 10%)';
+      }
+
+      pre {
+        position: relative;
+        display: block;
+
+        padding: 15px;
+        width: 100%!important;
+        height: auto!important;
+        margin: 0 0 25px 0;
+        right: ~'calc(-7px - 10%)';
+        background-color: @kleur2;
+        color: @white-color;
+        font-family: @ubuntu;
+        font-size: 24px;
+        line-height: 26px;
+        white-space: normal;
+        text-align: center;
+      }
+
+      p {
+        display: block;
+        padding: 0 10% 10px;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 0;
+        a {
+          font-size: 20px;
+          font-weight: bold;
         }
-        .block-op-zoek {
-            position: relative;
-            height: 800px;
-            width: 90%;
-            padding: 15px;
-            background-color: @kleur1;
-            .icon-op-zoek {
-                position: absolute;
-                margin: 0;
-                width: 60px!important;
-                top: 30px;
-                left: 35px;
-            }
-            h2 {
-                padding-left: 100px;
-                a{
-                    padding: 0;
-                    font-size: 36px;
-                    font-weight: bold;
-                    color: @kleur3;
-                }
-            }
-            a {
-                padding: 0;
-            }
-            img {
-                position: relative;
-                margin: 25px 0 0 0;
-                width: 100%!important;
-                height: auto!important;
-                right: ~'calc(-7px - 10%)';
-            }
+      }
 
-            pre {
-                position: relative;
-                display: block;
+    }
+  }
 
-                padding: 15px;
-                width: 100%!important;
-                height: auto!important;
-                margin: 0 0 25px 0;
-                right: ~'calc(-7px - 10%)';
-                background-color: @kleur2;
-                color: @white-color;
-                font-family: @ubuntu;
-                font-size: 24px;
-                line-height: 26px;
-                white-space: normal;
-                text-align: center;
-            }
+  .block-btn-row {
+    padding-top: 30px;
+    height: 170px;
+    .block-btn-wrapper-left {
+      padding: 0 15px 0 0;
+    }
+    .block-btn-wrapper-right {
+      padding: 0 0 0 15px;
+    }
+    .block-btn {
+      height: 140px;
+      background-image: url('img/home-btn-background.jpg');
+      background-size: cover;
+      background-position: center;
 
-            p {
-                display: block;
-                padding: 0 10% 10px;
-                font-size: 24px;
-                line-height: 30px;
-                margin-bottom: 0;
-                a {
-                    font-size: 20px;
-                    font-weight: bold;
-                }
-            }
-
+      h2 {
+        margin: 0;
+        text-align: center;
+        .transition( all 0.3s);
+        a {
+          display: block;
+          line-height: 125px;
+          font-size: 32px;
+          color: @white-color;
         }
+        &:hover {
+          a {
+            color: @kleur2;
+            text-decoration: none;
+          }
+
+          border-bottom: 15px solid @kleur2;
+        }
+      }
+    }
+  }
+
+  .right-column {
+    > .block-wrapper-left {
+      padding: 0 15px 0 0;
+      .block-kom-kijken {
+        position: relative;
+        height: 530px;
+
+        img {
+          .img-responsive;
+          height: 530px!important;
+          width: 100%!important;
+          object-fit: cover;
+        }
+        .icon-kom-kijken {
+          position: absolute;
+          margin: 0;
+          width: 95px!important;
+          height: auto!important;
+          object-fit: none;
+          left: ~'calc(50% - 47px)';
+          bottom: 70px;
+          z-index: 5;
+        }
+        h2 {
+          position: absolute;
+          text-align: center;
+          bottom: 0;
+          width: 100%;
+          margin: 0;
+          padding: 45px 10px 20px;
+          font-size: 36px;
+          font-weight: bold;
+          background-color: @kleur4;
+          a {
+            color: @white-color;
+          }
+        }
+      }
     }
 
-    .block-btn-row {
-        padding-top: 30px;
-        height: 170px;
-        .block-btn-wrapper-left {
-            padding: 0 15px 0 0;
-        }
-        .block-btn-wrapper-right {
-            padding: 0 0 0 15px;
-        }
-        .block-btn {
-            height: 140px;
-            background-image: url('img/home-btn-background.jpg');
-            background-size: cover;
-            background-position: center;
+    > .block-wrapper-right {
+      padding: 0 0 0 15px;
+      .block-info-groep8 {
+        position: relative;
+        height: 250px;
 
-            h2 {
-                margin: 0;
-                text-align: center;
-                .transition( all 0.3s);
-                a {
-                    display: block;
-                    line-height: 125px;
-                    font-size: 40px;
-                    color: @white-color;
-                }
-                &:hover {
-                    a {
-                        color: @kleur2;
-                        text-decoration: none;
-                    }
-
-                    border-bottom: 15px solid @kleur2;
-                }
-            }
+        img {
+          .img-responsive;
+          height: 250px!important;
+          width: 100%!important;
+          object-fit: cover;
         }
+        h2 {
+          position: absolute;
+          width: 100%;
+          margin: 0;
+          padding: 15px 10px;
+          bottom: 0;
+          font-size: 26px;
+          font-weight: bold;
+          text-align: center;
+          background-color: @kleur2;
+          a {
+            color: @white-color;
+          }
+        }
+      }
+      .block-maak-app {
+        position: relative;
+        height: 250px;
+        margin-top: 30px;
+
+        img {
+          .img-responsive;
+          height: 250px!important;
+          width: 100%!important;
+          object-fit: cover;
+        }
+        h2 {
+          position: absolute;
+          width: 100%;
+          margin: 0;
+          padding: 15px 10px;
+          bottom: 0;
+          font-size: 26px;
+          font-weight: bold;
+          text-align: center;
+          color: @white-color;
+          background-color: @kleur4;
+          a {
+            color: @white-color;
+          }
+        }
+      }
     }
-
-    .right-column {
-        > .block-wrapper-left {
-            padding: 0 15px 0 0;
-            .block-kom-kijken {
-                position: relative;
-                height: 530px;
-
-                img {
-                    .img-responsive;
-                    height: 530px!important;
-                    width: 100%!important;
-                    object-fit: cover;
-                }
-                .icon-kom-kijken {
-                    position: absolute;
-                    margin: 0;
-                    width: 95px!important;
-                    height: auto!important;
-                    object-fit: none;
-                    left: ~'calc(50% - 47px)';
-                    bottom: 70px;
-                    z-index: 5;
-                }
-                h2 {
-                    position: absolute;
-                    text-align: center;
-                    bottom: 0;
-                    width: 100%;
-                    margin: 0;
-                    padding: 45px 10px 20px;
-                    font-size: 36px;
-                    font-weight: bold;
-                    background-color: @kleur4;
-                    a {
-                        color: @white-color;
-                    }
-                }
-            }
-        }
-
-        > .block-wrapper-right {
-            padding: 0 0 0 15px;
-            .block-info-groep8 {
-                position: relative;
-                height: 250px;
-
-                img {
-                    .img-responsive;
-                    height: 250px!important;
-                    width: 100%!important;
-                    object-fit: cover;
-                }
-                h2 {
-                    position: absolute;
-                    width: 100%;
-                    margin: 0;
-                    padding: 15px 10px;
-                    bottom: 0;
-                    font-size: 26px;
-                    font-weight: bold;
-                    text-align: center;
-                    background-color: @kleur2;
-                    a {
-                        color: @white-color;
-                    }
-                }
-            }
-            .block-maak-app {
-                position: relative;
-                height: 250px;
-                margin-top: 30px;
-
-                img {
-                    .img-responsive;
-                    height: 250px!important;
-                    width: 100%!important;
-                    object-fit: cover;
-                }
-                h2 {
-                    position: absolute;
-                    width: 100%;
-                    margin: 0;
-                    padding: 15px 10px;
-                    bottom: 0;
-                    font-size: 26px;
-                    font-weight: bold;
-                    text-align: center;
-                    color: @white-color;
-                    background-color: @kleur4;
-                    a {
-                        color: @white-color;
-                    }
-                }
-            }
-        }
-        > .block-afbeelding {
-            padding: 0;
-            margin-top: 30px;
-            height: 410px;
-            .bx-viewport {
-                height: 410px!important;
-            }
-            .slide {
-                background-size: cover;
-                background-position: center;
-            }
-        }
+    > .block-afbeelding {
+      padding: 0;
+      margin-top: 30px;
+      height: 410px;
+      .bx-viewport {
+        height: 410px!important;
+      }
+      .slide {
+        background-size: cover;
+        background-position: center;
+      }
     }
+  }
 }
 .middle-row {
-    padding: 0 15px;
-    .block-wrapper {
-        padding: 15px;
-        .block {
-            height: auto;
-            img {
-                .img-responsive;
-                height: 380px!important;
-                width: 100%!important;
-                object-fit: cover;
-            }
-            h2 {
-                padding: 25px 20px;
-                margin: 0;
-                font-size: 36px;
-                font-weight: bold;
-                color: @kleur3;
-                background-color: @grey-light;
-            }
-            &.block-talenten {
-                h2 {
-                    margin-top: 30px;
-                }
-                .icon-talenten {
-                    position: absolute;
-                    margin: 0;
-                    width: 60px!important;
-                    height: auto!important;
-                    bottom: 35px;
-                    right: 40px;
-                }
-            }
-            &.block-filmmakers {
-                h2 {
-                    margin-bottom: 30px;
-                }
-                .icon-filmmakers {
-                    position: absolute;
-                    margin: 0;
-                    width: 60px!important;
-                    height: auto!important;
-                    top: 35px;
-                    right: 40px;
-                }
-            }
+  padding: 0 15px;
+  .block-wrapper {
+    padding: 15px;
+    .block {
+      height: auto;
+      img {
+        .img-responsive;
+        height: 380px!important;
+        width: 100%!important;
+        object-fit: cover;
+      }
+      h2 {
+        padding: 25px 20px;
+        margin: 0;
+        font-size: 36px;
+        font-weight: bold;
+        color: @kleur3;
+        background-color: @grey-light;
+      }
+      &.block-talenten {
+        h2 {
+          margin-top: 30px;
         }
+        .icon-talenten {
+          position: absolute;
+          margin: 0;
+          width: 60px!important;
+          height: auto!important;
+          bottom: 35px;
+          right: 40px;
+        }
+      }
+      &.block-filmmakers {
+        h2 {
+          margin-bottom: 30px;
+        }
+        .icon-filmmakers {
+          position: absolute;
+          margin: 0;
+          width: 60px!important;
+          height: auto!important;
+          top: 35px;
+          right: 40px;
+        }
+      }
     }
+  }
 }
 .bottom-row {
-    padding: 15px 0 30px 0;
+  padding: 15px 0 30px 0;
 
-    .row {
-        margin-left: 10px;
-        margin-right: 10px;
-        &.no-margin {
-            margin: 0;
-        }
-        .block-fancy-colored {
-            width: 100%;
-            height: 60px;
-            background-color: @kleur2;
-        }
-        .block-fancy {
-            position: relative;
-            float: left;
-            width: ~'calc(33.33% + 20px)';
-            height: 460px;
-            padding: 0;
-            margin: 0 -10px;
-            left:0;
-            top: 0px;
-            background-color: @kleur4;
-            .transition( all 0.5s);
-
-            &:before {
-                content: '';
-                opacity: 0;
-                position: absolute;
-                width: 20px;
-                height: 30px!important;
-                right: 0;
-                bottom: 0;
-                box-sizing: border-box;
-            }
-            &:after {
-                content: '';
-                opacity: 0;
-                position: absolute;
-                width: 20px;
-                height: 30px!important;
-                left: 0;
-                bottom: 0;
-                box-sizing: border-box;
-            }
-            &:hover {
-                top: -30px;
-                z-index: 10;
-                background-color: @kleur1;
-                .transition( all 0.5s);
-                &:before {
-                    opacity: 1;
-                    .transition( all 0.5s);
-                    bottom: -30px;
-                    height: ~'calc(100% + 30px)';
-                    border-left: 20px @fancy-box-overlap solid;
-                    border-bottom: 30px @kleur4 solid;
-                }
-                &:after {
-                    opacity: 1;
-                    .transition( all 0.5s);
-                    bottom: -30px;
-                    height: ~'calc(100% + 40px)';
-                    border-right: 20px @fancy-box-overlap solid;
-                    border-bottom: 30px @kleur4 solid;
-                }
-            }
-            .block-fancy-content {
-                display: inline-block;
-                position: relative;
-                margin: 5% 10%;
-                h2 {
-                    text-align: center;
-                    font-size: 36px;
-                    font-weight: bold;
-                    color: @kleur3;
-                    a {
-                        font-size: 36px;
-                        font-weight: bold;
-                        color: @kleur3;
-                    }
-                }
-                h3 {
-                    padding: 0 20px;
-                    text-align: center;
-                    font-style: italic;
-                    color: @kleur3;
-                }
-                p {
-                    height: 240px;
-                    padding-top: 25px;
-                    font-size:22px;
-                    line-height:28px;
-                }
-                a {
-                    font-weight: bold;
-                    font-size:20px;
-                }
-            }
-        }
+  .row {
+    margin-left: 10px;
+    margin-right: 10px;
+    &.no-margin {
+      margin: 0;
     }
+    .block-fancy-colored {
+      width: 100%;
+      height: 60px;
+      background-color: @kleur2;
+    }
+    .block-fancy {
+      position: relative;
+      float: left;
+      width: ~'calc(33.33% + 20px)';
+      height: 460px;
+      padding: 0;
+      margin: 0 -10px;
+      left:0;
+      top: 0px;
+      background-color: @kleur4;
+      .transition( all 0.5s);
+
+      &:before {
+        content: '';
+        opacity: 0;
+        position: absolute;
+        width: 20px;
+        height: 30px!important;
+        right: 0;
+        bottom: 0;
+        box-sizing: border-box;
+      }
+      &:after {
+        content: '';
+        opacity: 0;
+        position: absolute;
+        width: 20px;
+        height: 30px!important;
+        left: 0;
+        bottom: 0;
+        box-sizing: border-box;
+      }
+      &:hover {
+        top: -30px;
+        z-index: 10;
+        background-color: @kleur1;
+        .transition( all 0.5s);
+        &:before {
+          opacity: 1;
+          .transition( all 0.5s);
+          bottom: -30px;
+          height: ~'calc(100% + 30px)';
+          border-left: 20px @fancy-box-overlap solid;
+          border-bottom: 30px @kleur4 solid;
+        }
+        &:after {
+          opacity: 1;
+          .transition( all 0.5s);
+          bottom: -30px;
+          height: ~'calc(100% + 40px)';
+          border-right: 20px @fancy-box-overlap solid;
+          border-bottom: 30px @kleur4 solid;
+        }
+      }
+      .block-fancy-content {
+        display: inline-block;
+        position: relative;
+        margin: 5% 10%;
+        h2 {
+          text-align: center;
+          font-size: 36px;
+          font-weight: bold;
+          color: @kleur3;
+          a {
+            font-size: 36px;
+            font-weight: bold;
+            color: @kleur3;
+          }
+        }
+        h3 {
+          padding: 0 20px;
+          text-align: center;
+          font-style: italic;
+          color: @kleur3;
+        }
+        p {
+          height: 240px;
+          padding-top: 25px;
+          font-size:22px;
+          line-height:28px;
+        }
+        a {
+          font-weight: bold;
+          font-size:20px;
+        }
+      }
+    }
+  }
 }
 /* ==========================================================================
    Home Groep 8 pagina
    ========================================================================== */
 
 .groep-8-top-row {
-    padding: 0 15px;
-    .block-wrapper {
-        padding: 0 15px 15px 15px;
-        &.top-left-block {
-            padding-top: 300px;
-        }
-        .block-info-ouders {
-            position: relative;
-            padding: 15px 15px 15px 0;
-            height: 500px;
-            img {
-                position: absolute;
-                object-fit: cover;
-                padding-left: 5%;
-                width: 100%!important;
-                height: 360px!important;
-                z-index: 10;
-            }
-            h2 {
-                vertical-align: bottom;
-                position: absolute;
-                text-align: right;
-                bottom: 0;
-                width: 90%;
-                margin: 0;
-                padding: 190px 20px 25px;
-                font-size: 34px;
-                font-weight: bold;
-                color: @kleur3;
-                background-color: @kleur4;
-            }
-        }
-        .block-hallo-achtste-groeper {
-            padding: 1px;
-            position: relative;
-            background-color: @kleur1;
-            height: 800px;
-            width: 90%;
-            .icon-duim {
-                position: absolute;
-                margin: 0;
-                width: 60px!important;
-                height: 60px!important;
-                top: 30px;
-                left: 35px;
-            }
-            h2 {
-                text-align: right;
-                padding-left: 110px;
-                padding-right: 20px;
-                a{
-                    padding: 0;
-                    font-size: 36px;
-                    font-weight: bold;
-                    color: @kleur3;
-                }
-            }
-            a {
-                padding: 0;
-            }
-            img {
-                position: relative;
-                margin: 25px 0 0 0;
-                width: 100%!important;
-                height: auto!important;
-                right: ~'calc(-7px - 10%)';
-            }
-
-            pre {
-                display: block;
-                background-color: @kleur3;
-                color: @white-color;
-                font-family: @ubuntu;
-                font-size: 24px;
-                line-height: 26px;
-                white-space: normal;
-                text-align: center;
-                padding: 15px;
-                position: relative;
-                margin: 0 0 25px 0;
-                width: 100%!important;
-                height: auto!important;
-                right: ~'calc(-7px - 10%)';
-                a{
-                    line-height: 26px;
-                    color: @white-color;
-                    font-family: @ubuntu;
-                    font-size: 24px;
-                    font-weight: normal;
-                }
-            }
-
-            p {
-                display: block;
-                padding: 0 10% 10px;
-                font-size: 24px;
-                line-height: 30px;
-                margin-bottom: 0;
-                a {
-                    font-size: 20px;
-                    font-weight: bold;
-                }
-            }
-        }
-        .block-schrijf-in {
-            position: relative;
-            height: 89px;
-            .icon-inschrijven {
-                position: absolute;
-                object-fit: none;
-                margin: 0;
-                width: 45px!important;
-                height: 45px!important;
-                left: 20px;
-                bottom: 25px;
-                z-index: 5;
-            }
-            h2 {
-                position: absolute;
-                text-align: center;
-                bottom: 0;
-                width: 100%;
-                margin: 0;
-                padding: 25px 10px;
-                font-size: 36px;
-                font-weight: bold;
-                background-color: @kleur2;
-                a {
-                    color: @white-color;
-                }
-            }
-        }
-        .block-kom-kijken-groep8 {
-            position: relative;
-            height: 680px;
-            margin-top:30px;
-
-            img {
-                .img-responsive;
-                height: 581px!important;
-                width: 100%!important;
-                object-fit: cover;
-            }
-            h2 {
-                position: absolute;
-                text-align: center;
-                bottom: 0;
-                width: 100%;
-                margin: 0;
-                padding: 30px 10px;
-                font-size: 36px;
-                font-weight: bold;
-                background-color: @kleur4;
-                a {
-                    color: @white-color;
-                }
-            }
-            .icon-kom-kijken {
-                position: absolute;
-                object-fit: none;
-                margin: 0;
-                width: 65px!important;
-                height: 65px!important;
-                left: 20px;
-                bottom: 20px;
-                z-index: 5;
-            }
-        }
+  padding: 0 15px;
+  .block-wrapper {
+    padding: 0 15px 15px 15px;
+    &.top-left-block {
+      padding-top: 300px;
     }
+    .block-info-ouders {
+      position: relative;
+      padding: 15px 15px 15px 0;
+      height: 500px;
+      img {
+        position: absolute;
+        object-fit: cover;
+        padding-left: 5%;
+        width: 100%!important;
+        height: 360px!important;
+        z-index: 10;
+      }
+      h2 {
+        vertical-align: bottom;
+        position: absolute;
+        text-align: right;
+        bottom: 0;
+        width: 90%;
+        margin: 0;
+        padding: 190px 20px 25px;
+        font-size: 34px;
+        font-weight: bold;
+        color: @kleur3;
+        background-color: @kleur4;
+      }
+    }
+    .block-hallo-achtste-groeper {
+      padding: 1px;
+      position: relative;
+      background-color: @kleur1;
+      height: 800px;
+      width: 90%;
+      .icon-duim {
+        position: absolute;
+        margin: 0;
+        width: 60px!important;
+        height: 60px!important;
+        top: 30px;
+        left: 35px;
+      }
+      h2 {
+        text-align: right;
+        padding-left: 110px;
+        padding-right: 20px;
+        a{
+          padding: 0;
+          font-size: 36px;
+          font-weight: bold;
+          color: @kleur3;
+        }
+      }
+      a {
+        padding: 0;
+      }
+      img {
+        position: relative;
+        margin: 25px 0 0 0;
+        width: 100%!important;
+        height: auto!important;
+        right: ~'calc(-7px - 10%)';
+      }
+
+      pre {
+        display: block;
+        background-color: @kleur3;
+        color: @white-color;
+        font-family: @ubuntu;
+        font-size: 24px;
+        line-height: 26px;
+        white-space: normal;
+        text-align: center;
+        padding: 15px;
+        position: relative;
+        margin: 0 0 25px 0;
+        width: 100%!important;
+        height: auto!important;
+        right: ~'calc(-7px - 10%)';
+        a{
+          line-height: 26px;
+          color: @white-color;
+          font-family: @ubuntu;
+          font-size: 24px;
+          font-weight: normal;
+        }
+      }
+
+      p {
+        display: block;
+        padding: 0 10% 10px;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 0;
+        a {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+    .block-schrijf-in {
+      position: relative;
+      height: 89px;
+      .icon-inschrijven {
+        position: absolute;
+        object-fit: none;
+        margin: 0;
+        width: 45px!important;
+        height: 45px!important;
+        left: 20px;
+        bottom: 25px;
+        z-index: 5;
+      }
+      h2 {
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        padding: 25px 10px;
+        font-size: 36px;
+        font-weight: bold;
+        background-color: @kleur2;
+        a {
+          color: @white-color;
+        }
+      }
+    }
+    .block-kom-kijken-groep8 {
+      position: relative;
+      height: 680px;
+      margin-top:30px;
+
+      img {
+        .img-responsive;
+        height: 581px!important;
+        width: 100%!important;
+        object-fit: cover;
+      }
+      h2 {
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        padding: 30px 10px;
+        font-size: 36px;
+        font-weight: bold;
+        background-color: @kleur4;
+        a {
+          color: @white-color;
+        }
+      }
+      .icon-kom-kijken {
+        position: absolute;
+        object-fit: none;
+        margin: 0;
+        width: 65px!important;
+        height: 65px!important;
+        left: 20px;
+        bottom: 20px;
+        z-index: 5;
+      }
+    }
+  }
 }
 
 .groep-8-bottom-row {
-    padding: 0 15px;
-    .block-wrapper {
-        padding: 15px;
-        .block-filmmakers {
-            height: auto;
-            img {
-                .img-responsive;
-                height: 420px!important;
-                width: 100%!important;
-                object-fit: cover;
-            }
-            h2 {
-                padding: 25px 20px;
-                text-align: right;
-                margin: 0 0 30px 0;
-                font-size: 36px;
-                line-height: 50px;
-                font-weight: bold;
-                color: @kleur3;
-                background-color: @grey-light;
-            }
-            .icon-filmmakers {
-                position: absolute;
-                margin: 0;
-                width: 60px!important;
-                height: auto!important;
-                top: 40px;
-                left: 40px;
-            }
-        }
-        .block-10-vragen {
-            height: 550px;
-            background-color: @kleur2;
-            color: @white-color;
-            img {
-                .img-responsive;
-                height: 200px!important;
-                width: 100%!important;
-                object-fit: cover;
-            }
-            h2 {
-                padding: 25px 20px;
-                margin: 0;
-                font-size: 36px;
-                font-weight: bold;
-
-                text-align: center;
-                a {
-                    font-size: 36px;
-                    font-weight: bold;
-                    color: @white-color;
-                }
-            }
-            h3 {
-                padding: 0 20px;
-                margin-top: 0;
-                text-align: center;
-                font-style: italic;
-                font-size: 38px;
-            }
-
-            .icon-vragen {
-                position: absolute;
-                margin: 0;
-                width: 100px!important;
-                height: auto!important;
-                bottom: 35px;
-                left: ~'calc(50% - 50px)';
-            }
-        }
-        .block-monnikskap {
-            height: 550px;
-            background-color: @grey-light;
-            color: @kleur3;
-            a{
-                padding: 0;
-
-            }
-            img {
-                .img-responsive;
-                height: 200px!important;
-                width: 100%!important;
-                object-fit: cover;
-            }
-            h2 {
-                padding: 25px 20px;
-                margin: 0;
-                font-size: 36px;
-                font-weight: bold;
-                text-align: center;
-                a {
-                    font-size: 36px;
-                    font-weight: bold;
-                }
-            }
-            h3 {
-                padding: 0 20px;
-                margin-top: 0;
-                text-align: center;
-                font-style: italic;
-            }
-            p {
-                padding: 0 20px;
-                line-height: 26px;
-                a {
-                    font-size: 18px;
-                    font-weight: bold;
-                }
-            }
-
-        }
+  padding: 0 15px;
+  .block-wrapper {
+    padding: 15px;
+    .block-filmmakers {
+      height: auto;
+      img {
+        .img-responsive;
+        height: 420px!important;
+        width: 100%!important;
+        object-fit: cover;
+      }
+      h2 {
+        padding: 25px 20px;
+        text-align: right;
+        margin: 0 0 30px 0;
+        font-size: 36px;
+        line-height: 50px;
+        font-weight: bold;
+        color: @kleur3;
+        background-color: @grey-light;
+      }
+      .icon-filmmakers {
+        position: absolute;
+        margin: 0;
+        width: 60px!important;
+        height: auto!important;
+        top: 40px;
+        left: 40px;
+      }
     }
+    .block-10-vragen {
+      height: 550px;
+      background-color: @kleur2;
+      color: @white-color;
+      img {
+        .img-responsive;
+        height: 200px!important;
+        width: 100%!important;
+        object-fit: cover;
+      }
+      h2 {
+        padding: 25px 20px;
+        margin: 0;
+        font-size: 36px;
+        font-weight: bold;
+
+        text-align: center;
+        a {
+          font-size: 36px;
+          font-weight: bold;
+          color: @white-color;
+        }
+      }
+      h3 {
+        padding: 0 20px;
+        margin-top: 0;
+        text-align: center;
+        font-style: italic;
+        font-size: 38px;
+      }
+
+      .icon-vragen {
+        position: absolute;
+        margin: 0;
+        width: 100px!important;
+        height: auto!important;
+        bottom: 35px;
+        left: ~'calc(50% - 50px)';
+      }
+    }
+    .block-monnikskap {
+      height: 550px;
+      background-color: @grey-light;
+      color: @kleur3;
+      a{
+        padding: 0;
+
+      }
+      img {
+        .img-responsive;
+        height: 200px!important;
+        width: 100%!important;
+        object-fit: cover;
+      }
+      h2 {
+        padding: 25px 20px;
+        margin: 0;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        a {
+          font-size: 36px;
+          font-weight: bold;
+        }
+      }
+      h3 {
+        padding: 0 20px;
+        margin-top: 0;
+        text-align: center;
+        font-style: italic;
+      }
+      p {
+        padding: 0 20px;
+        line-height: 26px;
+        a {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+
+    }
+  }
 }
 /* ==========================================================================
    Routeplanner
    ========================================================================== */
 
 .routeplanner {
-    .row {
-        div {
-            &:first-child {
-                display: inline-block;
-                width: 70%;
-                padding-bottom: 10px;
-            }
-            &:last-child {
-                display: inline-block;
-                padding-left: 0;
-                padding-bottom: 10px;
-                width: 29%;
-                text-align: right;
-            }
-        }
-
-    }
-    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-        color: @black-color;
-    }
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-        color: @black-color;
-        opacity:  1;
-    }
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
-        color: @black-color;
-        opacity:  1;
-    }
-    :-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: @black-color;
-    }
-
-    #locatieA {
-        display: block;
-        padding: .5rem .75rem;
-        font-family: @ubuntu;
-        font-size: 1rem;
-        line-height: 1.25;
-        color: @kleur3;
-        background-color: @white-color;
-        border: 1px solid rgba(0,0,0,.15);
-        border-radius: .25rem;
-        width: 100%;
-        position: relative;
-        min-height: 1px;
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-    button {
+  .row {
+    div {
+      &:first-child {
         display: inline-block;
-        position: relative;
-        background-color: @kleur2;
-        color: @white-color;
-        font-weight: 400;
-        line-height: 1.25;
-        border: 1px solid transparent;
-        padding: .5rem 1rem;
-        font-size: 1rem;
-        border-radius: .25rem;
+        width: 70%;
+        padding-bottom: 10px;
+      }
+      &:last-child {
+        display: inline-block;
+        padding-left: 0;
+        padding-bottom: 10px;
+        width: 29%;
+        text-align: right;
+      }
     }
+
+  }
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: @black-color;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: @black-color;
+    opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: @black-color;
+    opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: @black-color;
+  }
+
+  #locatieA {
+    display: block;
+    padding: .5rem .75rem;
+    font-family: @ubuntu;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: @kleur3;
+    background-color: @white-color;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    width: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  button {
+    display: inline-block;
+    position: relative;
+    background-color: @kleur2;
+    color: @white-color;
+    font-weight: 400;
+    line-height: 1.25;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+  }
 }
 @media (max-width: 500px) {
-    .routeplanner {
-        .row {
-            div {
-                &:first-child {
-                    display: inline-block;
-                    width: 100%;
-                    padding-bottom: 10px;
-                }
-                &:last-child {
-                    display: inline-block;
-                    padding-left: 15px;
-                    padding-bottom: 10px;
-                    width: 100%;
-                    text-align: left;
-                }
-            }
+  .routeplanner {
+    .row {
+      div {
+        &:first-child {
+          display: inline-block;
+          width: 100%;
+          padding-bottom: 10px;
         }
+        &:last-child {
+          display: inline-block;
+          padding-left: 15px;
+          padding-bottom: 10px;
+          width: 100%;
+          text-align: left;
+        }
+      }
     }
+  }
 
-    #directionsPanel {
-        font-size: 12px;
-        line-height: 22px;
-        word-break: break-word;
-    }
+  #directionsPanel {
+    font-size: 12px;
+    line-height: 22px;
+    word-break: break-word;
+  }
 }
 
 /* ==========================================================================
    Formulier
    ========================================================================== */
 form{
-    .formulier_div {
-        margin-bottom: 1rem;
-        width: 100%;
-        &:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        &.hoofdkop {
-            padding-top: 20px;
-            span {
-                color: @kleur2;
-                font-size: 22px;
-                font-weight: bold;
-            }
-        }
-        &.tussenkop {
-            span {
-                color: @kleur2;
-                font-size: 20px;
-                font-weight: bold;
-            }
-        }
-        label{
-            font-weight: bold;
-            font-family: @ubuntu;
-            padding-top: .5rem;
-            padding-bottom: .5rem;
-            margin-bottom: 0;
-            float: left;
-            width: 30%;
-            position: relative;
-            min-height: 1px;
-            padding-right: 15px;
-            padding-left: 15px;
-        }
-        input, textarea{
-            display: block;
-            padding: .5rem .75rem;
-            font-family: @ubuntu;
-            font-size: 1rem;
-            line-height: 1.25;
-            color: #55595c;
-            background-color: #fff;
-            background-image: none;
-            -webkit-background-clip: padding-box;
-            background-clip: padding-box;
-            border: 1px solid rgba(0,0,0,.15);
-            border-radius: .25rem;
-            float: left;
-            width: 50%;
-            position: relative;
-            min-height: 1px;
-            padding-right: 15px;
-            padding-left: 15px;
-        }
-        .formulier_radio, .formulier_check {
-            margin-left: 30%;
-            width: 100%;
-            height: auto;
-            float: left;
-            > input {
-                width: 20px;
-                margin-top: 12px;
-            }
-            > label {
-                width: auto;
-            }
-        }
-        textarea{
-            height: 150px;
-        }
-        .form_tooltip {
-            float: left;
-            margin: 0 0 0 10px;
-            padding: 8px 12px;
-            background-color: @kleur2;
-
-            font-size: 24px;
-            font-weight: bold;
-            font-family: @ubuntu;
-            color: @white-color;
-
-            border-radius: 16px;
-            cursor: pointer;
-        }
-        .tooltip {
-            position: absolute;
-            display: inline-block;
-            padding-bottom: 6px;
-            .tooltip-inner {
-                position: relative;
-                padding: 10px;
-                background-color: @black-color;
-                color: white;
-                font-size: 12px;
-                border-radius: 5px;
-            }
-
-        }
+  .formulier_div {
+    margin-bottom: 1rem;
+    width: 100%;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
     }
-    .formulier_div_submit{
-        input{
-            background-color: @kleur2;
-            color: @white-color;
-            display: inline-block;
-            font-weight: 400;
-            line-height: 1.25;
-            border: 1px solid transparent;
-            padding: .5rem 1rem;
-            font-size: 1rem;
-            border-radius: .25rem;
-            margin-left: 30%;
-        }
+    &.hoofdkop {
+      padding-top: 20px;
+      span {
+        color: @kleur2;
+        font-size: 22px;
+        font-weight: bold;
+      }
     }
+    &.tussenkop {
+      span {
+        color: @kleur2;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+    label{
+      font-weight: bold;
+      font-family: @ubuntu;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      margin-bottom: 0;
+      float: left;
+      width: 30%;
+      position: relative;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    input, textarea{
+      display: block;
+      padding: .5rem .75rem;
+      font-family: @ubuntu;
+      font-size: 1rem;
+      line-height: 1.25;
+      color: #55595c;
+      background-color: #fff;
+      background-image: none;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      border: 1px solid rgba(0,0,0,.15);
+      border-radius: .25rem;
+      float: left;
+      width: 50%;
+      position: relative;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    .formulier_radio, .formulier_check {
+      margin-left: 30%;
+      width: 100%;
+      height: auto;
+      float: left;
+      > input {
+        width: 20px;
+        margin-top: 12px;
+      }
+      > label {
+        width: auto;
+      }
+    }
+    textarea{
+      height: 150px;
+    }
+    .form_tooltip {
+      float: left;
+      margin: 0 0 0 10px;
+      padding: 8px 12px;
+      background-color: @kleur2;
+
+      font-size: 24px;
+      font-weight: bold;
+      font-family: @ubuntu;
+      color: @white-color;
+
+      border-radius: 16px;
+      cursor: pointer;
+    }
+    .tooltip {
+      position: absolute;
+      display: inline-block;
+      padding-bottom: 6px;
+      .tooltip-inner {
+        position: relative;
+        padding: 10px;
+        background-color: @black-color;
+        color: white;
+        font-size: 12px;
+        border-radius: 5px;
+      }
+
+    }
+  }
+  .formulier_div_submit{
+    input{
+      background-color: @kleur2;
+      color: @white-color;
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.25;
+      border: 1px solid transparent;
+      padding: .5rem 1rem;
+      font-size: 1rem;
+      border-radius: .25rem;
+      margin-left: 30%;
+    }
+  }
 }
 
 .formulier_verzonden {
-    color: @kleur2;
+  color: @kleur2;
 }
 
 
 @media (max-width: 991px) {
-    form{
-        .formulier_div{
-            label{
-                width: 33.33333333%;
-            }
-            input, textarea{
-                width: 50%;
-            }
-            .formulier_radio, .formulier_check {
-                margin-left: 33.33333333%;
-            }
-            textarea{
+  form{
+    .formulier_div{
+      label{
+        width: 33.33333333%;
+      }
+      input, textarea{
+        width: 50%;
+      }
+      .formulier_radio, .formulier_check {
+        margin-left: 33.33333333%;
+      }
+      textarea{
 
-            }
-        }
-        .formulier_div_submit{
-            input{
-                margin-left: 33.33333333%;
-            }
-        }
+      }
     }
+    .formulier_div_submit{
+      input{
+        margin-left: 33.33333333%;
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {
-    form{
-        .formulier_div{
-            label{
-                width: 100%;
-                padding-left: 0;
+  form{
+    .formulier_div{
+      label{
+        width: 100%;
+        padding-left: 0;
 
-            }
-            input, textarea{
-                width: 100%;
-            }
-            .formulier_radio, .formulier_check {
-                margin-left: 5%;
-            }
-            textarea{
+      }
+      input, textarea{
+        width: 100%;
+      }
+      .formulier_radio, .formulier_check {
+        margin-left: 5%;
+      }
+      textarea{
 
-            }
-        }
-        .formulier_div_submit{
-            input{
-                margin-left: 0;
-            }
-        }
+      }
     }
+    .formulier_div_submit{
+      input{
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 /* Placeholder */
 ::-webkit-input-placeholder {
-    color: @black-color;
+  color: @black-color;
 }
 :-moz-placeholder {
-    color: @black-color;
+  color: @black-color;
 }
 ::-moz-placeholder {
-    color: @black-color;
+  color: @black-color;
 }
 :-ms-input-placeholder {
-    color: @black-color;
+  color: @black-color;
 }
 
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
 @media (max-width: 1550px) and (min-width: 1200px){
-    /* ==========================================================================
-       Home pagina
-       ========================================================================== */
-    .top-row {
-        .block-wrapper {
-            .block-in-beeld {
-                h2 {
-                    font-size: 27px;
-                }
-            }
-            .block-op-zoek {
-                h2 {
-                    a{
-                        font-size: 27px;
-                    }
-                }
-                pre {
-                    padding: 10px;
-                    font-size: 22px;
-                }
-                p {
-                    font-size: 20px;
-                }
-            }
+  /* ==========================================================================
+     Home pagina
+     ========================================================================== */
+  .top-row {
+    .block-wrapper {
+      .block-in-beeld {
+        h2 {
+          font-size: 27px;
         }
-        .block-btn-row {
-            .block-btn {
-                h2 {
-                    a {
-                        font-size: 30px;
-                    }
-                }
-            }
+      }
+      .block-op-zoek {
+        h2 {
+          a{
+            font-size: 27px;
+          }
         }
-        .right-column {
-            > .block-wrapper-left {
-                .block-kom-kijken {
-                    h2 {
-                        a {
-                            font-size: 26px;
-                        }
-                    }
-                }
-            }
+        pre {
+          padding: 10px;
+          font-size: 22px;
         }
+        p {
+          font-size: 20px;
+        }
+      }
     }
-    .middle-row {
-        .block-wrapper {
-            .block {
-                h2 {
-                    font-size: 24px;
-                    line-height: 39px;
-                }
-            }
+    .block-btn-row {
+      .block-btn {
+        h2 {
+          a {
+            font-size: 24px;
+          }
         }
+      }
     }
-    /* ==========================================================================
-        Home Groep 8 pagina
-       ========================================================================== */
+    .right-column {
+      > .block-wrapper-left {
+        .block-kom-kijken {
+          h2 {
+            a {
+              font-size: 26px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .middle-row {
+    .block-wrapper {
+      .block {
+        h2 {
+          font-size: 24px;
+          line-height: 39px;
+        }
+      }
+    }
+  }
+  /* ==========================================================================
+      Home Groep 8 pagina
+     ========================================================================== */
 
-    .groep-8-top-row {
-        .block-wrapper {
-            .block-info-ouders {
-                h2 {
-                    font-size: 25px;
-                }
-            }
-            .block-hallo-achtste-groeper {
-                .icon-duim {
-                    top: 15px;
-                }
-                h2 {
-                    a{
-                        font-size: 25px;
-                    }
-                }
-                pre {
-                    padding: 15px;
-                    a{
-                        padding: 0;
-                        font-size: 22px;
-                    }
-                }
-                p {
-                    font-size: 20px;
-                }
-                a {
-                    display: block;
-                    padding-top: 20px;
-                }
-            }
-            .block-schrijf-in {
-                h2 {
-                    padding-right: 30px;
-                    text-align: right;
-                }
-            }
-            .block-kom-kijken-groep8 {
-                h2 {
-                    padding-right: 30px;
-                    text-align: right;
-                }
-            }
+  .groep-8-top-row {
+    .block-wrapper {
+      .block-info-ouders {
+        h2 {
+          font-size: 25px;
         }
+      }
+      .block-hallo-achtste-groeper {
+        .icon-duim {
+          top: 15px;
+        }
+        h2 {
+          a{
+            font-size: 25px;
+          }
+        }
+        pre {
+          padding: 15px;
+          a{
+            padding: 0;
+            font-size: 22px;
+          }
+        }
+        p {
+          font-size: 20px;
+        }
+        a {
+          display: block;
+          padding-top: 20px;
+        }
+      }
+      .block-schrijf-in {
+        h2 {
+          padding-right: 30px;
+          text-align: right;
+        }
+      }
+      .block-kom-kijken-groep8 {
+        h2 {
+          padding-right: 30px;
+          text-align: right;
+        }
+      }
     }
+  }
 
-    .groep-8-bottom-row {
-        .block-wrapper {
-            .block-filmmakers {
-                h2 {
-                    font-size: 24px;
-                    line-height: 50px;
-                }
-            }
+  .groep-8-bottom-row {
+    .block-wrapper {
+      .block-filmmakers {
+        h2 {
+          font-size: 24px;
+          line-height: 50px;
         }
+      }
     }
+  }
 }
 @media (max-width: 1199px){
-    .top-row {
-        .block-wrapper {
-            .block-in-beeld {
-                h2 {
-                    font-size: 28px;
-                }
-            }
-            .block-op-zoek {
-                h2 {
-                    a{
-                        font-size: 28px;
-                    }
-                }
-            }
+  .top-row {
+    .block-wrapper {
+      .block-in-beeld {
+        h2 {
+          font-size: 28px;
         }
-    }
-    .middle-row {
-        .block-wrapper {
-            .block {
-                h2 {
-                    font-size: 28px;
-                    line-height: 39px;
-                }
-            }
+      }
+      .block-op-zoek {
+        h2 {
+          a{
+            font-size: 28px;
+          }
         }
+      }
     }
-    .groep-8-bottom-row {
-        .block-wrapper {
-            .block-filmmakers {
-                .icon-filmmakers {
-                    display: none;
-                }
-                h2 {
-                    font-size: 24px;
-                    line-height: 50px;
-                }
-            }
-            .block-10-vragen {
-                h2 {
-                    a {
-                        font-size: 28px;
-                        line-height: 32px;
-                    }
-                }
-                h3 {
-                    font-size: 26px;
-                    line-height: 30px;
-                }
-            }
-            .block-monnikskap {
-                h2 {
-                    a {
-                        font-size: 28px;
-                        line-height: 32px;
-                    }
-                }
-                h3 {
-                    font-size: 24px;
-                    line-height: 28px;
-                }
-            }
+        .block-btn-row {
+      .block-btn {
+        h2 {
+          a {
+            font-size: 28px;
+          }
         }
+      }
     }
+  }
+  .middle-row {
+    .block-wrapper {
+      .block {
+        h2 {
+          font-size: 28px;
+          line-height: 39px;
+        }
+      }
+    }
+  }
+  .groep-8-bottom-row {
+    .block-wrapper {
+      .block-filmmakers {
+        .icon-filmmakers {
+          display: none;
+        }
+        h2 {
+          font-size: 24px;
+          line-height: 50px;
+        }
+      }
+      .block-10-vragen {
+        h2 {
+          a {
+            font-size: 28px;
+            line-height: 32px;
+          }
+        }
+        h3 {
+          font-size: 26px;
+          line-height: 30px;
+        }
+      }
+      .block-monnikskap {
+        h2 {
+          a {
+            font-size: 28px;
+            line-height: 32px;
+          }
+        }
+        h3 {
+          font-size: 24px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 991px){
-    /* ==========================================================================
-   Home pagina
-   ========================================================================== */
-    .top-row {
-        .block-wrapper {
-            &.top-left-block {
-                padding-top: 0;
-            }
-            .block-in-beeld {
-                padding: 15px;
-                height: auto;
-                width: 100%;
-                background-color: @kleur4;
-                overflow: auto;
-                iframe {
-                    position: static;
-                    padding-left: 0;
-                    min-height: 160px;
-                }
-                h2 {
-                    position: relative;
-                    height: auto;
-                    width: 215px;
-                    float: right;
-                    padding: 15px 0 0 60px;
-                    font-size: 24px;
-                }
-                .icon-in-beeld {
-                    width: 45px!important;
-                    bottom: 20px;
-                    left: 18px;
-                }
-            }
-            .block-op-zoek {
-                height: auto;
-                width: 100%;
-                .icon-op-zoek {
-                    width: 40px!important;
-                    top: 20px;
-                    left: 20px;
-                }
-                h2 {
-                    margin: 0;
-                    padding:  0 0 15px 50px;
-                    text-align: right;
-                    max-width: 325px;
-                    float: right;
-                    a{
-                        font-size: 24px;
-                    }
-                }
-                a {
-                    img {
-                        margin: 0;
-                        right: 0;
-                    }
-                }
-
-                pre {
-                    font-size: 18px;
-                    line-height: 22px;
-                    padding: 10px;
-                    margin: 0;
-                    right: 0;
-                }
-
-                p {
-                    position: relative;
-                    padding: 15px 0;
-                    font-size: 16px;
-                    line-height: 24px;
-                    a {
-                        display: block;
-                        position: relative;
-                        padding: 15px 0;
-                        font-size: 18px;
-                    }
-                }
-
-            }
+  /* ==========================================================================
+ Home pagina
+ ========================================================================== */
+  .top-row {
+    .block-wrapper {
+      &.top-left-block {
+        padding-top: 0;
+      }
+      .block-in-beeld {
+        padding: 15px;
+        height: auto;
+        width: 100%;
+        background-color: @kleur4;
+        overflow: auto;
+        iframe {
+          position: static;
+          padding-left: 0;
+          min-height: 160px;
         }
-
-        .block-btn-row {
-            padding-top: 15px;
-            height: 85px;
-            .block-btn-wrapper-left {
-                padding: 0 7px 0 0;
-            }
-            .block-btn-wrapper-right {
-                padding: 0 0 0 7px;
-            }
-            .block-btn {
-                height: 70px;
-                h2 {
-                    a {
-                        line-height: 60px;
-                        font-size: 22px;
-                    }
-                    &:hover {
-                        border-bottom: 10px solid @kleur2;
-                    }
-                }
-            }
+        h2 {
+          position: relative;
+          height: auto;
+          width: 215px;
+          float: right;
+          padding: 15px 0 0 60px;
+          font-size: 24px;
         }
-
-        .right-column {
-            > .block-wrapper-left {
-                padding: 0;
-                .block-kom-kijken {
-                    height: auto;
-
-                    img {
-                        height: 730px!important;
-                    }
-                    .icon-kom-kijken {
-                    }
-                    h2 {
-                        a {
-                        }
-                    }
-                }
-            }
-
-            > .block-wrapper-right {
-                padding: 15px 0 0 0;
-                .block-info-groep8 {
-                    height: auto;
-                    img {
-                        height: auto!important;
-                    }
-                    h2 {
-                        a {
-                        }
-                    }
-                }
-                .block-maak-app {
-                    height: auto;
-                    margin-top: 15px;
-
-                    img {
-                        height: auto!important;
-                    }
-                    h2 {
-                        a {
-                        }
-                    }
-                }
-            }
+        .icon-in-beeld {
+          width: 45px!important;
+          bottom: 20px;
+          left: 18px;
         }
-    }
-    .middle-row {
-        .block-wrapper {
-            padding: 0 15px 15px;
-            .block {
-                img {
-                    height: auto!important;
-                }
-                h2 {
-                    padding: 15px 80px 15px 15px;
-                    font-size: 24px;
-                }
-                &.block-talenten {
-                    h2 {
-                        margin-top: 0;
-                    }
-                    .icon-talenten {
-                        width: 50px!important;
-                        bottom: 25px;
-                        right: 30px;
-                    }
-                }
-                &.block-filmmakers {
-                    h2 {
-                        margin-bottom: 0;
-                    }
-                    .icon-filmmakers {
-                        width: 50px!important;
-                        top: 10px;
-                        right: 30px;
-                    }
-                }
-            }
+      }
+      .block-op-zoek {
+        height: auto;
+        width: 100%;
+        .icon-op-zoek {
+          width: 40px!important;
+          top: 20px;
+          left: 20px;
         }
-    }
-    .bottom-row {
-        .row {
+        h2 {
+          margin: 0;
+          padding:  0 0 15px 50px;
+          text-align: right;
+          max-width: 325px;
+          float: right;
+          a{
+            font-size: 24px;
+          }
+        }
+        a {
+          img {
             margin: 0;
-            .block-fancy {
-                width: 100%;
-                height: auto;
-                margin: 0;
-                &:before {
-                    content: '';
-                }
-                &:after {
-                    content: '';
-                }
-                &:hover {
-                    top: 0;
-                    z-index: 0;
-                    background-color: @kleur1;
-                    .transition( all 0.5s);
-                    &:before {
-                        opacity: 0;
-                    }
-                    &:after {
-                        opacity: 0;
-
-                    }
-                }
-                .block-fancy-content {
-                    margin: 15px 15px;
-                    h2 {
-                        font-size: 24px;
-                        a {
-                            font-size: 24px;
-                        }
-                    }
-                    h3 {
-                        font-size: 20px;
-                    }
-                    p {
-                        height: 200px;
-                        font-size: 16px;
-                        line-height: 22px;
-                    }
-                    a {
-                        font-size: 18px;
-                    }
-                }
-            }
+            right: 0;
+          }
         }
-    }
-    /* ==========================================================================
-        Home Groep 8 pagina
-       ========================================================================== */
 
-    .groep-8-top-row {
-        padding: 0 15px;
-        .block-wrapper {
-            padding: 0 15px 15px 15px;
-            &.top-left-block {
-                padding-top: 0;
-            }
-            .block-info-ouders {
-                position: relative;
-                padding: 15px;
-                height: auto;
-                background-color: @kleur4;
-                img {
-                    position: relative;
-                    object-fit: cover;
-                    padding-left: 0;
-                    width: 100%!important;
-                    height: auto!important;
-                    z-index: 10;
-                }
-                h2 {
-                    vertical-align: bottom;
-                    position: relative;
-                    text-align: right;
-                    bottom: 0;
-                    width: 100%;
-                    margin: 0;
-                    padding: 15px 0 0;
-                    font-size: 24px;
-                    font-weight: bold;
-                    color: @kleur3;
-
-                }
-            }
-            .block-hallo-achtste-groeper {
-                padding: 15px;
-                height: auto;
-                width: 100%;
-                .icon-duim {
-                    position: absolute;
-                    margin: 0;
-                    width: 40px!important;
-                    height: 40px!important;
-                    top: 30px;
-                    left: 35px;
-                }
-                h2 {
-                    margin: 0;
-                    padding: 0 0 10px 80px;
-                    max-width: 325px;
-                    text-align: right;
-                    float: right;
-
-                    a{
-                        padding: 0;
-                        font-size: 24px;
-                        font-weight: bold;
-                        color: @kleur3;
-                    }
-                }
-                a {
-
-                }
-                img {
-                    margin: 0;
-                    right: 0;
-                }
-                pre {
-                    font-size: 18px;
-                    line-height: 22px;
-                    padding: 10px;
-                    margin: 0;
-                    right: 0;
-                    a{
-                        padding: 0;
-                        font-size: 18px;
-                        line-height: 22px;
-                    }
-                }
-
-                p {
-                    padding: 10px 0;
-                    font-size: 16px;
-                    line-height: 20px;
-                    a {
-                        padding: 5px 0 10px;
-                        font-size: 18px;
-                        font-weight: bold;
-                    }
-                }
-
-            }
-            .block-schrijf-in {
-                height: 76px;
-                .icon-inschrijven {
-                    bottom: 23px;
-                    object-fit: contain;
-                    width: 30px !important;
-                    height: 30px !important;
-                }
-                h2 {
-                    font-size: 24px;
-                    text-align: right;
-                }
-            }
-            .block-kom-kijken-groep8 {
-                height: auto;
-                margin-top: 15px;
-                img {
-                    height: auto!important;
-                }
-                h2 {
-                    text-align: right;
-                    padding: 25px 15px;
-                    font-size: 24px;
-                }
-                .icon-kom-kijken {
-                    object-fit: contain;
-                    width: 45px!important;
-                    height: 45px!important;
-                }
-            }
+        pre {
+          font-size: 18px;
+          line-height: 22px;
+          padding: 10px;
+          margin: 0;
+          right: 0;
         }
+
+        p {
+          position: relative;
+          padding: 15px 0;
+          font-size: 16px;
+          line-height: 24px;
+          a {
+            display: block;
+            position: relative;
+            padding: 15px 0;
+            font-size: 18px;
+          }
+        }
+      }
     }
 
-    .groep-8-bottom-row {
-        padding: 0 15px;
-        .block-wrapper {
-            padding: 0 15px 15px 15px;
-            .block-filmmakers {
-                height: auto;
-                img {
-                    height: auto!important;
-                }
-                h2 {
-                    padding: 25px 15px 25px 80px;
-                    margin: 0;
-                    font-size: 24px;
-                }
-                .icon-filmmakers {
-                    display: block;
-                    margin: 0;
-                    width: 50px!important;
-                    height: auto!important;
-                    top: 25px;
-                    left: 30px;
-                }
-            }
-            .block-10-vragen {
-                height: auto;
-                img {
-                    height: auto!important;
-                }
-                h2 {
-                    padding: 15px 15px;
-                    font-size: 24px;
-                    line-height: 26px;
-                    a {
-                        font-size: 24px;
-                        line-height: 26px;
-                    }
-                }
-                h3 {
-                    margin: 0;
-                    padding: 0 15px 90px;
-                    font-size: 22px;
-                    line-height: 26px;
-                }
-
-                .icon-vragen {
-                    width: 70px!important;
-                    left: ~'calc(50% - 35px)';
-                }
-            }
-            .block-monnikskap {
-                height: auto;
-                a {
-                    padding: 0;
-                }
-                img {
-                    height: auto!important;
-                }
-                h2 {
-                    padding: 25px 15px;
-                    font-size: 24px;
-                    line-height: 26px;
-                    a {
-                        font-size: 24px;
-                        line-height: 26px;
-                    }
-                }
-                h3 {
-                    padding: 0 15px;
-                    font-size: 22px;
-                    line-height: 26px;
-                }
-                p {
-                    padding: 0 15px;
-                    line-height: 20px;
-                    font-size: 16px;
-                    a {
-                        display: block;
-                        padding: 15px 0;
-                        font-size: 16px;
-                    }
-                }
-
-            }
+    .block-btn-row {
+      padding-top: 15px;
+      height: 85px;
+      .block-btn-wrapper-left {
+        padding: 0 7px 0 0;
+      }
+      .block-btn-wrapper-right {
+        padding: 0 0 0 7px;
+      }
+      .block-btn {
+        height: 70px;
+        h2 {
+          a {
+            line-height: 60px;
+            font-size: 22px;
+          }
+          &:hover {
+            border-bottom: 10px solid @kleur2;
+          }
         }
+      }
     }
+
+    .right-column {
+      > .block-wrapper-left {
+        padding: 0;
+        .block-kom-kijken {
+          height: auto;
+
+          img {
+            height: 730px!important;
+          }
+          .icon-kom-kijken {
+          }
+          h2 {
+            a {
+            }
+          }
+        }
+      }
+
+      > .block-wrapper-right {
+        padding: 15px 0 0 0;
+        .block-info-groep8 {
+          height: auto;
+          img {
+            height: auto!important;
+          }
+          h2 {
+            a {
+            }
+          }
+        }
+        .block-maak-app {
+          height: auto;
+          margin-top: 15px;
+
+          img {
+            height: auto!important;
+          }
+          h2 {
+            a {
+            }
+          }
+        }
+      }
+    }
+  }
+  .middle-row {
+    .block-wrapper {
+      padding: 0 15px 15px;
+      .block {
+        img {
+          height: auto!important;
+        }
+        h2 {
+          padding: 15px 80px 15px 15px;
+          font-size: 24px;
+        }
+        &.block-talenten {
+          h2 {
+            margin-top: 0;
+          }
+          .icon-talenten {
+            width: 50px!important;
+            bottom: 25px;
+            right: 30px;
+          }
+        }
+        &.block-filmmakers {
+          h2 {
+            margin-bottom: 0;
+          }
+          .icon-filmmakers {
+            width: 50px!important;
+            top: 10px;
+            right: 30px;
+          }
+        }
+      }
+    }
+  }
+  .bottom-row {
+    .row {
+      margin: 0;
+      .block-fancy {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        &:before {
+          content: '';
+        }
+        &:after {
+          content: '';
+        }
+        &:hover {
+          top: 0;
+          z-index: 0;
+          background-color: @kleur1;
+          .transition( all 0.5s);
+          &:before {
+            opacity: 0;
+          }
+          &:after {
+            opacity: 0;
+
+          }
+        }
+        .block-fancy-content {
+          margin: 15px 15px;
+          h2 {
+            font-size: 24px;
+            a {
+              font-size: 24px;
+            }
+          }
+          h3 {
+            font-size: 20px;
+          }
+          p {
+            height: 200px;
+            font-size: 16px;
+            line-height: 22px;
+          }
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  /* ==========================================================================
+      Home Groep 8 pagina
+     ========================================================================== */
+
+  .groep-8-top-row {
+    padding: 0 15px;
+    .block-wrapper {
+      padding: 0 15px 15px 15px;
+      &.top-left-block {
+        padding-top: 0;
+      }
+      .block-info-ouders {
+        position: relative;
+        padding: 15px;
+        height: auto;
+        background-color: @kleur4;
+        img {
+          position: relative;
+          object-fit: cover;
+          padding-left: 0;
+          width: 100%!important;
+          height: auto!important;
+          z-index: 10;
+        }
+        h2 {
+          vertical-align: bottom;
+          position: relative;
+          text-align: right;
+          bottom: 0;
+          width: 100%;
+          margin: 0;
+          padding: 15px 0 0;
+          font-size: 24px;
+          font-weight: bold;
+          color: @kleur3;
+
+        }
+      }
+      .block-hallo-achtste-groeper {
+        padding: 15px;
+        height: auto;
+        width: 100%;
+        .icon-duim {
+          position: absolute;
+          margin: 0;
+          width: 40px!important;
+          height: 40px!important;
+          top: 30px;
+          left: 35px;
+        }
+        h2 {
+          margin: 0;
+          padding: 0 0 10px 80px;
+          max-width: 325px;
+          text-align: right;
+          float: right;
+
+          a{
+            padding: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: @kleur3;
+          }
+        }
+        a {
+
+        }
+        img {
+          margin: 0;
+          right: 0;
+        }
+        pre {
+          font-size: 18px;
+          line-height: 22px;
+          padding: 10px;
+          margin: 0;
+          right: 0;
+          a{
+            padding: 0;
+            font-size: 18px;
+            line-height: 22px;
+          }
+        }
+
+        p {
+          padding: 10px 0;
+          font-size: 16px;
+          line-height: 20px;
+          a {
+            padding: 5px 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+
+      }
+      .block-schrijf-in {
+        height: 76px;
+        .icon-inschrijven {
+          bottom: 23px;
+          object-fit: contain;
+          width: 30px !important;
+          height: 30px !important;
+        }
+        h2 {
+          font-size: 24px;
+          text-align: right;
+        }
+      }
+      .block-kom-kijken-groep8 {
+        height: auto;
+        margin-top: 15px;
+        img {
+          height: auto!important;
+        }
+        h2 {
+          text-align: right;
+          padding: 25px 15px;
+          font-size: 24px;
+        }
+        .icon-kom-kijken {
+          object-fit: contain;
+          width: 45px!important;
+          height: 45px!important;
+        }
+      }
+    }
+  }
+
+  .groep-8-bottom-row {
+    padding: 0 15px;
+    .block-wrapper {
+      padding: 0 15px 15px 15px;
+      .block-filmmakers {
+        height: auto;
+        img {
+          height: auto!important;
+        }
+        h2 {
+          padding: 25px 15px 25px 80px;
+          margin: 0;
+          font-size: 24px;
+        }
+        .icon-filmmakers {
+          display: block;
+          margin: 0;
+          width: 50px!important;
+          height: auto!important;
+          top: 25px;
+          left: 30px;
+        }
+      }
+      .block-10-vragen {
+        height: auto;
+        img {
+          height: auto!important;
+        }
+        h2 {
+          padding: 15px 15px;
+          font-size: 24px;
+          line-height: 26px;
+          a {
+            font-size: 24px;
+            line-height: 26px;
+          }
+        }
+        h3 {
+          margin: 0;
+          padding: 0 15px 90px;
+          font-size: 22px;
+          line-height: 26px;
+        }
+
+        .icon-vragen {
+          width: 70px!important;
+          left: ~'calc(50% - 35px)';
+        }
+      }
+      .block-monnikskap {
+        height: auto;
+        a {
+          padding: 0;
+        }
+        img {
+          height: auto!important;
+        }
+        h2 {
+          padding: 25px 15px;
+          font-size: 24px;
+          line-height: 26px;
+          a {
+            font-size: 24px;
+            line-height: 26px;
+          }
+        }
+        h3 {
+          padding: 0 15px;
+          font-size: 22px;
+          line-height: 26px;
+        }
+        p {
+          padding: 0 15px;
+          line-height: 20px;
+          font-size: 16px;
+          a {
+            display: block;
+            padding: 15px 0;
+            font-size: 16px;
+          }
+        }
+
+      }
+    }
+  }
 }
 
 @media (max-width: 767px){
-    .titel-wrapper {
-        h1 {
-            font-size: 24px;
-            line-height: 28px;
-        }
+  .titel-wrapper {
+    h1 {
+      font-size: 24px;
+      line-height: 28px;
     }
-    .content-wrapper{
-        img {
-            margin: 10px 0 10px 0;
-        }
+  }
+  .content-wrapper{
+    img {
+      margin: 10px 0 10px 0;
     }
+  }
+
+  .top-row {
+    .block-btn-row {
+      .block-btn {
+        h2 {
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
 }
