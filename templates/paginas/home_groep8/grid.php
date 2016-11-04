@@ -12,8 +12,9 @@ In het voorbeeld hieronder zie je ook hoe je een default sectie kan defineren en
     <div class="row">top
         <div class="col-md-4" id="info-ouders">info-ouders</div>
         <div class="col-md-4" id="hallo-achtste-groeper">hallo-achtste-groeper</div>
-        <div class="col-md-2" id="schrijf-in">schrijf-in</div>
+        <div class="col-md-1" id="schrijf-in">schrijf-in</div>
         <div class="col-md-2" id="kom-kijken">kom-kijken</div>
+        <div class="col-md-1" id="projecten">projecten</div>
     </div>
 
     <div class="row">bottom

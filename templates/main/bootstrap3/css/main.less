@@ -111,6 +111,186 @@ h1, h2, h3, h4, h5, h6{
    Home pagina
    ========================================================================== */
 
+.block--sfeer {
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+}
+.block {
+  /* Kom kijken (groep 8 & home), info groep8, feest&activiteiten, projecten */
+  &.block--style-1 {
+    .block__link {
+      &:hover {
+        text-decoration: underline;
+        h2 {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  /* Filmmakers groep 8 */
+  .block--style-2 {
+    height: auto;
+    .block__content {
+      h2 {
+        font-weight: bold;
+        font-size: 36px;
+        text-align: right;
+        padding: 0;
+        margin: 0;
+      }
+      padding: 25px 20px;
+      color: @kleur3;
+      background-color: @grey-light;
+      border-bottom: 30px solid white;
+    }
+    .block__sfeer {
+      height: 431px;
+      width: 100%;
+    }
+  }
+  /* Filmmakers home */
+  .block--style-3 {
+    height: auto;
+    .block__content {
+      h2 {
+        font-size: 36px;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+      }
+      padding: 25px 20px;
+      color: @kleur3;
+      background-color: @grey-light;
+      border-bottom: 30px solid white;
+    }
+    .block__sfeer {
+      height: 380px;
+      width: 100%;
+    }
+  }
+  /* Talenten van Dominicus */
+  .block--style-4 {
+    height: auto;
+    .block__content {
+      h2 {
+        font-size: 36px;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+      }
+      padding: 25px 20px;
+      color: @kleur3;
+      background-color: @grey-light;
+      border-top: 30px solid white;
+    }
+    .block__sfeer {
+      height: 380px;
+      width: 100%;
+    }
+
+  }
+  /* 10 vragen over brugklas */
+  .block--style-5 {
+    height: auto;
+    .block__content {
+      height: 350px;
+      background-color: @kleur2;
+      color: @white-color;
+      h2 {
+        padding: 25px 20px;
+        margin: 0;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        a {
+          font-size: 36px;
+          font-weight: bold;
+          color: @white-color;
+        }
+      }
+      h3 {
+        padding: 0 20px;
+        margin-top: 0;
+        text-align: center;
+        font-style: italic;
+        font-size: 38px;
+      }
+    }
+    .block__sfeer {
+      height: 200px;
+      width: 100%;
+    }
+
+  }
+  .block--style-6 {
+    position: relative;
+    padding: 15px 15px 15px 0;
+    .block__sfeer {
+      position: absolute;
+      margin-left: 5%;
+      width: 95%;
+      height: 360px;
+      z-index: 10;
+    }
+    .block__content {
+      vertical-align: bottom;
+      position: absolute;
+      text-align: right;
+      bottom: 0;
+      width: 90%;
+      margin: 0;
+      padding: 190px 20px 25px;
+      background-color: @kleur4;
+      h2 {
+        font-size: 34px;
+        font-weight: bold;
+        color: @kleur3;
+      }
+    }
+    .block__link {
+      &:hover {
+        text-decoration: underline;
+        h2 {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .icon-talenten {
+    position: absolute;
+    margin: 0;
+    width: 60px!important;
+    height: auto!important;
+    bottom: 35px;
+    right: 40px;
+  }
+  .icon-filmmakers {
+    position: absolute;
+    margin: 0;
+    width: 60px!important;
+    height: auto!important;
+    top: 35px;
+    right: 40px;
+  }
+  .icon-filmmakers-groep8 {
+    position: absolute;
+    margin: 0;
+    width: 60px!important;
+    height: auto!important;
+    top: 40px;
+    left: 40px;
+  }
+  .icon-vragen {
+    position: absolute;
+    margin: 0;
+    width: 100px!important;
+    height: auto!important;
+    bottom: 35px;
+    left: ~'calc(50% - 50px)';
+  }
+}
+
 .top-row {
   padding: 0 15px;
   .block-wrapper {
@@ -118,6 +298,7 @@ h1, h2, h3, h4, h5, h6{
     &.top-left-block {
       padding-top: 330px;
     }
+
     .block-in-beeld {
       position: relative;
       padding: 15px 15px 15px 0;
@@ -262,18 +443,11 @@ h1, h2, h3, h4, h5, h6{
         position: relative;
         height: 530px;
 
-        img {
-          .img-responsive;
-          height: 530px!important;
-          width: 100%!important;
-          object-fit: cover;
-        }
         .icon-kom-kijken {
           position: absolute;
           margin: 0;
           width: 95px!important;
           height: auto!important;
-          object-fit: none;
           left: ~'calc(50% - 47px)';
           bottom: 70px;
           z-index: 5;
@@ -288,9 +462,7 @@ h1, h2, h3, h4, h5, h6{
           font-size: 36px;
           font-weight: bold;
           background-color: @kleur4;
-          a {
-            color: @white-color;
-          }
+          color: @white-color;
         }
       }
     }
@@ -300,13 +472,6 @@ h1, h2, h3, h4, h5, h6{
       .block-info-groep8 {
         position: relative;
         height: 250px;
-
-        img {
-          .img-responsive;
-          height: 250px!important;
-          width: 100%!important;
-          object-fit: cover;
-        }
         h2 {
           position: absolute;
           width: 100%;
@@ -317,22 +482,13 @@ h1, h2, h3, h4, h5, h6{
           font-weight: bold;
           text-align: center;
           background-color: @kleur2;
-          a {
-            color: @white-color;
-          }
+          color: @white-color;
         }
       }
       .block-maak-app {
         position: relative;
         height: 250px;
         margin-top: 30px;
-
-        img {
-          .img-responsive;
-          height: 250px!important;
-          width: 100%!important;
-          object-fit: cover;
-        }
         h2 {
           position: absolute;
           width: 100%;
@@ -344,9 +500,7 @@ h1, h2, h3, h4, h5, h6{
           text-align: center;
           color: @white-color;
           background-color: @kleur4;
-          a {
-            color: @white-color;
-          }
+          color: @white-color;
         }
       }
     }
@@ -368,54 +522,10 @@ h1, h2, h3, h4, h5, h6{
   padding: 0 15px;
   .block-wrapper {
     padding: 15px;
-    .block {
-      height: auto;
-      img {
-        .img-responsive;
-        height: 380px!important;
-        width: 100%!important;
-        object-fit: cover;
-      }
-      h2 {
-        padding: 25px 20px;
-        margin: 0;
-        font-size: 36px;
-        font-weight: bold;
-        color: @kleur3;
-        background-color: @grey-light;
-      }
-      &.block-talenten {
-        h2 {
-          margin-top: 30px;
-        }
-        .icon-talenten {
-          position: absolute;
-          margin: 0;
-          width: 60px!important;
-          height: auto!important;
-          bottom: 35px;
-          right: 40px;
-        }
-      }
-      &.block-filmmakers {
-        h2 {
-          margin-bottom: 30px;
-        }
-        .icon-filmmakers {
-          position: absolute;
-          margin: 0;
-          width: 60px!important;
-          height: auto!important;
-          top: 35px;
-          right: 40px;
-        }
-      }
-    }
   }
 }
 .bottom-row {
   padding: 15px 0 30px 0;
-
   .row {
     margin-left: 10px;
     margin-right: 10px;
@@ -528,30 +638,7 @@ h1, h2, h3, h4, h5, h6{
       padding-top: 300px;
     }
     .block-info-ouders {
-      position: relative;
-      padding: 15px 15px 15px 0;
       height: 500px;
-      img {
-        position: absolute;
-        object-fit: cover;
-        padding-left: 5%;
-        width: 100%!important;
-        height: 360px!important;
-        z-index: 10;
-      }
-      h2 {
-        vertical-align: bottom;
-        position: absolute;
-        text-align: right;
-        bottom: 0;
-        width: 90%;
-        margin: 0;
-        padding: 190px 20px 25px;
-        font-size: 34px;
-        font-weight: bold;
-        color: @kleur3;
-        background-color: @kleur4;
-      }
     }
     .block-hallo-achtste-groeper {
       padding: 1px;
@@ -630,7 +717,6 @@ h1, h2, h3, h4, h5, h6{
       height: 89px;
       .icon-inschrijven {
         position: absolute;
-        object-fit: none;
         margin: 0;
         width: 45px!important;
         height: 45px!important;
@@ -655,32 +741,48 @@ h1, h2, h3, h4, h5, h6{
     }
     .block-kom-kijken-groep8 {
       position: relative;
-      height: 680px;
-      margin-top:30px;
-
-      img {
-        .img-responsive;
-        height: 581px!important;
-        width: 100%!important;
-        object-fit: cover;
-      }
+      height: 391px;
+      margin-top: 30px;
       h2 {
         position: absolute;
         text-align: center;
         bottom: 0;
-        width: 100%;
+        width: ~'calc(100% - 30px)';
         margin: 0;
         padding: 30px 10px;
         font-size: 36px;
         font-weight: bold;
         background-color: @kleur4;
-        a {
-          color: @white-color;
-        }
+        color: @white-color;
       }
       .icon-kom-kijken {
         position: absolute;
-        object-fit: none;
+        margin: 0;
+        width: 65px!important;
+        height: 65px!important;
+        left: 20px;
+        bottom: 20px;
+        z-index: 5;
+      }
+    }
+    .block-projecten {
+      position: relative;
+      height: 260px;
+      margin-top:30px;
+      h2 {
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        width: ~'calc(100% - 30px)';
+        margin: 0;
+        padding: 30px 10px;
+        font-size: 36px;
+        font-weight: bold;
+        background-color: @kleur4;
+        color: @white-color;
+      }
+      .icon-kom-kijken {
+        position: absolute;
         margin: 0;
         width: 65px!important;
         height: 65px!important;
@@ -696,72 +798,8 @@ h1, h2, h3, h4, h5, h6{
   padding: 0 15px;
   .block-wrapper {
     padding: 15px;
-    .block-filmmakers {
-      height: auto;
-      img {
-        .img-responsive;
-        height: 420px!important;
-        width: 100%!important;
-        object-fit: cover;
-      }
-      h2 {
-        padding: 25px 20px;
-        text-align: right;
-        margin: 0 0 30px 0;
-        font-size: 36px;
-        line-height: 50px;
-        font-weight: bold;
-        color: @kleur3;
-        background-color: @grey-light;
-      }
-      .icon-filmmakers {
-        position: absolute;
-        margin: 0;
-        width: 60px!important;
-        height: auto!important;
-        top: 40px;
-        left: 40px;
-      }
-    }
     .block-10-vragen {
-      height: 550px;
-      background-color: @kleur2;
-      color: @white-color;
-      img {
-        .img-responsive;
-        height: 200px!important;
-        width: 100%!important;
-        object-fit: cover;
-      }
-      h2 {
-        padding: 25px 20px;
-        margin: 0;
-        font-size: 36px;
-        font-weight: bold;
 
-        text-align: center;
-        a {
-          font-size: 36px;
-          font-weight: bold;
-          color: @white-color;
-        }
-      }
-      h3 {
-        padding: 0 20px;
-        margin-top: 0;
-        text-align: center;
-        font-style: italic;
-        font-size: 38px;
-      }
-
-      .icon-vragen {
-        position: absolute;
-        margin: 0;
-        width: 100px!important;
-        height: auto!important;
-        bottom: 35px;
-        left: ~'calc(50% - 50px)';
-      }
     }
     .block-monnikskap {
       height: 550px;
@@ -770,12 +808,6 @@ h1, h2, h3, h4, h5, h6{
       a{
         padding: 0;
 
-      }
-      img {
-        .img-responsive;
-        height: 200px!important;
-        width: 100%!important;
-        object-fit: cover;
       }
       h2 {
         padding: 25px 20px;
@@ -1096,6 +1128,30 @@ form{
   /* ==========================================================================
      Home pagina
      ========================================================================== */
+  .block {
+    .block--style-2 {
+      .block__content {
+        h2 {
+          font-size: 24px;
+        }
+      }
+    }
+    .block--style-3 {
+      .block__content {
+        h2 {
+          font-size: 24px;
+        }
+      }
+    }
+    .block--style-4 {
+      .block__content {
+        h2 {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
   .top-row {
     .block-wrapper {
       .block-in-beeld {
@@ -1140,13 +1196,12 @@ form{
     }
   }
   .middle-row {
-    .block-wrapper {
-      .block {
-        h2 {
-          font-size: 24px;
-          line-height: 39px;
-        }
+    .block {
+      h2 {
+        font-size: 24px;
+        line-height: 39px;
       }
+
     }
   }
   /* ==========================================================================
@@ -1196,6 +1251,12 @@ form{
           text-align: right;
         }
       }
+      .block-projecten {
+        h2 {
+          padding-right: 30px;
+          text-align: right;
+        }
+      }
     }
   }
 
@@ -1204,7 +1265,7 @@ form{
       .block-filmmakers {
         h2 {
           font-size: 24px;
-          line-height: 50px;
+          line-height: 39px;
         }
       }
     }
@@ -1226,7 +1287,7 @@ form{
         }
       }
     }
-        .block-btn-row {
+    .block-btn-row {
       .block-btn {
         h2 {
           a {
@@ -1246,15 +1307,22 @@ form{
       }
     }
   }
+  .groep-8-top-row {
+    .block-wrapper {
+      .block-projecten {
+        height: 391px;
+      }
+    }
+  }
   .groep-8-bottom-row {
     .block-wrapper {
       .block-filmmakers {
-        .icon-filmmakers {
+        .icon-filmmakers-groep8 {
           display: none;
         }
         h2 {
           font-size: 24px;
-          line-height: 50px;
+          line-height: 39px;
         }
       }
       .block-10-vragen {
@@ -1271,6 +1339,9 @@ form{
       }
       .block-monnikskap {
         h2 {
+          font-size: 28px;
+          line-height: 32px;
+          padding: 10px;
           a {
             font-size: 28px;
             line-height: 32px;
@@ -1289,6 +1360,63 @@ form{
   /* ==========================================================================
  Home pagina
  ========================================================================== */
+  .block--sfeer {
+    height: 300px;
+  }
+  .block {
+    /* Kom kijken (groep 8 & home), info groep8, feest&activiteiten, projecten */
+    .block--style-1 {
+
+    }
+    /* Filmmakers groep 8 */
+    .block--style-2 {
+      .block__content {
+        padding: 0;
+        border-bottom: none;
+      }
+    }
+    /* Filmmakers home */
+    .block--style-3 {
+      .block__content {
+        padding: 0;
+        border-bottom: none;
+      }
+
+    }
+    /* Talenten van Dominicus */
+    .block--style-4 {
+      .block__content {
+        padding: 0;
+        border-top: none;
+      }
+    }
+    /* 10 vragen */
+    .block--style-5 {
+      .block__content {
+        height: auto;
+      }
+    }
+    .block--style-6 {
+      padding: 15px;
+      background-color: @kleur4;
+      .block__sfeer {
+        position: relative;
+        margin-left: 0;
+        width: 100%;
+        height: 300px;
+      }
+      .block__content {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        h2 {
+          padding: 0 0;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
   .top-row {
     .block-wrapper {
       &.top-left-block {
@@ -1304,6 +1432,7 @@ form{
           position: static;
           padding-left: 0;
           min-height: 160px;
+          height: auto;
         }
         h2 {
           position: relative;
@@ -1343,7 +1472,6 @@ form{
             right: 0;
           }
         }
-
         pre {
           font-size: 18px;
           line-height: 22px;
@@ -1395,16 +1523,6 @@ form{
         padding: 0;
         .block-kom-kijken {
           height: auto;
-
-          img {
-            height: 730px!important;
-          }
-          .icon-kom-kijken {
-          }
-          h2 {
-            a {
-            }
-          }
         }
       }
 
@@ -1412,25 +1530,10 @@ form{
         padding: 15px 0 0 0;
         .block-info-groep8 {
           height: auto;
-          img {
-            height: auto!important;
-          }
-          h2 {
-            a {
-            }
-          }
         }
         .block-maak-app {
           height: auto;
           margin-top: 15px;
-
-          img {
-            height: auto!important;
-          }
-          h2 {
-            a {
-            }
-          }
         }
       }
     }
@@ -1439,9 +1542,6 @@ form{
     .block-wrapper {
       padding: 0 15px 15px;
       .block {
-        img {
-          height: auto!important;
-        }
         h2 {
           padding: 15px 80px 15px 15px;
           font-size: 24px;
@@ -1530,31 +1630,7 @@ form{
         padding-top: 0;
       }
       .block-info-ouders {
-        position: relative;
-        padding: 15px;
         height: auto;
-        background-color: @kleur4;
-        img {
-          position: relative;
-          object-fit: cover;
-          padding-left: 0;
-          width: 100%!important;
-          height: auto!important;
-          z-index: 10;
-        }
-        h2 {
-          vertical-align: bottom;
-          position: relative;
-          text-align: right;
-          bottom: 0;
-          width: 100%;
-          margin: 0;
-          padding: 15px 0 0;
-          font-size: 24px;
-          font-weight: bold;
-          color: @kleur3;
-
-        }
       }
       .block-hallo-achtste-groeper {
         padding: 15px;
@@ -1581,9 +1657,6 @@ form{
             font-weight: bold;
             color: @kleur3;
           }
-        }
-        a {
-
         }
         img {
           margin: 0;
@@ -1630,9 +1703,20 @@ form{
       .block-kom-kijken-groep8 {
         height: auto;
         margin-top: 15px;
-        img {
-          height: auto!important;
+        h2 {
+          text-align: right;
+          padding: 25px 15px;
+          font-size: 24px;
         }
+        .icon-kom-kijken {
+          object-fit: contain;
+          width: 45px!important;
+          height: 45px!important;
+        }
+      }
+      .block-projecten {
+        height: auto;
+        margin-top: 15px;
         h2 {
           text-align: right;
           padding: 25px 15px;
@@ -1653,15 +1737,12 @@ form{
       padding: 0 15px 15px 15px;
       .block-filmmakers {
         height: auto;
-        img {
-          height: auto!important;
-        }
         h2 {
           padding: 25px 15px 25px 80px;
           margin: 0;
           font-size: 24px;
         }
-        .icon-filmmakers {
+        .icon-filmmakers-groep8 {
           display: block;
           margin: 0;
           width: 50px!important;
@@ -1672,9 +1753,6 @@ form{
       }
       .block-10-vragen {
         height: auto;
-        img {
-          height: auto!important;
-        }
         h2 {
           padding: 15px 15px;
           font-size: 24px;
@@ -1698,12 +1776,11 @@ form{
       }
       .block-monnikskap {
         height: auto;
+        padding-bottom: 15px;
         a {
           padding: 0;
         }
-        img {
-          height: auto!important;
-        }
+
         h2 {
           padding: 25px 15px;
           font-size: 24px;
@@ -1755,6 +1832,39 @@ form{
             font-size: 18px;
           }
         }
+      }
+    }
+  }
+  .block--sfeer {
+    height: 270px;
+  }
+  .block {
+    /* Kom kijken (groep 8 & home), info groep8, feest&activiteiten, projecten */
+    .block--style-1 {
+
+    }
+    /* Filmmakers groep8 */
+    .block--style-2 {
+      .block__sfeer {
+        height: 250px;
+      }
+    }
+    /* Filmmakers home */
+    .block--style-3 {
+      .block__sfeer {
+        height: 250px;
+      }
+    }
+    /* Dominicus talenten */
+    .block--style-4 {
+      .block__sfeer {
+        height: 250px;
+      }
+    }
+    /* Info voor ouders */
+    .block--style-6 {
+      .block__sfeer {
+        height: 250px;
       }
     }
   }
