@@ -4,8 +4,8 @@ smart_include_css('css/style.css');
 smart_include_js('jquery.dotdotdot.min.js');
 smart_include_js('main.js');
 $config = array(
-    'tabelnaam' => $tabelnaam,
-    'group_id' => $DATA['group'],
+    'tabelnaam' => 'art_oudleerlingen',
+    'group_id' => 0,
     'order' => 'a.gewicht ASC', // bv: RAND()
     'artikel_id' => 0,
     'limit_links' => 1,

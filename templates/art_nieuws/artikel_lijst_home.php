@@ -4,8 +4,8 @@ smart_include_css('css/style.css');
 smart_include_js('main.js');
 
 $config = array(
-    'tabelnaam' => $tabelnaam,
-    'group_id' => $DATA['group'],
+    'tabelnaam' => 'art_nieuws',
+    'group_id' => 0,
     'order' => 't.datum DESC', // bv: RAND()
     'artikel_id' => 0,
     'limit_links' => 3,
@@ -13,10 +13,6 @@ $config = array(
 );
 
 /* Artikelen ophalen */
-
-
-
-
 
 $art_arr = get_artikelen_arr($config['tabelnaam'], $config['group_id'], $config['order'], $config['artikel_id'], $config['limit_links'], $config['where']);
 //print_pre($art_arr);
