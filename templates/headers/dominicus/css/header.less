@@ -17,7 +17,10 @@ Header
     border-bottom: 2px solid @kleur3;
     z-index: 200;
     .header-main {
-      padding: 0 30px;
+      padding: 0 20px;
+      @media(max-width: 1199px) {
+        padding: 0 10px;
+      }
       width: 100%;
       height: 40px;
 
@@ -84,13 +87,13 @@ Header
         vertical-align: top;
         padding: 8px 0;
         vertical-align: top;
-        width: 210px;
+        width: 185px;
         margin-right: 10px;
         .search__input {
           display: inline-block;
-          width: 140px;
+          width: 130px;
           height: 24px;
-          margin: 0 10px 0 0;
+          margin: 0 5px 0 0;
           color: @black-color;
           line-height: 18px;
           font-size: 14px;
@@ -111,15 +114,15 @@ Header
       .social-list {
         display: inline-block;
         vertical-align: top;
-        width: 195px;
+        width: 132px;
         margin: 0;
         padding: 0;
         text-align: right;
         list-style-type: none;
         .social-item {
           display: inline-block;
-          vertical-align: top;
-          margin-right: 10px;
+          vertical-align: middle;
+          margin-right: 6px;
           &:last-child {
             margin-right: 0;
           }
@@ -130,7 +133,10 @@ Header
               line-height: 40px;
               .transition(all .3s);
             }
-
+            img {
+              height: 32px;
+              padding: 0;
+            }
             &:hover, &:focus {
               text-decoration: none;
             }

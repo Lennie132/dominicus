@@ -7,322 +7,326 @@
 @ubuntu: Ubuntu, sans-serif;
 
 .header-nav {
+  display: inline-block;
+  width: ~'calc(100% - 627px)';
+  vertical-align: top;
+  margin: 0;
+  text-align: center;
+  > li{
     display: inline-block;
-    width: ~'calc(100% - 715px)';
     vertical-align: top;
-    margin: 0;
-    text-align: center;
-    > li{
-        display: inline-block;
-        vertical-align: top;
-        padding: 0 15px;
-        border-right: 2px solid @kleur3;
-        &:nth-last-child(2) {
-            border-right: none;
+    padding: 0 12px;
+    border-right: 2px solid @kleur3;
+    &:nth-last-child(2) {
+      border-right: none;
+    }
+    &:last-child{
+      padding: 0;
+      border-right: none;
+    }
+    &.icon-telefoon {
+      a {
+        font-size: 18px;
+        &:before {
+          content: "\e057";
+          font-family: 'icomoon' !important;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 40px;
+          speak: none;
+          vertical-align: top;
         }
-        &:last-child{
-            padding: 0;
-            border-right: none;
-        }
-        &.icon-telefoon {
-            a {
-                &:before {
-                    content: "\e057";
-                    font-family: 'icomoon' !important;
-                    font-size: 30px;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-variant: normal;
-                    text-transform: none;
-                    line-height: 40px;
-                    speak: none;
-                    vertical-align: top;
-                }
-            }
-        }
-        > a{
-            color: @kleur3;
-            font-family: @ubuntu;
-            vertical-align: middle;
-            font-size: 24px;
-            line-height: 40px;
+      }
+    }
+    > a{
+      color: @kleur3;
+      font-family: @ubuntu;
+      vertical-align: middle;
+      font-size: 22px;
+      line-height: 40px;
 
-            .transition(all .3s);
-            &:hover {
-                text-decoration: none;
-                font-weight: bold;
-                border-top: 5px solid @kleur1;
-            }
-            &:focus {
-                text-decoration: none;
-            }
-        }
-        > ul {
-            display: none;
-            position: absolute;
-            background-color: @white-color;
-            z-index: 100;
-            padding: 15px 0 0 0;
-            > li {
-                display: block;
-                padding: 5px 15px;
-                text-align: left;
-                > a {
-                    font-family: @ubuntu;
-                    color: @kleur3;
-                    font-size: 21px;
-                    line-height: 21px;
+      .transition(all .3s);
+      &:hover {
+        text-decoration: none;
+        font-weight: bold;
+        border-top: 5px solid @kleur1;
+      }
+      &:focus {
+        text-decoration: none;
+      }
+    }
+    > ul {
+      display: none;
+      position: absolute;
+      background-color: @white-color;
+      z-index: 100;
+      padding: 15px 0 0 0;
+      > li {
+        display: block;
+        padding: 5px 15px;
+        text-align: left;
+        > a {
+          font-family: @ubuntu;
+          color: @kleur3;
+          font-size: 21px;
+          line-height: 21px;
 
-                    &:hover, &:focus {
-                        text-decoration: underline;
-                        font-weight: bold;
-                        border-top: none;
-                    }
-                }
-                &.active {
-                    > a {
-                        text-decoration: underline;
-                        font-weight: bold;
-                        border-top: none;
-                    }
-                }
-            }
-        }
-        &:hover {
-            > ul {
-                display: block;
-            }
+          &:hover, &:focus {
+            text-decoration: underline;
+            font-weight: bold;
+            border-top: none;
+          }
         }
         &.active {
-            > a {
-                font-weight: bold;
-                border-top: 5px solid @kleur1;
-            }
+          > a {
+            text-decoration: underline;
+            font-weight: bold;
+            border-top: none;
+          }
         }
+      }
     }
+    &:hover {
+      > ul {
+        display: block;
+      }
+    }
+    &.active {
+      > a {
+        font-weight: bold;
+        border-top: 5px solid @kleur1;
+      }
+    }
+  }
 
-    > .nav__dropdown-toggle {
-        visibility: hidden;
-        display: inline-block;
-        width: 25px;
-        text-decoration: none;
-        color: @kleur3;
-        cursor: pointer;
-        .transition(all 0.3s);
-        &:after {
-            font-family: 'icomoon' !important;
-            content: "\f0d7";
-            font-size: 24px;
-            line-height: 40px;
-        }
-        &.priority-nav-is-visible {
-            visibility: visible;
-        }
-        &.priority-nav-is-hidden {
-            visibility: hidden;
-        }
+  > .nav__dropdown-toggle {
+    visibility: hidden;
+    display: inline-block;
+    width: 25px;
+    text-decoration: none;
+    color: @kleur3;
+    cursor: pointer;
+    .transition(all 0.3s);
+    &:after {
+      font-family: 'icomoon' !important;
+      content: "\f0d7";
+      font-size: 24px;
+      line-height: 40px;
+    }
+    &.priority-nav-is-visible {
+      visibility: visible;
     }
     &.priority-nav-is-hidden {
-        visibility: hidden;
+      visibility: hidden;
     }
+  }
+  &.priority-nav-is-hidden {
+    visibility: hidden;
+  }
 }
 
 .priority-nav__wrapper {
-    position: relative;
-    > .priority-nav__dropdown {
-        display: inline-block;
-        position: absolute;
-        visibility: hidden;
-        right: -70px;
-        top: 47px;
-        padding: 0;
-        z-index: 150;
-        background-color: @white-color;
-        list-style: none;
-        > li {
-            border-top: 2px solid @kleur3;
-            margin: 0;
+  position: relative;
+  display: inline-block;
+  > .priority-nav__dropdown {
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    right: -70px;
+    top: 47px;
+    padding: 0;
+    z-index: 150;
+    background-color: @white-color;
+    list-style: none;
+    > li {
+      border-top: 2px solid @kleur3;
+      margin: 0;
+      > a {
+        color: @kleur3;
+        display: block;
+        white-space: normal;
+        font-size: 24px;
+        font-family: @ubuntu;
+        line-height: 62px;
+        padding: 0 50px 0 20px;
+        white-space: nowrap;
+        &:hover {
+          text-decoration: none;
+          font-weight: bold;
+        }
+        &:focus {
+          text-decoration: none;
+          font-weight: normal;
+        }
+      }
+      &.active {
+        > a {
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
+      &.isparent {
+        > a {
+          &:after {
+            font-family: 'icomoon' !important;
+            content: "\f0d7";
+            position: absolute;
+            right: 20px;
+            font-size: 24px;
+            line-height: 62px;
+          }
+        }
+      }
+      &.isparent.is-open-1 {
+        > a {
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+        > ul {
+          display: block;
+          list-style: none;
+          margin: 0;
+          padding: 0 0 5px;
+          > li {
+            padding: 7px 10px 7px 23px;
             > a {
-                color: @kleur3;
-                display: block;
-                white-space: normal;
-                font-size: 24px;
-                font-family: @ubuntu;
-                line-height: 62px;
-                padding: 0 50px 0 20px;
-                white-space: nowrap;
-                &:hover {
-                    text-decoration: none;
-                    font-weight: bold;
-                }
-                &:focus {
-                    text-decoration: none;
-                    font-weight: normal;
-                }
+              color: @kleur3;
+              font-family: @ubuntu;
+              font-size: 16px;
+              line-height: 20px;
+              display: block;
+            }
+            &:hover, &:focus {
+              > a {
+                font-weight: bold;
+                text-decoration: underline;
+              }
             }
             &.active {
-                > a {
-                    font-weight: bold;
-                    text-decoration: underline;
-                }
+              > a {
+                font-weight: bold;
+                text-decoration: underline;
+              }
             }
             &.isparent {
-                > a {
-                    &:after {
-                        font-family: 'icomoon' !important;
-                        content: "\f0d7";
-                        position: absolute;
-                        right: 20px;
-                        font-size: 24px;
-                        line-height: 62px;
-                    }
+              > a {
+                &:after {
+                  font-family: 'icomoon' !important;
+                  content: "\f0d7";
+                  position: absolute;
+                  right: 20px;
+                  font-size: 18px;
+                  line-height: 20px;
                 }
+              }
             }
-            &.isparent.is-open-1 {
-                > a {
-                    &:after {
-                        transform: rotate(180deg);
-                    }
+            &.isparent.is-open-2 {
+              > a {
+                &:after {
+                  transform: rotate(180deg);
                 }
-                > ul {
+              }
+              > ul {
+                display: block;
+                list-style: none;
+                margin: 0;
+                padding: 0 0 5px;
+                background-color: @kleur1;
+                > li {
+                  padding: 7px 10px 7px 23px;
+                  > a {
+                    color: @kleur3;
+                    font-family: @ubuntu;
+                    font-size: 16px;
+                    line-height: 20px;
                     display: block;
-                    list-style: none;
-                    margin: 0;
-                    padding: 0 0 5px;
-                    > li {
-                        padding: 7px 10px 7px 23px;
-                        > a {
-                            color: @kleur3;
-                            font-family: @ubuntu;
-                            font-size: 16px;
-                            line-height: 20px;
-                            display: block;
-                        }
-                        &:hover, &:focus {
-                            > a {
-                                font-weight: bold;
-                                text-decoration: underline;
-                            }
-                        }
-                        &.active {
-                            > a {
-                                font-weight: bold;
-                                text-decoration: underline;
-                            }
-                        }
-                        &.isparent {
-                            > a {
-                                &:after {
-                                    font-family: 'icomoon' !important;
-                                    content: "\f0d7";
-                                    position: absolute;
-                                    right: 20px;
-                                    font-size: 18px;
-                                    line-height: 20px;
-                                }
-                            }
-                        }
-                        &.isparent.is-open-2 {
-                            > a {
-                                &:after {
-                                    transform: rotate(180deg);
-                                }
-                            }
-                            > ul {
-                                display: block;
-                                list-style: none;
-                                margin: 0;
-                                padding: 0 0 5px;
-                                background-color: @kleur1;
-                                > li {
-                                    padding: 7px 10px 7px 23px;
-                                    > a {
-                                        color: @kleur3;
-                                        font-family: @ubuntu;
-                                        font-size: 16px;
-                                        line-height: 20px;
-                                        display: block;
-                                    }
-                                    &:hover, &:focus {
-                                        > a {
-                                            font-weight: bold;
-                                            text-decoration: underline;
-                                        }
-                                    }
-                                    &.active {
-                                        > a {
-                                            font-weight: bold;
-                                            text-decoration: underline;
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                  }
+                  &:hover, &:focus {
+                    > a {
+                      font-weight: bold;
+                      text-decoration: underline;
                     }
+                  }
+                  &.active {
+                    > a {
+                      font-weight: bold;
+                      text-decoration: underline;
+                    }
+                  }
                 }
+              }
             }
-            ul {
-                display: none;
-            }
+          }
         }
-        &:last-child {
-            border-bottom: 2px solid @kleur3;
-        }
-        &.show {
-            visibility: visible;
-        }
+      }
+      ul {
+        display: none;
+      }
     }
+    &:last-child {
+      border-bottom: 2px solid @kleur3;
+    }
+    &.show {
+      visibility: visible;
+    }
+  }
 }
 
 /* ==========================================================================
    Menu responsive
    ========================================================================== */
 @media (max-width: 1199px){
-
+  .header-nav {
+    width: ~'calc(100% - 432px)';
+  }
 }
 
 @media (max-width: 991px){
-    .header-nav {
-        padding: 16px 0;
-        visibility: visible;
-        float: right;
-        width: 40px;
+  .header-nav {
+    padding: 16px 0;
+    visibility: visible;
+    float: right;
+    width: 40px;
 
-        > li{
-            &:last-child{
-                margin: 0;
-            }
-            > a{
-                &:hover, &:focus{
-                    border-top: none;
-                }
-            }
-            &.active {
-                > a {
-                    font-weight: bold;
-                }
-            }
+    > li{
+      &:last-child{
+        margin: 0;
+      }
+      > a{
+        &:hover, &:focus{
+          border-top: none;
         }
-        > .nav__dropdown-toggle {
-            float: right;
-            display: inline-block;
-            position: static;
-            width: 40px;
-            &:after {
-                content: "\e20e";
-                font-size: 32px;
-            }
+      }
+      &.active {
+        > a {
+          font-weight: bold;
         }
+      }
     }
+    > .nav__dropdown-toggle {
+      float: right;
+      display: inline-block;
+      position: static;
+      width: 40px;
+      &:after {
+        content: "\e20e";
+        font-size: 32px;
+      }
+    }
+  }
 
-    .priority-nav__wrapper {
-        display: block;
-        > .priority-nav__dropdown {
-            top: 72px;
-            right: 0;
-            width: 100%;
-        }
+  .priority-nav__wrapper {
+    display: block;
+    > .priority-nav__dropdown {
+      top: 72px;
+      right: 0;
+      width: 100%;
     }
+  }
 }
 
 @media (max-width: 767px){
