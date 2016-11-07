@@ -7,7 +7,7 @@
 		
         <?php lcms::FaviconGenerator()->getHTML(); ?>
 		
-        <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
         <script>window.jQuery || document.write('<script src="<?= lcms_client_script::get_main_template_path() ?>/js/jquery-2.2.0.min.js"><\/script>')</script> 
 		
         <?php
