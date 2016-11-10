@@ -315,7 +315,7 @@ h1, h2, h3, h4, h5, h6{
         height: 260px;
         width: 95%;
         margin: 0;
-        padding: 190px 25px 25px 100px;
+        padding: 190px 65px 25px 100px;
         vertical-align: bottom;
         bottom: 0;
         font-size: 36px;
@@ -323,6 +323,54 @@ h1, h2, h3, h4, h5, h6{
         text-align: right;
         color: @kleur3;
         background-color: @kleur4;
+        @media (max-width: 1600px) {
+          font-size: 27px;
+        }
+        @media(max-width: 1380px) {
+          font-size: 23px;
+          padding-left: 70px;
+        }
+        @media(max-width: 1199px) {
+          font-size: 28px;
+        }
+        @media(max-width: 991px) {
+          font-size: 24px;
+        }
+
+
+      }
+      .social-list {
+        right: 0;
+        bottom: 0;
+        height: auto;
+        position: absolute;
+        list-style-type: none;
+        padding: 0 50px 20px 0;
+        margin: 0;
+        list-style-type: none;
+        @media(max-width: 1380px) {
+          padding-right: 35px;
+        }
+        .social-item {
+          display: block;
+          vertical-align: middle;
+          margin-right: 0;
+          .social-link {
+            span {
+              color: @kleur3;
+              font-size: 28px;
+              line-height: 35px;
+              .transition(all .3s);
+            }
+            img {
+              height: 28px;
+              padding: 0;
+            }
+            &:hover, &:focus {
+              text-decoration: none;
+            }
+          }
+        }
       }
       .icon-in-beeld {
         position: absolute;
@@ -331,6 +379,9 @@ h1, h2, h3, h4, h5, h6{
         bottom: 30px;
         left: 35px;
         z-index: 5;
+        @media(max-width: 1380px) {
+          left: 15px;
+        }
       }
     }
     .block-op-zoek {
@@ -1154,11 +1205,6 @@ form{
 
   .top-row {
     .block-wrapper {
-      .block-in-beeld {
-        h2 {
-          font-size: 27px;
-        }
-      }
       .block-op-zoek {
         h2 {
           a{
@@ -1274,11 +1320,6 @@ form{
 @media (max-width: 1199px){
   .top-row {
     .block-wrapper {
-      .block-in-beeld {
-        h2 {
-          font-size: 28px;
-        }
-      }
       .block-op-zoek {
         h2 {
           a{
@@ -1350,6 +1391,21 @@ form{
         h3 {
           font-size: 24px;
           line-height: 28px;
+        }
+      }
+    }
+  }
+  .bottom-row {
+    .row {
+      .block-fancy {
+        .block-fancy-content {
+          h3 {
+            margin-top: 10px;
+            font-size: 23px;
+          }
+          p {
+            padding-top: 10px;
+          }
         }
       }
     }
@@ -1439,13 +1495,41 @@ form{
           height: auto;
           width: 215px;
           float: right;
-          padding: 15px 0 0 60px;
-          font-size: 24px;
+          padding: 15px 40px 0 60px;
         }
         .icon-in-beeld {
           width: 45px!important;
           bottom: 20px;
           left: 18px;
+        }
+        .social-list {
+          right: 0;
+          height: auto;
+          position: absolute;
+          list-style-type: none;
+          padding: 0 16px 12px 0;
+          margin: 0;
+          list-style-type: none;
+          .social-item {
+            display: block;
+            vertical-align: middle;
+            margin-right: 0;
+            .social-link {
+              span {
+                color: @kleur3;
+                font-size: 25px;
+                line-height: 30px;
+                .transition(all .3s);
+              }
+              img {
+                height: 28px;
+                padding: 0;
+              }
+              &:hover, &:focus {
+                text-decoration: none;
+              }
+            }
+          }
         }
       }
       .block-op-zoek {
@@ -1607,6 +1691,7 @@ form{
             font-size: 20px;
           }
           p {
+            padding-top: 10px;
             height: 200px;
             font-size: 16px;
             line-height: 22px;
