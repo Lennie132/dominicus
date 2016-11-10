@@ -86,12 +86,12 @@ Header
         display: inline-block;
         vertical-align: top;
         padding: 8px 0;
+        width: 141px;
         vertical-align: top;
-        width: 185px;
         margin-right: 10px;
         .search__input {
           display: inline-block;
-          width: 130px;
+          width: 110px;
           height: 24px;
           margin: 0 5px 0 0;
           color: @black-color;
@@ -101,7 +101,7 @@ Header
         .search__button {
           display: inline-block;
           vertical-align: top;
-          width: 50px;
+          width: auto;
           line-height: 22px;
           font-size: 14px;
           background-color: @kleur2;
@@ -112,9 +112,14 @@ Header
       }
 
       .social-list {
+        &.socal-list--left {
+          width: 42px;
+        }
+        &.socal-list--right {
+          width: 157px;
+        }
         display: inline-block;
         vertical-align: top;
-        width: 132px;
         margin: 0;
         padding: 0;
         text-align: right;
@@ -122,27 +127,24 @@ Header
         .social-item {
           display: inline-block;
           vertical-align: middle;
-          margin-right: 6px;
+          margin-right: 4px;
           &:last-child {
             margin-right: 0;
           }
           .social-link {
             span {
               color: @kleur3;
-              font-size: 28px;
+              font-size: 25px;
               line-height: 40px;
               .transition(all .3s);
             }
             img {
-              height: 32px;
+              height: 28px;
               padding: 0;
             }
             &:hover, &:focus {
               text-decoration: none;
             }
-          }
-          .fb-like {
-            padding: 10px 0;
           }
         }
       }
@@ -155,6 +157,24 @@ Header
 Header responsive
 ========================================================================== */
 @media (max-width: 1199px){
+  .header-wrapper{
+    .header-bar {
+      .header-main {
+        .social-list {
+          &.socal-list--left {
+            width: 42px;
+          }
+          &.socal-list--right {
+            width: 157px;
+          }
+          .social-item {
+            .social-link {
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 991px){
@@ -180,7 +200,6 @@ Header responsive
               }
             }
           }
-
           .wrapper-logo-no-text {
             display: none;
           }
@@ -190,10 +209,16 @@ Header responsive
         }
 
         .social-list {
+          &.socal-list--left {
+            width: auto;
+          }
+          &.socal-list--right {
+            width: auto;
+          }
           padding: 16px 0;
           float: left;
           padding-left: 10px;
-          width: auto;
+
           .social-item {
             .social-link {
             }

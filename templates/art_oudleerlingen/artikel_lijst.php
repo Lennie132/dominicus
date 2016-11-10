@@ -1,6 +1,5 @@
 <?php
   smart_include_css('css/style.less');
-  smart_include_css('css/style.css');
   smart_include_js('main.js');
   $config = array(
       'tabelnaam' => $tabelnaam,
@@ -12,8 +11,6 @@
   );
 
   /* Artikelen ophalen */
-
-
 
   if ($DATA['page'] == get_variabele('page_home')) {
     include dirname(__FILE__) . '/artikel_latest.php';

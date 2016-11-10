@@ -38,17 +38,11 @@
           </div>
         </div>
 
-        <?php // lcms::Menu()->setNiveausDiep(2)->setClass('main-nav list-unstyled')->getHTML();  ?>
-        <?= get_menu(0, '', 'header-nav list-unstyled'); ?>
 
-        <form class="search hidden-xs hidden-sm hidden-md" action="<?= link::v('page_zoekresultaten') ?>" method="get">
-          <input class="search__input" type="text" id="zoekopdracht" name="zoekopdracht" placeholder="zoeken..."/>
-          <button class="search__button" type="submit"><?= get_variabele("knop_zoek"); ?></button>
-        </form>
 
-        <ul class="social-list">
+        <ul class="social-list socal-list--left">
           <?php
-            $socialmedia = get_artikelen_arr('art_socialmedia', '*', 'a.gewicht DESC');
+            $socialmedia = get_artikelen_arr('art_socialmedia', get_variabele('social_groep_rechts_logo'), 'a.gewicht DESC');
             //print_pre($socialmedia);
 
             if (!empty($socialmedia)) {
@@ -59,10 +53,48 @@
                 } else {
                   $link = lcms::niceLink($social['link']);
                 }
-                echo $link;
                 ?>
                 <li class="social-item">
                   <a href="<?= lcms::niceLink($link); ?>" target="_blank" class="social-link" title="<?php echo $social['naam']; ?>">
+                    <?php if ($social['afbeelding_ipv_icon'] == 1 && trim($social_img) != "") { ?>
+                      <img src="<?= lcms::resize($social_img, 50, 50, '', 80); ?>" title="<?= $social['naam']; ?>">
+                    <?php } else { ?>
+                      <span class="<?= $social['icon']; ?>"></span>
+                    <?php } ?>
+                  </a>
+                </li>
+                <?php
+              }
+            }
+          ?>
+        </ul>
+
+
+
+        <?php // lcms::Menu()->setNiveausDiep(2)->setClass('main-nav list-unstyled')->getHTML();  ?>
+        <?= get_menu(0, '', 'header-nav list-unstyled'); ?>
+
+        <form class="search hidden-xs hidden-sm hidden-md" action="<?= link::v('page_zoekresultaten') ?>" method="get">
+          <input class="search__input" type="text" id="zoekopdracht" name="zoekopdracht" placeholder="zoeken..."/>
+          <button class="search__button" type="submit"><span class="icon-search"></span></button>
+        </form>
+
+        <ul class="social-list socal-list--right">
+          <?php
+            $socialmedia = get_artikelen_arr('art_socialmedia', get_variabele('social_groep_rechts_boven'), 'a.gewicht DESC');
+            //print_pre($socialmedia);
+
+            if (!empty($socialmedia)) {
+              foreach ($socialmedia as $social) {
+                $social_img = get_art_file_path($social['afbeelding'], $social['artikel_id']);
+                if ($social['gebruik_interne_link'] == 1) {
+                  $link = link::c($social['interne_pagina_link'])->return_absolute(true)->__toString();
+                } else {
+                  $link = lcms::niceLink($social['link']);
+                }
+                ?>
+                <li class="social-item">
+                  <a href="<?= lcms::niceLink($link); ?>" target="_blank" class="social-link" title="<?= $social['naam']; ?>">
                     <?php if ($social['afbeelding_ipv_icon'] == 1 && trim($social_img) != "") { ?>
                       <img src="<?= lcms::resize($social_img, 50, 50, '', 80); ?>" title="<?= $social['naam']; ?>">
                     <?php } else { ?>
