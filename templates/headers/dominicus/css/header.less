@@ -94,9 +94,12 @@ Header
           width: 110px;
           height: 24px;
           margin: 0 5px 0 0;
+          padding: 0 3px;
           color: @black-color;
           line-height: 18px;
           font-size: 14px;
+          border: 1px solid @black-color;
+          border-radius: 1px;
         }
         .search__button {
           display: inline-block;
@@ -107,13 +110,14 @@ Header
           background-color: @kleur2;
           color: @white-color;
           border: none;
-          border-radius: 3px;
+          border-radius: 2px;
         }
       }
 
       .social-list {
         &.socal-list--left {
-          width: 42px;
+          width: 54px;
+          padding-right: 10px;
         }
         &.socal-list--right {
           width: 157px;
@@ -139,7 +143,7 @@ Header
               .transition(all .3s);
             }
             img {
-              height: 28px;
+              height: 26px;
               padding: 0;
             }
             &:hover, &:focus {
