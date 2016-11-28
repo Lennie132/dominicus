@@ -39,8 +39,8 @@
         lcms_client_script::add_main_js('js/modernizr-2.6.2.min.js');
 
         /** custom CSS inladen * */
-        //lcms_client_script::add_less('client/template/custom/css/style.less', true);
-
+        lcms_client_script::add_main_less('css/blocks-home.less');
+                
         /** custom JS inladen * */
         //lcms_client_script::add_js('client/template/custom/js/plugins.js', true);
         lcms_client_script::add_main_js('js/jquery.dotdotdot.min.js', true);
