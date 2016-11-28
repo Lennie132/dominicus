@@ -5,11 +5,13 @@
       'order' => ' a.artikel_id DESC', // bv: RAND()
       'artikel_id' => 0,
       'limit_links' => 1,
-      'where' => ' GROUP BY g.group_id ',
+      'where' => ' ',
       'module' => 0,
   );
 
   $slide_arr = get_artikelen_arr($config['tabelnaam'], $config['group_id'], $config['order'], $config['artikel_id'], $config['limit_links'], $config['where']);
+  
+  
   if (!empty($slide_arr)) {
     ?>
     <div class="slider-wrapper">
