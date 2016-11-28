@@ -1,0 +1,1593 @@
+@opensans: "Open Sans", sans-serif;
+@ubuntu: Ubuntu, sans-serif;
+@theme-color: #ff9900; // oranje
+@white-color: #ffffff; // wit
+@black-color: #000000; // zwart
+@grey-light: #e1dfde;
+@fancy-box-overlap: #cfa700;
+
+
+.block--sfeer {
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+}
+.block {
+  /* Kom kijken (groep 8 & home), info groep8, feest&activiteiten, projecten */
+  &.block--style-1 {
+    .block__link {
+      &:hover {
+        text-decoration: underline;
+        h2 {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  /* Filmmakers groep 8 */
+  .block--style-2 {
+    height: auto;
+    .block__content {
+      h2 {
+        font-weight: bold;
+        font-size: 36px;
+        text-align: right;
+        padding: 0;
+        margin: 0;
+      }
+      padding: 25px 20px;
+      color: @kleur3;
+      background-color: @grey-light;
+      border-bottom: 30px solid white;
+    }
+    .block__sfeer {
+      height: 431px;
+      width: 100%;
+    }
+  }
+  /* Filmmakers home */
+  .block--style-3 {
+    height: auto;
+    .block__content {
+      h2 {
+        font-size: 36px;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+      }
+      padding: 25px 20px;
+      color: @kleur3;
+      background-color: @grey-light;
+      border-bottom: 30px solid white;
+    }
+    .block__sfeer {
+      height: 380px;
+      width: 100%;
+    }
+  }
+  /* Talenten van Dominicus */
+  .block--style-4 {
+    height: auto;
+    .block__content {
+      h2 {
+        font-size: 36px;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+      }
+      padding: 25px 20px;
+      color: @kleur3;
+      background-color: @grey-light;
+      border-top: 30px solid white;
+    }
+    .block__sfeer {
+      height: 380px;
+      width: 100%;
+    }
+
+  }
+  /* 10 vragen over brugklas */
+  .block--style-5 {
+    height: auto;
+    .block__content {
+      height: 350px;
+      background-color: @kleur2;
+      color: @white-color;
+      h2 {
+        padding: 25px 20px;
+        margin: 0;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        a {
+          font-size: 36px;
+          font-weight: bold;
+          color: @white-color;
+        }
+      }
+      h3 {
+        padding: 0 20px;
+        margin-top: 0;
+        text-align: center;
+        font-style: italic;
+        font-size: 38px;
+      }
+    }
+    .block__sfeer {
+      height: 200px;
+      width: 100%;
+    }
+
+  }
+  .block--style-6 {
+    position: relative;
+    padding: 15px 15px 15px 0;
+    .block__sfeer {
+      position: absolute;
+      margin-left: 5%;
+      width: 95%;
+      height: 360px;
+      z-index: 10;
+    }
+    .block__content {
+      vertical-align: bottom;
+      position: absolute;
+      text-align: right;
+      bottom: 0;
+      width: 90%;
+      margin: 0;
+      padding: 190px 20px 25px;
+      background-color: @kleur4;
+      h2 {
+        font-size: 34px;
+        font-weight: bold;
+        color: @kleur3;
+      }
+    }
+    .block__link {
+      &:hover {
+        text-decoration: underline;
+        h2 {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .icon-talenten {
+    position: absolute;
+    margin: 0;
+    width: 60px!important;
+    height: auto!important;
+    bottom: 35px;
+    right: 40px;
+  }
+  .icon-filmmakers {
+    position: absolute;
+    margin: 0;
+    width: 60px!important;
+    height: auto!important;
+    top: 35px;
+    right: 40px;
+  }
+  .icon-filmmakers-groep8 {
+    position: absolute;
+    margin: 0;
+    width: 60px!important;
+    height: auto!important;
+    top: 40px;
+    left: 40px;
+  }
+  .icon-vragen {
+    position: absolute;
+    margin: 0;
+    width: 100px!important;
+    height: auto!important;
+    bottom: 35px;
+    left: ~'calc(50% - 50px)';
+  }
+}
+
+/* ==========================================================================
+   Home pagina
+   ========================================================================== */
+
+.top-row {
+  padding: 0 15px;
+  .block-wrapper {
+    padding: 0 15px 15px 15px;
+    &.top-left-block {
+      padding-top: 330px;
+    }
+
+    .block-in-beeld {
+      position: relative;
+      padding: 15px 15px 15px 0;
+      height: 470px;
+      iframe {
+        position: absolute;
+        width: 100%;
+        height: 340px;
+        padding-left: 5%;
+        z-index: 10;
+      }
+      h2 {
+        position: absolute;
+        height: 260px;
+        width: 95%;
+        margin: 0;
+        padding: 190px 65px 25px 100px;
+        vertical-align: bottom;
+        bottom: 0;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: right;
+        color: @kleur3;
+        background-color: @kleur4;
+        @media (max-width: 1600px) {
+          font-size: 27px;
+        }
+        @media(max-width: 1380px) {
+          font-size: 23px;
+          padding-left: 70px;
+        }
+        @media(max-width: 1199px) {
+          font-size: 28px;
+        }
+        @media(max-width: 991px) {
+          font-size: 24px;
+        }
+
+
+      }
+      .social-list {
+        right: 0;
+        bottom: 0;
+        height: auto;
+        position: absolute;
+        list-style-type: none;
+        padding: 0 50px 20px 0;
+        margin: 0;
+        list-style-type: none;
+        @media(max-width: 1380px) {
+          padding-right: 35px;
+        }
+        .social-item {
+          display: block;
+          vertical-align: middle;
+          margin-right: 0;
+          .social-link {
+            span {
+              color: @kleur3;
+              font-size: 28px;
+              line-height: 35px;
+              .transition(all .3s);
+            }
+            img {
+              height: 28px;
+              padding: 0;
+            }
+            &:hover, &:focus {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .icon-in-beeld {
+        position: absolute;
+        margin: 0;
+        width: 60px!important;
+        bottom: 30px;
+        left: 35px;
+        z-index: 5;
+        @media(max-width: 1380px) {
+          left: 15px;
+        }
+      }
+    }
+    .block-op-zoek {
+      position: relative;
+      height: 800px;
+      width: 90%;
+      padding: 15px;
+      background-color: @kleur1;
+      .icon-op-zoek {
+        position: absolute;
+        margin: 0;
+        width: 60px!important;
+        top: 30px;
+        left: 35px;
+      }
+      h2 {
+        padding-left: 100px;
+        a{
+          padding: 0;
+          font-size: 36px;
+          font-weight: bold;
+          color: @kleur3;
+        }
+      }
+      a {
+        padding: 0;
+      }
+      img {
+        position: relative;
+        margin: 25px 0 0 0;
+        width: 100%!important;
+        height: auto!important;
+        right: ~'calc(-7px - 10%)';
+      }
+
+      pre {
+        position: relative;
+        display: block;
+
+        padding: 15px;
+        width: 100%!important;
+        height: auto!important;
+        margin: 0 0 25px 0;
+        right: ~'calc(-7px - 10%)';
+        background-color: @kleur2;
+        color: @white-color;
+        font-family: @ubuntu;
+        font-size: 24px;
+        line-height: 26px;
+        white-space: normal;
+        text-align: center;
+      }
+
+      p {
+        display: block;
+        padding: 0 10% 10px;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 0;
+        a {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+
+    }
+  }
+
+  .block-btn-row {
+    padding-top: 30px;
+    height: 170px;
+    .block-btn-wrapper-left {
+      padding: 0 15px 0 0;
+    }
+    .block-btn-wrapper-right {
+      padding: 0 0 0 15px;
+    }
+    .block-btn {
+      height: 140px;
+      background-image: url('img/home-btn-background.jpg');
+      background-size: cover;
+      background-position: center;
+
+      h2 {
+        margin: 0;
+        text-align: center;
+        .transition( all 0.3s);
+        a {
+          display: block;
+          line-height: 125px;
+          font-size: 32px;
+          color: @white-color;
+        }
+        &:hover {
+          a {
+            color: @kleur2;
+            text-decoration: none;
+          }
+
+          border-bottom: 15px solid @kleur2;
+        }
+      }
+    }
+  }
+
+  .right-column {
+    > .block-wrapper-left {
+      padding: 0 15px 0 0;
+      .block-kom-kijken {
+        position: relative;
+        height: 530px;
+
+        .icon-kom-kijken {
+          position: absolute;
+          margin: 0;
+          width: 95px!important;
+          height: auto!important;
+          left: ~'calc(50% - 47px)';
+          bottom: 70px;
+          z-index: 5;
+        }
+        h2 {
+          position: absolute;
+          text-align: center;
+          bottom: 0;
+          width: 100%;
+          margin: 0;
+          padding: 45px 10px 20px;
+          font-size: 36px;
+          font-weight: bold;
+          background-color: @kleur4;
+          color: @white-color;
+        }
+      }
+    }
+
+    > .block-wrapper-right {
+      padding: 0 0 0 15px;
+      .block-info-groep8 {
+        position: relative;
+        height: 250px;
+        h2 {
+          position: absolute;
+          width: 100%;
+          margin: 0;
+          padding: 15px 10px;
+          bottom: 0;
+          font-size: 26px;
+          font-weight: bold;
+          text-align: center;
+          background-color: @kleur2;
+          color: @white-color;
+        }
+      }
+      .block-maak-app {
+        position: relative;
+        height: 250px;
+        margin-top: 30px;
+        h2 {
+          position: absolute;
+          width: 100%;
+          margin: 0;
+          padding: 15px 10px;
+          bottom: 0;
+          font-size: 26px;
+          font-weight: bold;
+          text-align: center;
+          color: @white-color;
+          background-color: @kleur4;
+          color: @white-color;
+        }
+      }
+    }
+    > .block-afbeelding {
+      padding: 0;
+      margin-top: 30px;
+      height: 410px;
+      .bx-viewport {
+        height: 410px!important;
+      }
+      .slide {
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+}
+.middle-row {
+  padding: 0 15px;
+  .block-wrapper {
+    padding: 15px;
+  }
+}
+.bottom-row {
+  padding: 15px 0 30px 0;
+  .row {
+    margin-left: 10px;
+    margin-right: 10px;
+    &.no-margin {
+      margin: 0;
+    }
+    .block-fancy-colored {
+      width: 100%;
+      height: 60px;
+      background-color: @kleur2;
+    }
+    .block-fancy {
+      position: relative;
+      float: left;
+      width: ~'calc(33.33% + 20px)';
+      height: 460px;
+      padding: 0;
+      margin: 0 -10px;
+      left:0;
+      top: 0px;
+      background-color: @kleur4;
+      .transition( all 0.5s);
+
+      &:before {
+        content: '';
+        opacity: 0;
+        position: absolute;
+        width: 20px;
+        height: 30px!important;
+        right: 0;
+        bottom: 0;
+        box-sizing: border-box;
+      }
+      &:after {
+        content: '';
+        opacity: 0;
+        position: absolute;
+        width: 20px;
+        height: 30px!important;
+        left: 0;
+        bottom: 0;
+        box-sizing: border-box;
+      }
+      &:hover {
+        top: -30px;
+        z-index: 10;
+        background-color: @kleur1;
+        .transition( all 0.5s);
+        &:before {
+          opacity: 1;
+          .transition( all 0.5s);
+          bottom: -30px;
+          height: ~'calc(100% + 30px)';
+          border-left: 20px @fancy-box-overlap solid;
+          border-bottom: 30px @kleur4 solid;
+        }
+        &:after {
+          opacity: 1;
+          .transition( all 0.5s);
+          bottom: -30px;
+          height: ~'calc(100% + 40px)';
+          border-right: 20px @fancy-box-overlap solid;
+          border-bottom: 30px @kleur4 solid;
+        }
+      }
+      .block-fancy-content {
+        display: inline-block;
+        position: relative;
+        margin: 5% 10%;
+        h2 {
+          text-align: center;
+          font-size: 36px;
+          font-weight: bold;
+          color: @kleur3;
+          a {
+            font-size: 36px;
+            font-weight: bold;
+            color: @kleur3;
+          }
+        }
+        h3 {
+          padding: 0 20px;
+          text-align: center;
+          font-style: italic;
+          color: @kleur3;
+        }
+        p {
+          height: 240px;
+          padding-top: 25px;
+          font-size:22px;
+          line-height:28px;
+        }
+        a {
+          font-weight: bold;
+          font-size:20px;
+        }
+      }
+    }
+  }
+}
+/* ==========================================================================
+   Home Groep 8 pagina
+   ========================================================================== */
+
+.groep-8-top-row {
+  padding: 0 15px;
+  .block-wrapper {
+    padding: 0 15px 15px 15px;
+    &.top-left-block {
+      padding-top: 300px;
+    }
+    .block-info-ouders {
+      height: 500px;
+    }
+    .block-hallo-achtste-groeper {
+      padding: 1px;
+      position: relative;
+      background-color: @kleur1;
+      height: 800px;
+      width: 90%;
+      .icon-duim {
+        position: absolute;
+        margin: 0;
+        width: 60px!important;
+        height: 60px!important;
+        top: 30px;
+        left: 35px;
+      }
+      h2 {
+        text-align: right;
+        padding-left: 110px;
+        padding-right: 20px;
+        a{
+          padding: 0;
+          font-size: 36px;
+          font-weight: bold;
+          color: @kleur3;
+        }
+      }
+      a {
+        padding: 0;
+      }
+      img {
+        position: relative;
+        margin: 25px 0 0 0;
+        width: 100%!important;
+        height: auto!important;
+        right: ~'calc(-7px - 10%)';
+      }
+
+      pre {
+        display: block;
+        background-color: @kleur3;
+        color: @white-color;
+        font-family: @ubuntu;
+        font-size: 24px;
+        line-height: 26px;
+        white-space: normal;
+        text-align: center;
+        padding: 15px;
+        position: relative;
+        margin: 0 0 25px 0;
+        width: 100%!important;
+        height: auto!important;
+        right: ~'calc(-7px - 10%)';
+        a{
+          line-height: 26px;
+          color: @white-color;
+          font-family: @ubuntu;
+          font-size: 24px;
+          font-weight: normal;
+        }
+      }
+
+      p {
+        display: block;
+        padding: 0 10% 10px;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 0;
+        a {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+    .block-schrijf-in {
+      position: relative;
+      height: 89px;
+      .icon-inschrijven {
+        position: absolute;
+        margin: 0;
+        width: 45px!important;
+        height: 45px!important;
+        left: 20px;
+        bottom: 25px;
+        z-index: 5;
+      }
+      h2 {
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        padding: 25px 10px;
+        font-size: 36px;
+        font-weight: bold;
+        background-color: @kleur2;
+        a {
+          color: @white-color;
+        }
+      }
+    }
+    .block-kom-kijken-groep8 {
+      position: relative;
+      height: 391px;
+      margin-top: 30px;
+      h2 {
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        width: ~'calc(100% - 30px)';
+        margin: 0;
+        padding: 30px 10px;
+        font-size: 36px;
+        font-weight: bold;
+        background-color: @kleur4;
+        color: @white-color;
+      }
+      .icon-kom-kijken {
+        position: absolute;
+        margin: 0;
+        width: 65px!important;
+        height: 65px!important;
+        left: 20px;
+        bottom: 20px;
+        z-index: 5;
+      }
+    }
+    .block-projecten {
+      position: relative;
+      height: 260px;
+      margin-top:30px;
+      h2 {
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        width: ~'calc(100% - 30px)';
+        margin: 0;
+        padding: 30px 10px;
+        font-size: 36px;
+        font-weight: bold;
+        background-color: @kleur4;
+        color: @white-color;
+      }
+      .icon-kom-kijken {
+        position: absolute;
+        margin: 0;
+        width: 65px!important;
+        height: 65px!important;
+        left: 20px;
+        bottom: 20px;
+        z-index: 5;
+      }
+    }
+  }
+}
+
+.groep-8-bottom-row {
+  padding: 0 15px;
+  .block-wrapper {
+    padding: 15px;
+    .block-10-vragen {
+
+    }
+    .block-monnikskap {
+      height: 550px;
+
+      color: @kleur3;
+      a{
+        padding: 0;
+
+      }
+      h2 {
+        padding: 25px 20px;
+        margin: 0;
+        font-size: 36px;
+        line-height: 39px;
+        font-weight: bold;
+        text-align: center;
+        background-color: @grey-light;
+        margin-bottom: 30px;
+        a {
+          font-size: 36px;
+          line-height: 39px;
+          font-weight: bold;
+        }
+      }
+      h3 {
+        padding: 0 20px;
+        margin-top: 0;
+        text-align: center;
+        font-style: italic;
+        background-color: @grey-light;
+      }
+      p {
+        padding: 0 20px;
+        line-height: 26px;
+        a {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+      @media(max-width: 1860px) {
+        h2 {
+          font-size: 30px;
+          a {
+            font-size: 30px;
+          }
+        }
+      }
+      @media(max-width: 1590px) {
+        h2 {
+          font-size: 24px;
+          a {
+            font-size: 24px;
+          }
+        }
+      }
+      @media(max-width: 1320px) {
+        h2 {
+          font-size: 20px;
+          a {
+            font-size: 20px;
+          }
+        }
+      }
+      @media(max-width: 1199px) {
+        h2 {
+          padding: 25px 10px;
+        }
+        h3 {
+          font-size: 24px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1550px) and (min-width: 1200px){
+  /* ==========================================================================
+     Home pagina
+     ========================================================================== */
+  .block {
+    .block--style-2 {
+      .block__content {
+        h2 {
+          font-size: 24px;
+        }
+      }
+    }
+    .block--style-3 {
+      .block__content {
+        h2 {
+          font-size: 24px;
+        }
+      }
+    }
+    .block--style-4 {
+      .block__content {
+        h2 {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  .top-row {
+    .block-wrapper {
+      .block-op-zoek {
+        h2 {
+          a{
+            font-size: 27px;
+          }
+        }
+        pre {
+          padding: 10px;
+          font-size: 22px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+    .block-btn-row {
+      .block-btn {
+        h2 {
+          a {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+    .right-column {
+      > .block-wrapper-left {
+        .block-kom-kijken {
+          h2 {
+            a {
+              font-size: 26px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .middle-row {
+    .block {
+      h2 {
+        font-size: 24px;
+        line-height: 39px;
+      }
+
+    }
+  }
+  /* ==========================================================================
+      Home Groep 8 pagina
+     ========================================================================== */
+
+  .groep-8-top-row {
+    .block-wrapper {
+      .block-info-ouders {
+        h2 {
+          font-size: 25px;
+        }
+      }
+      .block-hallo-achtste-groeper {
+        .icon-duim {
+          top: 15px;
+        }
+        h2 {
+          a{
+            font-size: 25px;
+          }
+        }
+        pre {
+          padding: 15px;
+          a{
+            padding: 0;
+            font-size: 22px;
+          }
+        }
+        p {
+          font-size: 20px;
+        }
+        a {
+          display: block;
+          padding-top: 20px;
+        }
+      }
+      .block-schrijf-in {
+        h2 {
+          padding-right: 30px;
+          text-align: right;
+        }
+      }
+      .block-kom-kijken-groep8 {
+        h2 {
+          padding-right: 30px;
+          text-align: right;
+        }
+      }
+      .block-projecten {
+        h2 {
+          padding-right: 30px;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .groep-8-bottom-row {
+    .block-wrapper {
+      .block-filmmakers {
+        h2 {
+          font-size: 24px;
+          line-height: 39px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1199px){
+  .top-row {
+    .block-wrapper {
+      .block-op-zoek {
+        h2 {
+          a{
+            font-size: 28px;
+          }
+        }
+      }
+    }
+    .block-btn-row {
+      .block-btn {
+        h2 {
+          a {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+  .middle-row {
+    .block-wrapper {
+      .block {
+        h2 {
+          font-size: 28px;
+          line-height: 39px;
+        }
+      }
+    }
+  }
+  .groep-8-top-row {
+    .block-wrapper {
+      .block-projecten {
+        height: 391px;
+      }
+    }
+  }
+  .groep-8-bottom-row {
+    .block-wrapper {
+      .block-filmmakers {
+        .icon-filmmakers-groep8 {
+          display: none;
+        }
+        h2 {
+          font-size: 24px;
+          line-height: 39px;
+        }
+      }
+      .block-10-vragen {
+        h2 {
+          a {
+            font-size: 28px;
+            line-height: 32px;
+          }
+        }
+        h3 {
+          font-size: 26px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+  .bottom-row {
+    .row {
+      .block-fancy {
+        .block-fancy-content {
+          h3 {
+            margin-top: 10px;
+            font-size: 23px;
+          }
+          p {
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px){
+  /* ==========================================================================
+ Home pagina
+ ========================================================================== */
+  .block--sfeer {
+    height: 300px;
+  }
+  .block {
+    /* Kom kijken (groep 8 & home), info groep8, feest&activiteiten, projecten */
+    .block--style-1 {
+
+    }
+    /* Filmmakers groep 8 */
+    .block--style-2 {
+      .block__content {
+        padding: 0;
+        border-bottom: none;
+      }
+    }
+    /* Filmmakers home */
+    .block--style-3 {
+      .block__content {
+        padding: 0;
+        border-bottom: none;
+      }
+
+    }
+    /* Talenten van Dominicus */
+    .block--style-4 {
+      .block__content {
+        padding: 0;
+        border-top: none;
+      }
+    }
+    /* 10 vragen */
+    .block--style-5 {
+      .block__content {
+        height: auto;
+      }
+    }
+    .block--style-6 {
+      padding: 15px;
+      background-color: @kleur4;
+      .block__sfeer {
+        position: relative;
+        margin-left: 0;
+        width: 100%;
+        height: 300px;
+      }
+      .block__content {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        h2 {
+          padding: 0 0;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  .top-row {
+    .block-wrapper {
+      &.top-left-block {
+        padding-top: 0;
+      }
+      .block-in-beeld {
+        padding: 15px;
+        height: auto;
+        width: 100%;
+        background-color: @kleur4;
+        overflow: auto;
+        iframe {
+          position: static;
+          padding-left: 0;
+          min-height: 160px;
+          height: auto;
+        }
+        h2 {
+          position: relative;
+          height: auto;
+          width: 215px;
+          float: right;
+          padding: 15px 40px 0 60px;
+        }
+        .icon-in-beeld {
+          width: 45px!important;
+          bottom: 20px;
+          left: 18px;
+        }
+        .social-list {
+          right: 0;
+          height: auto;
+          position: absolute;
+          list-style-type: none;
+          padding: 0 16px 12px 0;
+          margin: 0;
+          list-style-type: none;
+          .social-item {
+            display: block;
+            vertical-align: middle;
+            margin-right: 0;
+            .social-link {
+              span {
+                color: @kleur3;
+                font-size: 25px;
+                line-height: 30px;
+                .transition(all .3s);
+              }
+              img {
+                height: 28px;
+                padding: 0;
+              }
+              &:hover, &:focus {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+      .block-op-zoek {
+        height: auto;
+        width: 100%;
+        .icon-op-zoek {
+          width: 40px!important;
+          top: 20px;
+          left: 20px;
+        }
+        h2 {
+          margin: 0;
+          padding:  0 0 15px 50px;
+          text-align: right;
+          max-width: 325px;
+          float: right;
+          a{
+            font-size: 24px;
+          }
+        }
+        a {
+          img {
+            margin: 0;
+            right: 0;
+          }
+        }
+        pre {
+          font-size: 18px;
+          line-height: 22px;
+          padding: 10px;
+          margin: 0;
+          right: 0;
+        }
+
+        p {
+          position: relative;
+          padding: 15px 0;
+          font-size: 16px;
+          line-height: 24px;
+          a {
+            display: block;
+            position: relative;
+            padding: 15px 0;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .block-btn-row {
+      padding-top: 15px;
+      height: 85px;
+      .block-btn-wrapper-left {
+        padding: 0 7px 0 0;
+      }
+      .block-btn-wrapper-right {
+        padding: 0 0 0 7px;
+      }
+      .block-btn {
+        height: 70px;
+        h2 {
+          a {
+            line-height: 60px;
+            font-size: 22px;
+          }
+          &:hover {
+            border-bottom: 10px solid @kleur2;
+          }
+        }
+      }
+    }
+
+    .right-column {
+      > .block-wrapper-left {
+        padding: 0;
+        .block-kom-kijken {
+          height: auto;
+        }
+      }
+
+      > .block-wrapper-right {
+        padding: 15px 0 0 0;
+        .block-info-groep8 {
+          height: auto;
+        }
+        .block-maak-app {
+          height: auto;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  .middle-row {
+    .block-wrapper {
+      padding: 0 15px 15px;
+      .block {
+        h2 {
+          padding: 15px 80px 15px 15px;
+          font-size: 24px;
+        }
+        &.block-talenten {
+          h2 {
+            margin-top: 0;
+          }
+          .icon-talenten {
+            width: 50px!important;
+            bottom: 25px;
+            right: 30px;
+          }
+        }
+        &.block-filmmakers {
+          h2 {
+            margin-bottom: 0;
+          }
+          .icon-filmmakers {
+            width: 50px!important;
+            top: 10px;
+            right: 30px;
+          }
+        }
+      }
+    }
+  }
+  .bottom-row {
+    .row {
+      margin: 0;
+      .block-fancy {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        &:before {
+          content: '';
+        }
+        &:after {
+          content: '';
+        }
+        &:hover {
+          top: 0;
+          z-index: 0;
+          background-color: @kleur1;
+          .transition( all 0.5s);
+          &:before {
+            opacity: 0;
+          }
+          &:after {
+            opacity: 0;
+
+          }
+        }
+        .block-fancy-content {
+          margin: 15px 15px;
+          h2 {
+            font-size: 24px;
+            a {
+              font-size: 24px;
+            }
+          }
+          h3 {
+            font-size: 20px;
+          }
+          p {
+            padding-top: 10px;
+            height: 200px;
+            font-size: 16px;
+            line-height: 22px;
+          }
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  /* ==========================================================================
+      Home Groep 8 pagina
+     ========================================================================== */
+
+  .groep-8-top-row {
+    padding: 0 15px;
+    .block-wrapper {
+      padding: 0 15px 15px 15px;
+      &.top-left-block {
+        padding-top: 0;
+      }
+      .block-info-ouders {
+        height: auto;
+      }
+      .block-hallo-achtste-groeper {
+        padding: 15px;
+        height: auto;
+        width: 100%;
+        .icon-duim {
+          position: absolute;
+          margin: 0;
+          width: 40px!important;
+          height: 40px!important;
+          top: 30px;
+          left: 35px;
+        }
+        h2 {
+          margin: 0;
+          padding: 0 0 10px 80px;
+          max-width: 325px;
+          text-align: right;
+          float: right;
+
+          a{
+            padding: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: @kleur3;
+          }
+        }
+        img {
+          margin: 0;
+          right: 0;
+        }
+        pre {
+          font-size: 18px;
+          line-height: 22px;
+          padding: 10px;
+          margin: 0;
+          right: 0;
+          a{
+            padding: 0;
+            font-size: 18px;
+            line-height: 22px;
+          }
+        }
+
+        p {
+          padding: 10px 0;
+          font-size: 16px;
+          line-height: 20px;
+          a {
+            padding: 5px 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+
+      }
+      .block-schrijf-in {
+        height: 76px;
+        .icon-inschrijven {
+          bottom: 23px;
+          object-fit: contain;
+          width: 30px !important;
+          height: 30px !important;
+        }
+        h2 {
+          font-size: 24px;
+          text-align: right;
+        }
+      }
+      .block-kom-kijken-groep8 {
+        height: auto;
+        margin-top: 15px;
+        h2 {
+          text-align: right;
+          padding: 25px 15px;
+          font-size: 24px;
+        }
+        .icon-kom-kijken {
+          object-fit: contain;
+          width: 45px!important;
+          height: 45px!important;
+        }
+      }
+      .block-projecten {
+        height: auto;
+        margin-top: 15px;
+        h2 {
+          text-align: right;
+          padding: 25px 15px;
+          font-size: 24px;
+        }
+        .icon-kom-kijken {
+          object-fit: contain;
+          width: 45px!important;
+          height: 45px!important;
+        }
+      }
+    }
+  }
+
+  .groep-8-bottom-row {
+    padding: 0 15px;
+    .block-wrapper {
+      padding: 0 15px 15px 15px;
+      .block-filmmakers {
+        height: auto;
+        h2 {
+          padding: 25px 15px 25px 80px;
+          margin: 0;
+          font-size: 24px;
+        }
+        .icon-filmmakers-groep8 {
+          display: block;
+          margin: 0;
+          width: 50px!important;
+          height: auto!important;
+          top: 25px;
+          left: 30px;
+        }
+      }
+      .block-10-vragen {
+        height: auto;
+        h2 {
+          padding: 15px 15px;
+          font-size: 24px;
+          line-height: 26px;
+          a {
+            font-size: 24px;
+            line-height: 26px;
+          }
+        }
+        h3 {
+          margin: 0;
+          padding: 0 15px 90px;
+          font-size: 22px;
+          line-height: 26px;
+        }
+
+        .icon-vragen {
+          width: 70px!important;
+          left: ~'calc(50% - 35px)';
+        }
+      }
+      .block-monnikskap {
+        height: auto;
+        a {
+          padding: 0;
+        }
+
+        h2 {
+          padding: 25px 15px;
+          font-size: 24px;
+          line-height: 26px;
+          margin-bottom: 0;
+          a {
+            font-size: 24px;
+            line-height: 26px;
+          }
+        }
+        h3 {
+          padding: 0 15px;
+          font-size: 22px;
+          line-height: 26px;
+        }
+        p {
+          padding: 0 15px;
+          line-height: 20px;
+          font-size: 16px;
+          a {
+            display: block;
+            padding: 15px 0;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .titel-wrapper {
+    h1 {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  .content-wrapper{
+    img {
+      margin: 10px 0 10px 0;
+    }
+  }
+
+  .top-row {
+    .block-btn-row {
+      .block-btn {
+        h2 {
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  .block--sfeer {
+    height: 270px;
+  }
+  .block {
+    /* Kom kijken (groep 8 & home), info groep8, feest&activiteiten, projecten */
+    .block--style-1 {
+
+    }
+    /* Filmmakers groep8 */
+    .block--style-2 {
+      .block__sfeer {
+        height: 250px;
+      }
+    }
+    /* Filmmakers home */
+    .block--style-3 {
+      .block__sfeer {
+        height: 250px;
+      }
+    }
+    /* Dominicus talenten */
+    .block--style-4 {
+      .block__sfeer {
+        height: 250px;
+      }
+    }
+    /* Info voor ouders */
+    .block--style-6 {
+      .block__sfeer {
+        height: 250px;
+      }
+    }
+  }
+}

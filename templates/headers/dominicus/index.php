@@ -38,8 +38,8 @@
           </div>
         </div>
 
-
-
+        <?= get_menu(0, '', 'header-nav list-unstyled'); ?>
+      
         <ul class="social-list socal-list--left">
           <?php
             $socialmedia = get_artikelen_arr('art_socialmedia', get_variabele('social_groep_rechts_logo'), 'a.gewicht DESC');
@@ -68,17 +68,12 @@
             }
           ?>
         </ul>
-
-
-
-        <?php // lcms::Menu()->setNiveausDiep(2)->setClass('main-nav list-unstyled')->getHTML();  ?>
-        <?= get_menu(0, '', 'header-nav list-unstyled'); ?>
-
+       
         <form class="search hidden-xs hidden-sm hidden-md" action="<?= link::v('page_zoekresultaten') ?>" method="get">
           <input class="search__input" type="text" id="zoekopdracht" name="zoekopdracht" placeholder="zoeken..."/>
           <button class="search__button" type="submit"><span class="icon-search"></span></button>
         </form>
-
+        
         <ul class="social-list socal-list--right">
           <?php
             $socialmedia = get_artikelen_arr('art_socialmedia', get_variabele('social_groep_rechts_boven'), 'a.gewicht DESC');
