@@ -21,40 +21,31 @@
     -webkit-perspective: 1000;
     perspective: 1000;
     .slide{
-      height: 461px;
+      height: 431px;
       position:relative;
       background-repeat:no-repeat;
       background-size:cover;
       background-position:center;
       .overlay{
-        position:relative;
+        position: absolute;
         width:100%;
-        height:100%;
-        background:rgba(0, 0, 0, .1);
-        .center-block{
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          width:100%;
-          text-align:center;
-          padding: 0 20px;
-          q {
-            font-size:26px;
-            font-weight:bold;
-            color:#fff;
-            line-height:32px;
-            text-transform:uppercase;
-            text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
-            margin:0;
-          }
-          p{
-            font-size:22px;
-            font-weight:bold;
-            color:#fff;
-            line-height:36px;
-            text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
-            margin:0;
-          }
+        bottom: 0;
+        text-align: center;
+        background:rgba(97, 96, 91, 0.78);
+        padding: 10px;
+        q {
+          font-size:24px;
+          font-weight:bold;
+          color:#fff;
+          line-height:34px;
+          margin:0;
+        }
+        p{
+          font-size:18px;
+          font-weight:bold;
+          color:#fff;
+          line-height:32px;
+          margin:0;
         }
       }
     }
@@ -65,7 +56,16 @@
   .slider-wrapper{
     .bxslider{
       .slide{
-        height:400px;
+        height:431px;
+        .overlay{
+          q {
+            line-height: 26px;
+            font-size:18px;
+          }
+          p{
+            font-size:14px;
+          }
+        }
       }
     }
   }
@@ -74,21 +74,32 @@
   .slider-wrapper{
     .bxslider{
       .slide{
-        height:300px;
+        height:350px;
+                .overlay{
+          q {
+            line-height: 26px;
+            font-size:20px;
+          }
+          p{
+            font-size:16px;
+          }
+        }
       }
     }
   }
 }
-@media (max-width: 767px){
+@media (max-width: 600px){
   .slider-wrapper{
     .bxslider{
       .slide{
-        height:250px;
+        height:400px;
         .overlay{
-          .center-block{
-            p{
-              font-size:22px;
-            }
+          q {
+            line-height: 24px;
+            font-size:18px;
+          }
+          p{
+            font-size:15px;
           }
         }
       }

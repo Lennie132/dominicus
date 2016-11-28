@@ -13,10 +13,6 @@
 
   /* Artikelen ophalen */
 
-
-
-
-
   $art_arr = get_artikelen_arr($config['tabelnaam'], $config['group_id'], $config['order'], $config['artikel_id'], $config['limit_links'], $config['where']);
 //print_pre($art_arr);
   if (!empty($art_arr)) {
@@ -30,13 +26,11 @@
             ?>
             <div class="slide" style="background-image:url('<?= lcms::resize($img, 1920, 1080, '', 80); ?>');"> 
               <div class="overlay">
-                <div class="center-block">
-                    <div class="row">
-                      <div class="col-xs-12">
-                        <q><?= $artikel['Quote']; ?></q>
-                        <p><?= $artikel['Leerling']; ?></p>
-                      </div>
-                    </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <q><?= $artikel['Quote']; ?></q>
+                    <p><?= $artikel['Leerling']; ?></p>
+                  </div>
                 </div>
               </div>
             </div>
