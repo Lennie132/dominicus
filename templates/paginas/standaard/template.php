@@ -20,7 +20,7 @@ if (trim($sfeer) == '') {
   <div class="containter">
     <div class="container">
       <div class="col-xs-12">
-        <h1><?php echo get_pagina_title($pageid) ?></h1>
+        <h1><?= get_pagina_title($pageid); ?></h1>
       </div>
     </div>
   </div>
