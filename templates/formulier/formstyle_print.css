@@ -1,0 +1,95 @@
+
+@media print {
+  body {
+    visibility: hidden;
+  }
+  #form-print {
+    visibility: visible;
+  }
+  #form-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  form .formulier_div {
+    width: 100%;
+  }
+  form .formulier_div:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  form .formulier_div.hoofdkop {
+    padding-top: 5px;
+  }
+  form .formulier_div.hoofdkop span {
+    color: #e84e1b;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  form .formulier_div.tussenkop span {
+    color: #e84e1b;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  form .formulier_div > .form-label {
+    float: left;
+    width: 30%;
+    padding: 3px;
+  }
+  form .formulier_div > .form-input input,
+  form .formulier_div > .form-input textarea,
+  form .formulier_div > .form-input select,
+  form .formulier_div > .form-input recaptcha {
+    width: 60%;
+    padding: 3px 5px;
+    font-size: 12px;
+    line-height: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+  }
+  form .formulier_div > .form-input textarea {
+    max-width: 60%;
+    min-width: 60%;
+    height: 150px;
+  }
+  form .formulier_div > .form-input .google-recaptcha {
+    display: none;
+  }
+  form .formulier_div > .form-input .formulier_radio,
+  form .formulier_div > .form-input .formulier_check {
+    margin-left: 30%;
+    width: 60%;
+    height: auto;
+    float: left;
+  }
+  form .formulier_div > .form-input .formulier_radio > input,
+  form .formulier_div > .form-input .formulier_check > input {
+    float: left;
+    margin-left: 0;
+    width: 20px;
+        border: none;
+  }
+  form .formulier_div > .form-input .formulier_radio > label,
+  form .formulier_div > .form-input .formulier_check > label {
+    width: 40%;
+    float: left;
+    padding: 0 10px;
+  }
+  form .formulier_div > .form-input .form_tooltip {
+    display: none;
+  }
+  form .formulier_div > .form-input .tooltip {
+    display: none;
+  }
+  form .formulier_div > .form-input .tooltip .tooltip-inner {
+    display: none;
+  }
+  form .formulier_div > .form-input .tooltip .tooltip-inner::after {
+    display: none;
+  }
+  form .formulier_div_submit .form_submit {
+    display: none;
+  }
+}

@@ -1,0 +1,15 @@
+.inpfout label{
+    color:red;
+}
+.inpfout input{
+    border-color:red;
+}
+.form_betaalwijze_service label{
+    margin-left:10px;
+}
+.print-only {
+  display: none;
+}
+#submit-form {
+  display: none;
+}
