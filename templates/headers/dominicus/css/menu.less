@@ -8,7 +8,7 @@
 
 .header-nav {
   display: inline-block;
-  width: ~'calc(100% - 662px)';
+  width: ~'calc(100% - 670px)';
   vertical-align: top;
   margin: 0;
   text-align: center;
@@ -21,7 +21,7 @@
       border-right: none;
     }
     &:last-child{
-      padding: 0;
+      padding: 0 0 0 10px;
       border-right: none;
     }
     &.icon-telefoon {
@@ -104,8 +104,10 @@
 
   > .nav__dropdown-toggle {
     visibility: hidden;
+    padding-left: 10px;
     display: inline-block;
     width: 25px;
+    border-left: 2px solid @kleur3;
     text-decoration: none;
     color: @kleur3;
     cursor: pointer;
@@ -281,7 +283,7 @@
    ========================================================================== */
 @media (max-width: 1199px){
   .header-nav {
-    width: ~'calc(100% - 499px)';
+    width: ~'calc(100% - 511px)';
   }
 }
 
@@ -311,6 +313,7 @@
       float: right;
       display: inline-block;
       position: static;
+      border-left: none;
       width: 40px;
       &:after {
         content: "\e20e";
