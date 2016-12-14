@@ -1,7 +1,7 @@
 <?php
   global $block;
   $block_sfeer = get_sfeerafbeelding($DATA['page'], 1, false, true, false, $block[0]['block_id']);
-
+  //print_pre($block_sfeer);
   $useSfeer = false;
   $useSfeerLink = false;
   if (trim($block_sfeer['afbeelding']) != '') {
@@ -12,10 +12,11 @@
   }
 
   if (strpos($block[0]['klasse'], 'block--style-1') !== false) {
+ 
     ?>
     <div style="<?= $useSfeer ? 'height: 100%' : ''; ?>" class="<?= $block[0]['klasse']; ?> block">
       <?php if ($useSfeerLink) { ?>
-        <a class="block__link" href="<?= Link::c($block_sfeer['link']); ?>" title="<?= get_pagina_title($block_sfeer['link']); ?>">
+        <a class="block__link" href="<?= $block_sfeer['link']; ?>" title="<?= get_pagina_title($block_sfeer['link']); ?>">
         <?php } ?>
 
         <div <?= $useSfeer ? 'class="block--sfeer" style="background-image: url(\'' . lcms::resize($block_sfeer['afbeelding'], 920, 1920, '', 80) . '\')"' : ''; ?>>
@@ -32,7 +33,7 @@
     ?>
     <div style="<?= $useSfeer ? 'height: 100%' : ''; ?>" class="<?= $block[0]['klasse']; ?>">
       <?php if ($useSfeerLink) { ?>
-        <a href="<?= Link::c($block_sfeer['link']); ?>" title="<?= get_pagina_title($block_sfeer['link']); ?>">
+        <a href="<?= $block_sfeer['link']; ?>" title="<?= get_pagina_title($block_sfeer['link']); ?>">
         <?php } ?>
         <div class="block__content">
           <?= $block[0]['html']; ?>
@@ -48,10 +49,9 @@
     <?php
   } else if (strpos($block[0]['klasse'], 'block--style-3') !== false) {
     ?>
-
     <div style="<?= $useSfeer ? 'height: 100%' : ''; ?>" class="<?= $block[0]['klasse']; ?>">
       <?php if ($useSfeerLink) { ?>
-        <a href="<?= Link::c($block_sfeer['link']); ?>" title="<?= get_pagina_title($block_sfeer['link']); ?>">
+        <a href="<?= $block_sfeer['link']; ?>" title="<?= get_pagina_title($block_sfeer['link']); ?>">
         <?php } ?>
         <div class="block__content">
           <?= $block[0]['html']; ?>
@@ -67,7 +67,7 @@
     ?>
     <div style="<?= $useSfeer ? 'height: 100%' : ''; ?>" class="<?= $block[0]['klasse']; ?>">
       <?php if ($useSfeerLink) { ?>
-        <a href="<?= Link::c($block_sfeer['link']); ?>" title="<?= get_pagina_title($block_sfeer['link']); ?>">
+        <a href="<?= $block_sfeer['link']; ?>" title="<?= get_pagina_title($block_sfeer['link']); ?>">
         <?php } ?>
         <div <?= $useSfeer ? 'class="block--sfeer block__sfeer" style="background-image: url(\'' . lcms::resize($block_sfeer['afbeelding'], 920, 920, '', 80) . '\')"' : ''; ?>>
         </div>
@@ -84,7 +84,7 @@
     ?>
     <div style="<?= $useSfeer ? 'height: 100%' : ''; ?>" class="<?= $block[0]['klasse']; ?>">
       <?php if ($useSfeerLink) { ?>
-        <a href="<?= Link::c($block_sfeer['link']); ?>" title="<?= get_pagina_title($block_sfeer['link']); ?>">
+        <a href="<?= $block_sfeer['link']; ?>" title="<?= get_pagina_title($block_sfeer['link']); ?>">
         <?php } ?>
         <div <?= $useSfeer ? 'class="block--sfeer block__sfeer" style="background-image: url(\'' . lcms::resize($block_sfeer['afbeelding'], 920, 920, '', 80) . '\')"' : ''; ?>>
         </div>
@@ -100,7 +100,7 @@
     ?>
     <div style="<?= $useSfeer ? 'height: 100%' : ''; ?>" class="<?= $block[0]['klasse']; ?>">
       <?php if ($useSfeerLink) { ?>
-      <a class="block__link" href="<?= Link::c($block_sfeer['link']); ?>" title="<?= get_pagina_title($block_sfeer['link']); ?>">
+      <a class="block__link" href="<?= $block_sfeer['link']; ?>" title="<?= get_pagina_title($block_sfeer['link']); ?>">
         <?php } ?>
         <div <?= $useSfeer ? 'class="block--sfeer block__sfeer" style="background-image: url(\'' . lcms::resize($block_sfeer['afbeelding'], 920, 920, '', 80) . '\')"' : ''; ?>>
         </div>
